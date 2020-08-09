@@ -1,0 +1,82 @@
+body {
+    background-color: #160f19;
+  }
+  .parent { /* main container taht holds the images */
+    display: inline-block;
+    width: 100px;
+    height: 118px;
+  }
+  
+  .thumbnail {
+    z-index: 1;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+  }
+  .bannerright {
+    z-index: 2;
+    position: absolute;
+    margin-left: 20px;
+    width: 80px;
+    height: 80px;
+  }
+  .tag1 {
+    z-index: 2;
+    position: absolute;
+    margin-top: 75px;
+  }
+  .tag2 {
+    z-index: 2;
+    position: absolute;
+    margin-top: 75px;
+    margin-left: 25px;
+  }
+  .tag3 {
+    z-index: 2;
+    position: absolute;
+    margin-top: 75px;
+    margin-left: 50px;
+  }
+  .tag4 {
+    z-index: 2;
+    position: absolute;
+    margin-top: 75px;
+    margin-left: 75px;
+  }
+  .greyblock {
+    z-index: 1;
+    position: absolute;
+    margin-top: 100px;
+    height: 20px;
+    width: 100px;
+    background-color: grey;
+  }
+  .hulltype {
+    z-index: 2;
+    position: absolute;
+    margin-top: 100px;
+    width: 32px;
+    height: 20px;
+  }
+  .bannerleft {
+    z-index: 2;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+  }
+  .text {
+    margin-top: 100px;
+    margin-left: 32px;
+  }
+  .shipname {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    max-width: 68px;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    position: absolute;
+    word-wrap: break-word;
+    line-height: 1em;
+    max-height: 2em;
+  }
