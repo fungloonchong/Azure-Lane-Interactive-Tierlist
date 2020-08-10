@@ -75,7 +75,10 @@ body {
     color: white;
     text-align: center;
     z-index: 10;
-    position: absolute;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
     word-wrap: break-word;
     line-height: 1em;
     max-height: 2em;
