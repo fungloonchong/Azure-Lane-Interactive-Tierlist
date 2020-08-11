@@ -2,7 +2,7 @@
 This a tier list by Usagi Sensei, a CN player who is notable for his contributions to the AL community, made filterable by various things for ease of use.  
 
 Credits to:  
-**[Usagi Sensei](https://space.bilibili.com/24889090)** for the creation of the list goes to him.  
+**[Usagi Sensei](https://space.bilibili.com/24889090)** for the creation of the list.  
 **[u/TheScorpion1397](https://www.reddit.com/user/TheScorpion1397/)** for translating it to english.  
 
 
