@@ -3,7 +3,6 @@ This a tier list by Usagi Sensei, a CN player who is notable for his contributio
 
 Credits to:  
 **[Usagi Sensei](https://space.bilibili.com/24889090)** for the creation of the list goes to him.  
-**[u/xYoshario](https://www.reddit.com/user/xYoshario/)** for posting the untranslated version.  
 **[u/TheScorpion1397](https://www.reddit.com/user/TheScorpion1397/)** for translating it to english.  
 
 
@@ -30,7 +29,7 @@ Finally, it should be noted that with new endgame content releasing soonTM, as t
 
 # Main List Changelog:
 ```
-[30-07-2020]
+[30-07-2020] PvE Ship Tier List #55
 NEW:
 - Howe (T0)  
 - Perseus (T0)  
