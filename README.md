@@ -1,8 +1,8 @@
 # What is this?
-This a tier list by **[Usagi Sensei](https://space.bilibili.com/24889090)**, a CN player who is notable for his contributions to the AL community.  
-All credit for the creation of the list goes to him.  
+This a tier list by Usagi Sensei, a CN player who is notable for his contributions to the AL community, made filterable by various things for ease of use.  
 
-Thanks to:  
+Credits to:  
+**[Usagi Sensei](https://space.bilibili.com/24889090)** for the creation of the list goes to him.  
 **[u/xYoshario](https://www.reddit.com/user/xYoshario/)** for posting the untranslated version.  
 **[u/TheScorpion1397](https://www.reddit.com/user/TheScorpion1397/)** for translating it to english.  
 
@@ -11,10 +11,10 @@ Thanks to:
 **Ships are rated within their own class from T0 (the strongest) to Tn (the weakest).  
 The main tier list is composed of T0 through T4 and includes the ships that could be considered meta in some form.**  
 
-The markings in the upper right of their portrait showing how they can be obtained.  
+The banner in the upper right of their portrait showing how they can be obtained.  
 Absence of a banner indicates they are not limited and can be obtained at all times via drops (including war archives), construction, or the merit, core, and medal shops.  
 
-Ships are marked indicating their strengths to assist with choosing the best ship for any given situation. The key for these is found in the bottom right.  
+Ships are marked with round icons indicating their strengths to assist with choosing the best ship for any given situation.  
 
 Rankings are not contingent on the buffs or presence of another ship, with the exceptions of the three carrier pairs and the Ning/Ping/Yat Sen trio, which are indicated by their merged pictures.  
 
@@ -27,3 +27,25 @@ All tier lists are somewhat biased based on the opinions and experiences of thei
 This tier list is based on the current endgame of Chapter 13, and as such ships with better air and anti-air capabilities are valued higher, which should be factored in when using this list for other purposes.  
 
 Finally, it should be noted that with new endgame content releasing soonTM, as teased during the CN 3rd Anniversary stream, there is a high likelihood of this list changing heavily in future updates depending on the needs of said content.
+
+# Main List Changelog:
+```
+[30-07-2020]
+NEW:
+- Howe (T0)  
+- Perseus (T0)  
+- Hermione (T1)  
+- Valiant (T2)    
+- Eagle (T3)  
+- Icarus (T4)  
+
+PROMOTIONS:
+- Tanikaze (T3 🡅 T2)  
+
+DEMOTIONS:
+- Champagne (T0 🡇 T1)  
+- Washington (T1 🡇 T2)  
+- Biloxi (T1 🡇 T2)  
+- Sheffield (T2 🡇 T3)  
+- Kagerou (T2 🡇 T3)  
+```
