@@ -1,10 +1,32 @@
 body {
   background-color: #160f19;
+  font-family: "Lato", sans-serif;
 }
-.parent { /* main container taht holds the images */
+.destroyer {
+  display: inline-flex;
+}
+.battleship {
+  display: inline-flex;
+}
+.carrier {
+  display: inline-flex;
+}
+.heavycruiser {
+  display: inline-flex;
+}
+.lightcruiser {
+  display: inline-flex;
+}
+.submarine {
+  display: inline-flex;
+}
+.parent {
+  /* main container taht holds the images */
   display: inline-block;
   width: 100px;
   height: 118px;
+  margin-top: 5px;
+  margin-right: 10px;
 }
 
 .thumbnail {
@@ -16,9 +38,8 @@ body {
 .bannerright {
   z-index: 2;
   position: absolute;
-  margin-left: 20px;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
 }
 .tag1 {
   z-index: 2;
@@ -67,19 +88,80 @@ body {
 .text {
   margin-top: 100px;
   margin-left: 32px;
+  height: 20px;
+  line-height: 20px;
 }
 .shipname {
-  font-family: 'Lato', sans-serif;
-  font-size: 10px;
-  max-width: 68px;
-  color: white;
+    font-size: 12px;
+    width: 68px;
+    text-align: center;
+    color: white;
+    z-index: 10;
+    position: absolute;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-break: auto;
+}
+.shipnamealt {
+  font-size: 12px;
+  line-height: 9px;
+  width: 68px;
   text-align: center;
+  color: white;
   z-index: 10;
-  display: block;
-  position: relative;
+  position: absolute;
   overflow: hidden;
   text-overflow: ellipsis;
-  word-wrap: break-word;
-  line-height: 1em;
-  max-height: 2em;
+  line-break: auto;
+}
+
+div.t0 > div.tierbanner {
+  background-image: linear-gradient(#ff6d00, #ff9900);
+  border-radius: 10px;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  color: white;
+  font-size: 48px;
+  margin-bottom: 5px;
+}
+div.t1 > div.tierbanner {
+  background-image: linear-gradient(#fe016e, #fe012f);
+  border-radius: 10px;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  color: white;
+  font-size: 48px;
+  margin-bottom: 5px;
+}
+div.t2 > div.tierbanner {
+  background-image: linear-gradient(#ff0a96, #ff5cd1);
+  border-radius: 10px;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  color: white;
+  font-size: 48px;
+  margin-bottom: 5px;
+}
+div.t3 > div.tierbanner {
+  background-image: linear-gradient(#b002ff, #9320ff);
+  border-radius: 10px;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  color: white;
+  font-size: 48px;
+  margin-bottom: 5px;
+}
+div.t4 > div.tierbanner {
+  background-image: linear-gradient(#009eff, #0056fe);
+  border-radius: 10px;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  color: white;
+  font-size: 48px;
+  margin-bottom: 5px;
 }
