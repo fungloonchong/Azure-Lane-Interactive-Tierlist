@@ -41,7 +41,7 @@ async function filltier(a1, a2) {
   a.src = ships[`${a1}`][`${a2}`][i].thumbnail;
   document.getElementsByClassName(a1)[0].getElementsByClassName(a2)[0].getElementsByClassName("parent")[i].appendChild(a);
   // Bannerright
-  if (ships[`${a1}`][`${a2}`][i].banneralt != null) {
+  if (ships[`${a1}`][`${a2}`][i].banner != null) {
   a = document.createElement("img");
   a.className = "bannerright";
   a.src = ships[`${a1}`][`${a2}`][i].bannerlink;
