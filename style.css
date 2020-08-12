@@ -2,6 +2,9 @@ body {
   background-color: #160f19;
   font-family: "Lato", sans-serif;
 }
+.main {
+  display: inline-flex;
+}
 .destroyer {
   display: inline-flex;
 }
@@ -21,14 +24,18 @@ body {
   display: inline-flex;
 }
 .parent {
-  /* main container taht holds the images */
   display: inline-block;
   width: 100px;
   height: 118px;
   margin-top: 5px;
   margin-right: 10px;
 }
-
+.rarityimg {
+  z-index: 0;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
 .thumbnail {
   z-index: 1;
   position: absolute;
