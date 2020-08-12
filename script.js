@@ -4,7 +4,7 @@ let ships;
 window.onload = async function () {
   maincont = document.getElementsByClassName("main")[0];
   ships = await getjson();
-  let geticons = document.querySelectorAll(".icon1");
+  /*let geticons = document.querySelectorAll(".icon1");
   geticons.forEach(function (iconadd) {
     iconadd.addEventListener(
       "click",
@@ -14,7 +14,8 @@ window.onload = async function () {
       false
     );
   });
-  buildhtml(1);
+  buildhtml(1);*/
+  buildhtml();
 };
 
 async function getjson() {
@@ -176,14 +177,16 @@ async function tiertext(a1) {
   return result;
 }
 
-async function buildhtml(a1) {
+//async function buildhtml(a1) {
+async function buildhtml() {
   let shipobj = Object.entries(ships);
-  //for (let i = 0; i < shipobj.length; i++) {
+  //for (let i = a1 - 1; i < a1 && i < a1 + 1; i++) {
   document.getElementsByClassName("main")[0].innerHTML = "";
-  for (let i = a1 - 1; i < a1 && i < a1 + 1; i++) {
+    for (let i = 0; i < shipobj.length; i++) {
     // Hulltype class
     let t = document.createElement("div");
-    t.className = shipobj[i][0];
+    t.className = shipobj[i][0] + " all";
+    let classname = shipobj[i][0]
     maincont.appendChild(t);
     // Hulltype class banner
     let b = document.createElement("img");
@@ -221,7 +224,7 @@ async function buildhtml(a1) {
         .getElementsByClassName(Object.keys(shipobj[i][1])[ii])[0]
         .appendChild(f);
 
-      await filltier(t.className, s.className);
+      await filltier(classname, s.className);
     }
   }
 }

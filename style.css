@@ -3,9 +3,9 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.main {
+/*.main {
   display: inline-flex;
-}
+}*/
 
 .destroyer {
   display: inline-flex;
@@ -29,6 +29,10 @@ body {
 
 .submarine {
   display: inline-flex;
+}
+
+.all {
+  margin-bottom: 20px;
 }
 
 .parent {
