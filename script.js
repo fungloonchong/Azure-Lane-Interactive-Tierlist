@@ -124,17 +124,14 @@ async function texthandler(a1, a2) {
         fontSize = "11px";
       }
       // If the second str is longer then 10
-      if ((await countcheck.countafter[1].length) >= 10) {
+      if ((await countcheck.countafter[1].length) > 10) {
         fontSize = "10px";
       }
       // If the second str is smaller or 8 long
       if (countcheck.countafter[1].length <= 8) {
         fontSize = "12px";
       }
-    } else {
-      fontSize = "10px";
-    }
-    if ((await countcheck.count) == 2) {
+    } else if ((await countcheck.count) == 2) {
       // If the second str is at least 9 => 10+ long
       if (
         (await countcheck.countafter[1].length) == 10 &&
@@ -143,7 +140,7 @@ async function texthandler(a1, a2) {
         fontSize = "11px";
       }
       // If the second str is longer then 10
-      if ((await countcheck.countafter[1].length) >= 10) {
+      if ((await countcheck.countafter[1].length) > 10) {
         fontSize = "10px";
       }
       // If the second str is smaller or 8 long
