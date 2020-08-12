@@ -1,14 +1,14 @@
 let maincont;
 let ships;
 
-window.onload = async function() {
+window.onload = async function () {
   maincont = document.getElementsByClassName("main")[0];
   ships = await getjson();
   let geticons = document.querySelectorAll(".icon1");
-  geticons.forEach(function(iconadd) {
+  geticons.forEach(function (iconadd) {
     iconadd.addEventListener(
       "click",
-      function() {
+      function () {
         buildhtml(this.id);
       },
       false
@@ -30,7 +30,10 @@ async function getjson() {
 async function countspaces(a1) {
   let count = a1.split(" ").length - 1;
   let countafter = a1.match(/^\s*(\S+)\s*(.*?)\s*$/).slice(1);
-  return { count, countafter };
+  return {
+    count,
+    countafter
+  };
 }
 
 async function removespaces(a1) {
@@ -74,7 +77,10 @@ async function tiersize(a1) {
     rawresult = 1.54;
   }
 
-  return { result, rawresult };
+  return {
+    result,
+    rawresult
+  };
   /*
 kleiner oder 6 -  3x2
 
@@ -161,7 +167,11 @@ async function texthandler(a1, a2) {
     className = "shipname";
   }
 
-  return { className, fontSize, lineHeight };
+  return {
+    className,
+    fontSize,
+    lineHeight
+  };
 }
 
 async function tiertext(a1) {
@@ -182,11 +192,17 @@ async function buildhtml(a1) {
     let b = document.createElement("img");
     b.className = shipobj[i][0] + "banner";
     b.style.marginRight = "30px";
-    b.src =
-      "Assets/TierClassBanner/" +
-      shipobj[i][0].charAt(0).toUpperCase() +
-      shipobj[i][0].slice(1) +
-      ".png";
+    if (shipobj[i][0] == "heavycruiser") {
+      b.src = "Assets/TierClassBanner/HeavyCruiser.png";
+    } else if (shipobj[i][0] == "lightcruiser") {
+      b.src = "Assets/TierClassBanner/LightCruiser.png";
+    } else {
+      b.src =
+        "Assets/TierClassBanner/" +
+        shipobj[i][0].charAt(0).toUpperCase() +
+        shipobj[i][0].slice(1) +
+        ".png";
+    }
     document.getElementsByClassName(shipobj[i][0])[0].appendChild(b);
     for (let ii = 0; ii < Object.keys(shipobj[i][1]).length && ii < 5; ii++) {
       // s == t0 t1 t2 usw
@@ -229,8 +245,7 @@ async function filltier(a1, a2) {
     document
       .getElementsByClassName(a1)[0]
       .getElementsByClassName(a2)[0]
-      .getElementsByClassName("parent")
-      [i].appendChild(a);
+      .getElementsByClassName("parent")[i].appendChild(a);
     // thumbnail
     a = document.createElement("img");
     a.className = "thumbnail";
@@ -238,8 +253,7 @@ async function filltier(a1, a2) {
     document
       .getElementsByClassName(a1)[0]
       .getElementsByClassName(a2)[0]
-      .getElementsByClassName("parent")
-      [i].appendChild(a);
+      .getElementsByClassName("parent")[i].appendChild(a);
     // Bannerright
     if (ships[`${a1}`][`${a2}`][i].banner != null) {
       a = document.createElement("img");
@@ -248,8 +262,7 @@ async function filltier(a1, a2) {
       document
         .getElementsByClassName(a1)[0]
         .getElementsByClassName(a2)[0]
-        .getElementsByClassName("parent")
-        [i].appendChild(a);
+        .getElementsByClassName("parent")[i].appendChild(a);
     }
     // Bannerleft
     if (ships[`${a1}`][`${a2}`][i].banneralt != null) {
@@ -259,8 +272,7 @@ async function filltier(a1, a2) {
       document
         .getElementsByClassName(a1)[0]
         .getElementsByClassName(a2)[0]
-        .getElementsByClassName("parent")
-        [i].appendChild(a);
+        .getElementsByClassName("parent")[i].appendChild(a);
     }
     // Tags
     if (ships[`${a1}`][`${a2}`][i].tags != null) {
@@ -272,8 +284,7 @@ async function filltier(a1, a2) {
         document
           .getElementsByClassName(a1)[0]
           .getElementsByClassName(a2)[0]
-          .getElementsByClassName("parent")
-          [i].appendChild(a);
+          .getElementsByClassName("parent")[i].appendChild(a);
       }
     }
     // Greyblock
@@ -282,8 +293,7 @@ async function filltier(a1, a2) {
     document
       .getElementsByClassName(a1)[0]
       .getElementsByClassName(a2)[0]
-      .getElementsByClassName("parent")
-      [i].appendChild(a);
+      .getElementsByClassName("parent")[i].appendChild(a);
     // Hulltype
     a = document.createElement("img");
     a.className = "hulltype";
@@ -292,16 +302,14 @@ async function filltier(a1, a2) {
     document
       .getElementsByClassName(a1)[0]
       .getElementsByClassName(a2)[0]
-      .getElementsByClassName("parent")
-      [i].appendChild(a);
+      .getElementsByClassName("parent")[i].appendChild(a);
     // Textblock
     a = document.createElement("div");
     a.className = "text";
     document
       .getElementsByClassName(a1)[0]
       .getElementsByClassName(a2)[0]
-      .getElementsByClassName("parent")
-      [i].appendChild(a);
+      .getElementsByClassName("parent")[i].appendChild(a);
     // Span text
     a = document.createElement("span");
     let textcheck = await texthandler(
@@ -324,8 +332,7 @@ async function filltier(a1, a2) {
     document
       .getElementsByClassName(a1)[0]
       .getElementsByClassName(a2)[0]
-      .getElementsByClassName("parent")
-      [i].getElementsByClassName("text")[0]
+      .getElementsByClassName("parent")[i].getElementsByClassName("text")[0]
       .appendChild(a);
   }
 }

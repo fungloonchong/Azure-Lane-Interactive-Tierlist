@@ -2,27 +2,35 @@ body {
   background-color: #160f19;
   font-family: "Lato", sans-serif;
 }
+
 .main {
   display: inline-flex;
 }
+
 .destroyer {
   display: inline-flex;
 }
+
 .battleship {
   display: inline-flex;
 }
+
 .carrier {
   display: inline-flex;
 }
+
 .heavycruiser {
   display: inline-flex;
 }
+
 .lightcruiser {
   display: inline-flex;
 }
+
 .submarine {
   display: inline-flex;
 }
+
 .parent {
   display: inline-block;
   width: 100px;
@@ -30,47 +38,55 @@ body {
   margin-top: 5px;
   margin-right: 10px;
 }
+
 .rarityimg {
   z-index: 0;
   position: absolute;
   width: 100px;
   height: 100px;
 }
+
 .thumbnail {
   z-index: 1;
   position: absolute;
   width: 100px;
   height: 100px;
 }
+
 .bannerright {
   z-index: 2;
   position: absolute;
   width: 100px;
   height: 100px;
 }
+
 .tag1 {
   z-index: 2;
   position: absolute;
   margin-top: 75px;
 }
+
 .tag2 {
   z-index: 2;
   position: absolute;
   margin-top: 75px;
   margin-left: 25px;
 }
+
 .tag3 {
   z-index: 2;
   position: absolute;
   margin-top: 75px;
   margin-left: 50px;
 }
+
 .tag4 {
   z-index: 2;
   position: absolute;
   margin-top: 75px;
   margin-left: 75px;
 }
+
 .greyblock {
   z-index: 1;
   position: absolute;
@@ -79,6 +95,7 @@ body {
   width: 100px;
   background-color: grey;
 }
+
 .hulltype {
   z-index: 2;
   position: absolute;
@@ -86,29 +103,33 @@ body {
   width: 32px;
   height: 20px;
 }
+
 .bannerleft {
   z-index: 2;
   position: absolute;
   width: 100px;
   height: 100px;
 }
+
 .text {
   margin-top: 100px;
   margin-left: 32px;
   height: 20px;
   line-height: 20px;
 }
+
 .shipname {
-    font-size: 12px;
-    width: 68px;
-    text-align: center;
-    color: white;
-    z-index: 10;
-    position: absolute;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-break: auto;
+  font-size: 12px;
+  width: 68px;
+  text-align: center;
+  color: white;
+  z-index: 10;
+  position: absolute;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-break: auto;
 }
+
 .shipnamealt {
   font-size: 12px;
   line-height: 9px;
@@ -122,7 +143,7 @@ body {
   line-break: auto;
 }
 
-div.t0 > div.tierbanner {
+div.t0>div.tierbanner {
   background-image: linear-gradient(#ff6d00, #ff9900);
   border-radius: 10px;
   text-align: center;
@@ -132,7 +153,8 @@ div.t0 > div.tierbanner {
   font-size: 48px;
   margin-bottom: 5px;
 }
-div.t1 > div.tierbanner {
+
+div.t1>div.tierbanner {
   background-image: linear-gradient(#fe016e, #fe012f);
   border-radius: 10px;
   text-align: center;
@@ -142,7 +164,8 @@ div.t1 > div.tierbanner {
   font-size: 48px;
   margin-bottom: 5px;
 }
-div.t2 > div.tierbanner {
+
+div.t2>div.tierbanner {
   background-image: linear-gradient(#ff0a96, #ff5cd1);
   border-radius: 10px;
   text-align: center;
@@ -152,7 +175,8 @@ div.t2 > div.tierbanner {
   font-size: 48px;
   margin-bottom: 5px;
 }
-div.t3 > div.tierbanner {
+
+div.t3>div.tierbanner {
   background-image: linear-gradient(#b002ff, #9320ff);
   border-radius: 10px;
   text-align: center;
@@ -162,7 +186,8 @@ div.t3 > div.tierbanner {
   font-size: 48px;
   margin-bottom: 5px;
 }
-div.t4 > div.tierbanner {
+
+div.t4>div.tierbanner {
   background-image: linear-gradient(#009eff, #0056fe);
   border-radius: 10px;
   text-align: center;

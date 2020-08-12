@@ -1,7 +1,6 @@
 {
   "destroyer": {
-    "t0": [
-      {
+    "t0": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Kitakaze",
         "id": "Plan009",
         "names": {
@@ -152,8 +151,7 @@
         "tags": ["TRP", "DEF", "HEAL", "BUFFDEF"]
       }
     ],
-    "t1": [
-      {
+    "t1": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Shirakami_Fubuki",
         "id": "Collab051",
         "names": {
@@ -379,8 +377,7 @@
         "tags": ["BA", "BUFFDMG"]
       }
     ],
-    "t2": [
-      {
+    "t2": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Kawakaze",
         "id": "288",
         "names": {
@@ -681,8 +678,7 @@
         "tags": ["BA"]
       }
     ],
-    "t3": [
-      {
+    "t3": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Carabiniere",
         "id": "415",
         "names": {
@@ -908,8 +904,7 @@
         "tags": ["TRP", "BUFFDEF"]
       }
     ],
-    "t4": [
-      {
+    "t4": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Hibiki",
         "id": "160",
         "names": {
@@ -1160,8 +1155,7 @@
         "tags": ["DEF", "BUFFDMG"]
       }
     ],
-    "t5": [
-      {
+    "t5": [{
         "wikiUrl": "https://azurlane.koumakan.jp/White_Heart",
         "id": "Collab007",
         "names": {
@@ -1837,8 +1831,7 @@
         "tags": ["BUFFTRP", "BUFFDEF"]
       }
     ],
-    "t6": [
-      {
+    "t6": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Blanc",
         "id": "Collab003",
         "names": {
@@ -2839,8 +2832,7 @@
         "tags": ["BUFFDEF"]
       }
     ],
-    "t7": [
-      {
+    "t7": [{
         "wikiUrl": "https://azurlane.koumakan.jp/22",
         "id": "Collab021",
         "names": {
@@ -3568,8 +3560,7 @@
     ]
   },
   "battleship": {
-    "t0": [
-      {
+    "t0": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Friedrich_der_Große",
         "id": "Plan011",
         "names": {
@@ -3795,8 +3786,7 @@
         "tags": ["BA", "BUFFSHL", "BUFFAIR", "BUFFDMG"]
       }
     ],
-    "t1": [
-      {
+    "t1": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Champagne",
         "id": "Plan017",
         "names": {
@@ -4047,8 +4037,7 @@
         "tags": ["BA", "BUFFDEF"]
       }
     ],
-    "t2": [
-      {
+    "t2": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Izumo",
         "id": "Plan004",
         "names": {
@@ -4349,8 +4338,7 @@
         "tags": ["BA", "BUFFSHL"]
       }
     ],
-    "t3": [
-      {
+    "t3": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Massachusetts",
         "id": "354",
         "names": {
@@ -4501,8 +4489,7 @@
         "tags": ["BA"]
       }
     ],
-    "t4": [
-      {
+    "t4": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Mikasa",
         "id": "320",
         "names": {
@@ -4728,8 +4715,7 @@
         "tags": ["HEAL"]
       }
     ],
-    "t5": [
-      {
+    "t5": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Colorado",
         "id": "060",
         "names": {
@@ -4980,8 +4966,7 @@
         "tags": ["BA"]
       }
     ],
-    "t6": [
-      {
+    "t6": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Kongou",
         "id": "204",
         "names": {
@@ -5132,8 +5117,7 @@
         "tags": ["BA"]
       }
     ],
-    "t7": [
-      {
+    "t7": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Renown",
         "id": "127",
         "names": {
@@ -5261,8 +5245,7 @@
     ]
   },
   "carrier": {
-    "t0": [
-      {
+    "t0": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Essex",
         "id": "357",
         "names": {
@@ -5488,8 +5471,7 @@
         "tags": ["HEAL", "DEF", "BUFFDMG"]
       }
     ],
-    "t1": [
-      {
+    "t1": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Shangri-La",
         "id": "378",
         "names": {
@@ -5690,8 +5672,7 @@
         "tags": ["HEAL", "AA"]
       }
     ],
-    "t2": [
-      {
+    "t2": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Shoukaku",
         "id": "228",
         "names": {
@@ -5992,8 +5973,7 @@
         "tags": null
       }
     ],
-    "t3": [
-      {
+    "t3": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Graf_Zeppelin",
         "id": "252",
         "names": {
@@ -6194,8 +6174,7 @@
         "tags": ["AS"]
       }
     ],
-    "t4": [
-      {
+    "t4": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Ookami_Mio",
         "id": "Collab057",
         "names": {
@@ -6396,8 +6375,7 @@
         "tags": ["BUFFAIR"]
       }
     ],
-    "t5": [
-      {
+    "t5": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Green_Heart",
         "id": "Collab008",
         "names": {
@@ -6448,8 +6426,7 @@
         "tags": ["BA"]
       }
     ],
-    "t6": [
-      {
+    "t6": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Vert",
         "id": "Collab004",
         "names": {
@@ -6575,8 +6552,7 @@
         "tags": null
       }
     ],
-    "t7": [
-      {
+    "t7": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Uruuru",
         "id": "Collab034",
         "names": {
@@ -6729,8 +6705,7 @@
     ]
   },
   "heavycruiser": {
-    "t0": [
-      {
+    "t0": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Azuma",
         "id": "Plan010",
         "names": {
@@ -6906,8 +6881,7 @@
         "tags": ["MG+1", "BA", "DEF", "AA"]
       }
     ],
-    "t1": [
-      {
+    "t1": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Saint_Louis",
         "id": "Plan006",
         "names": {
@@ -7033,8 +7007,7 @@
         "tags": ["MG+1", "DEF", "AA", "BUFFDEF"]
       }
     ],
-    "t2": [
-      {
+    "t2": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Elegant_Kizuna_AI",
         "id": "Collab042",
         "names": {
@@ -7160,8 +7133,7 @@
         "tags": ["MG+1", "BUFFSHL"]
       }
     ],
-    "t3": [
-      {
+    "t3": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Takao",
         "id": "200",
         "names": {
@@ -7312,8 +7284,7 @@
         "tags": ["BA"]
       }
     ],
-    "t4": [
-      {
+    "t4": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Black_Heart",
         "id": "Collab006",
         "names": {
@@ -7464,8 +7435,7 @@
         "tags": null
       }
     ],
-    "t5": [
-      {
+    "t5": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Kuon",
         "id": "Collab031",
         "names": {
@@ -7766,8 +7736,7 @@
         "tags": ["MG+1", "BUFFSHL"]
       }
     ],
-    "t6": [
-      {
+    "t6": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Noire",
         "id": "Collab002",
         "names": {
@@ -7918,8 +7887,7 @@
         "tags": ["MG+1"]
       }
     ],
-    "t7": [
-      {
+    "t7": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Trento",
         "id": "414",
         "names": {
@@ -8097,8 +8065,7 @@
     ]
   },
   "lightcruiser": {
-    "t0": [
-      {
+    "t0": [{
         "wikiUrl": "https://azurlane.koumakan.jp/San_Diego",
         "id": "036",
         "names": {
@@ -8349,8 +8316,7 @@
         "tags": ["DEF"]
       }
     ],
-    "t1": [
-      {
+    "t1": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Montpelier",
         "id": "329",
         "names": {
@@ -8651,8 +8617,7 @@
         "tags": ["BUFFDMG"]
       }
     ],
-    "t2": [
-      {
+    "t2": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Kinu",
         "id": "186",
         "names": {
@@ -9028,8 +8993,7 @@
         "tags": ["MG+1", "DEF"]
       }
     ],
-    "t3": [
-      {
+    "t3": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Reno",
         "id": "445",
         "names": {
@@ -9330,8 +9294,7 @@
         "tags": ["MG+1"]
       }
     ],
-    "t4": [
-      {
+    "t4": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Purple_Heart",
         "id": "Collab005",
         "names": {
@@ -9582,8 +9545,7 @@
         "tags": ["BUFFDEF"]
       }
     ],
-    "t5": [
-      {
+    "t5": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Rurutie",
         "id": "Collab033",
         "names": {
@@ -9709,8 +9671,7 @@
         "tags": ["BUFFDMG", "BUFFDEF"]
       }
     ],
-    "t6": [
-      {
+    "t6": [{
         "wikiUrl": "https://azurlane.koumakan.jp/HDN_Neptune",
         "id": "Collab001",
         "names": {
@@ -9886,8 +9847,7 @@
         "tags": ["AA"]
       }
     ],
-    "t7": [
-      {
+    "t7": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Memphis",
         "id": "360",
         "names": {
@@ -10140,8 +10100,7 @@
     ]
   },
   "submarine": {
-    "t0": [
-      {
+    "t0": [{
         "wikiUrl": "https://azurlane.koumakan.jp/U-101",
         "id": "399",
         "names": {
@@ -10217,8 +10176,7 @@
         "tags": null
       }
     ],
-    "t1": [
-      {
+    "t1": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Minato_Aqua",
         "id": "Collab053",
         "names": {
@@ -10344,8 +10302,7 @@
         "tags": null
       }
     ],
-    "t2": [
-      {
+    "t2": [{
         "wikiUrl": "https://azurlane.koumakan.jp/I-19",
         "id": "338",
         "names": {
@@ -10421,8 +10378,7 @@
         "tags": null
       }
     ],
-    "t3": [
-      {
+    "t3": [{
         "wikiUrl": "https://azurlane.koumakan.jp/Surcouf",
         "id": "350",
         "names": {
@@ -10498,8 +10454,7 @@
         "tags": null
       }
     ],
-    "t4": [
-      {
+    "t4": [{
         "wikiUrl": "https://azurlane.koumakan.jp/U-73",
         "id": "387",
         "names": {
