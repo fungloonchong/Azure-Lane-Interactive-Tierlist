@@ -182,7 +182,7 @@ async function buildhtml() {
   let shipobj = Object.entries(ships);
   //for (let i = a1 - 1; i < a1 && i < a1 + 1; i++) {
   document.getElementsByClassName("main")[0].innerHTML = "";
-    for (let i = 0; i < shipobj.length; i++) {
+  for (let i = 0; i < shipobj.length; i++) {
     // Hulltype class
     let t = document.createElement("div");
     t.className = shipobj[i][0] + " all";
@@ -212,6 +212,7 @@ async function buildhtml() {
         shipobj[i][1][Object.keys(shipobj[i][1])[ii]].length
       );
       s.style.width = sizecheck.result;
+      s.style.marginRight = "20px";
       document.getElementsByClassName(shipobj[i][0])[0].appendChild(s);
 
       let f = document.createElement("div");
