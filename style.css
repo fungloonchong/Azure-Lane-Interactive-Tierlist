@@ -126,6 +126,7 @@ body {
   font-size: 12px;
   width: 68px;
   text-align: center;
+  text-shadow: 1px 1px #00000070;
   color: white;
   z-index: 10;
   position: absolute;
@@ -139,6 +140,7 @@ body {
   line-height: 9px;
   width: 68px;
   text-align: center;
+  text-shadow: 1px 1px #00000070;
   color: white;
   z-index: 10;
   position: absolute;
