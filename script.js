@@ -26,7 +26,7 @@ window.onload = async function () {
       false
     );
   });
-  //buildhtmlall();
+  buildhtmlall();
 };
 
 window.onclick = function(event) {
@@ -530,7 +530,13 @@ async function filltier(a1, a2) {
       .getElementsByClassName(a1)[0]
       .getElementsByClassName(a2)[0]
       .getElementsByClassName("parent")[i].appendChild(a);
-    
+    a = document.createElement("a");
+    a.className = "link";
+    a.href = ships[`${a1}`][`${a2}`][i].wikiUrl;
+    document
+      .getElementsByClassName(a1)[0]
+      .getElementsByClassName(a2)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
     // thumbnail
     a = document.createElement("img");
     a.className = "thumbnail";
