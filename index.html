@@ -1,23 +1,180 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Ah yes Tier List</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script.js"></script>
+  </head>
 
-<head>
-  <title>Ah yes Tier List</title>
-  <link rel="stylesheet" type="text/css" href="./style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
-  <script src="./script.js"></script>
-</head>
-
-<body>
-  <!--<div class="changetypedebug">
-    <img class="icon1" id="1" src="Assets/HullTypeIcons/Destroyer.png">
-    <img class="icon1" id="2" src="Assets/HullTypeIcons/Battleship.png">
-    <img class="icon1" id="3" src="Assets/HullTypeIcons/AircraftCarrier.png">
-    <img class="icon1" id="4" src="Assets/HullTypeIcons/HeavyCruiser.png">
-    <img class="icon1" id="5" src="Assets/HullTypeIcons/LightCruiser.png">
-    <img class="icon1" id="6" src="Assets/HullTypeIcons/Submarine.png">
-  </div>-->
-  <div class="main"></div>
-</body>
-
+  <body>
+    <div class="dropdowns">
+      <div class="hulltype-dropdown">
+        <button onclick="myFunction(this.classList)" class="hulltype-dropbtn">
+          Hull Type
+        </button>
+  <div id="hulltype-dropdown" class="hulltype-dropdown-content">
+    <img class="hulltypefilter" id="destroyer" src="Assets/HullTypeIcons/Destroyer.png">
+    <img class="hulltypefilter" id="battleship" src="Assets/HullTypeIcons/Battleship.png">
+    <img class="hulltypefilter" id="carrier" src="Assets/HullTypeIcons/AircraftCarrier.png">
+    <img class="hulltypefilter" id="heavycruiser" src="Assets/HullTypeIcons/HeavyCruiser.png">
+    <img class="hulltypefilter" id="lightcruiser" src="Assets/HullTypeIcons/LightCruiser.png">
+    <img class="hulltypefilter" id="submarine" src="Assets/HullTypeIcons/Submarine.png">
+    <img class="hulltypefilter" id="AviationBattleship" src="Assets/HullTypeIcons/AviationBattleship.png">
+    <img class="hulltypefilter" id="Monitor" src="Assets/HullTypeIcons/Monitor.png">
+    <img class="hulltypefilter" id="Repairship" src="Assets/HullTypeIcons/Repairship.png">
+    <img class="hulltypefilter" id="SubmarineCarrier" src="Assets/HullTypeIcons/SubmarineCarrier.png">
+  </div>
+</div>
+      <div class="rarity-dropdown">
+        <button onclick="myFunction(this.classList)" class="rarity-dropbtn">
+          Rarity
+        </button>
+        <div id="rarity-dropdown" class="rarity-dropdown-content">
+          <img class="rarityfilter" id="Normal" src="Assets/RarityBGs/Normal.png" />
+          <img class="rarityfilter" id="Rare" src="Assets/RarityBGs/Rare.png" />
+          <img class="rarityfilter" id="Elite" src="Assets/RarityBGs/Elite.png" />
+          <img class="rarityfilter" id="SuperRare" src="Assets/RarityBGs/SuperRare.png" />
+          <img class="rarityfilter" id="Priority" src="Assets/RarityBGs/Priority.png" />
+          <img class="rarityfilter" id="Decisive" src="Assets/RarityBGs/Decisive.png" />
+        </div>
+      </div>
+      <!--<div class="tag-dropdown">
+        <button onclick="myFunction(this.classList)" class="tag-dropbtn">
+          Tag
+        </button>
+        <div id="tag-dropdown" class="tag-dropdown-content">
+          <img class="icon1" id="t1" src="Assets/TagIcons/ICOv2/AA.png" />
+          <img class="icon1" id="t2" src="Assets/TagIcons/ICOv2/AS.png" />
+          <img class="icon1" id="t3" src="Assets/TagIcons/ICOv2/BA.png" />
+          <img class="icon1" id="t4" src="Assets/TagIcons/ICOv2/BUFFAA.png" />
+          <img class="icon1" id="t5" src="Assets/TagIcons/ICOv2/BUFFAIR.png" />
+          <img class="icon1" id="t6" src="Assets/TagIcons/ICOv2/BUFFDEF.png" />
+          <img class="icon1" id="t7" src="Assets/TagIcons/ICOv2/BUFFDMG.png" />
+          <img class="icon1" id="t8" src="Assets/TagIcons/ICOv2/BUFFEXP.png" />
+          <img class="icon1" id="t9" src="Assets/TagIcons/ICOv2/BUFFSHL.png" />
+          <img class="icon1" id="t10" src="Assets/TagIcons/ICOv2/BUFFTRP.png" />
+          <img class="icon1" id="t11" src="Assets/TagIcons/ICOv2/DEF.png" />
+          <img class="icon1" id="t12" src="Assets/TagIcons/ICOv2/HEAL.png" />
+          <img class="icon1" id="t13" src="Assets/TagIcons/ICOv2/MG+1.png" />
+          <img class="icon1" id="t14" src="Assets/TagIcons/ICOv2/TRP.png" />
+        </div>
+      </div>
+      <div class="tier-dropdown">
+        <button onclick="myFunction(this.classList)" class="tier-dropbtn">
+          Tier
+        </button>
+        <div id="tier-dropdown" class="tier-dropdown-content">
+          <div class="ti0">T0</div>
+          <div class="ti1">T1</div>
+          <div class="ti2">T2</div>
+          <div class="ti3">T3</div>
+          <div class="ti4">T4</div>
+        </div>
+      </div>
+      <div class="nationality-dropdown">
+        <button
+          onclick="myFunction(this.classList)"
+          class="nationality-dropbtn"
+        >
+          Nationality
+        </button>
+        <div id="nationality-dropdown" class="nationality-dropdown-content">
+          <img
+            class="icon1"
+            style="background-color: DeepSkyBlue"
+            id="n1"
+            src="Assets/Nationalities/Bilibili.png"
+          />
+          <img
+            class="icon1"
+            style="background-color: DeepSkyBlue"
+            id="n2"
+            src="Assets/Nationalities/EagleUnion.png"
+          />
+          <img
+            class="icon1"
+            style="background-color: Crimson"
+            id="n3"
+            src="Assets/Nationalities/EasternRadiance.png"
+          />
+          <img
+            class="icon1"
+            style="background-color: #8EE7F1"
+            id="n4"
+            src="Assets/Nationalities/Hololive.png"
+          />
+          <img
+            class="icon1"
+            style="background-color: Blue"
+            id="n5"
+            src="Assets/Nationalities/IrisLibre.png"
+          />
+          <img
+            class="icon1"
+            style="background-color: Red"
+            id="n6"
+            src="Assets/Nationalities/Ironblood.png"
+          />
+          <img
+            class="icon1"
+            style="background-color: pink"
+            id="n7"
+            src="Assets/Nationalities/KizunaAI.png"
+          />
+          <img
+            class="icon1"
+            style="background-color: MediumOrchid"
+            id="n8"
+            src="Assets/Nationalities/Neptunia.png"
+          />
+          <img
+            class="icon1"
+            style="background-color: Grey"
+            id="n9"
+            src="Assets/Nationalities/NorthUnion.png"
+          />
+          <img
+            class="icon1"
+            style="background-color: Navy"
+            id="n10"
+            src="Assets/Nationalities/RoyalNavy.png"
+          />
+          <img
+            class="icon1"
+            style="background-color: Pink"
+            id="n11"
+            src="Assets/Nationalities/SakuraEmpire.png"
+          />
+          <img
+            class="icon1"
+            style="background-color: white"
+            id="n12"
+            src="Assets/Nationalities/SardegnaEmpire.png"
+          />
+          <img
+            class="icon1"
+            id="n13"
+            src="Assets/Nationalities/Universal.png"
+          />
+          <img
+            class="icon1"
+            style="background-color: Crimson"
+            id="n14"
+            src="Assets/Nationalities/Utawarerumono.png"
+          />
+          <img
+            class="icon1"
+            style="background-color: Crimson"
+            id="n15"
+            src="Assets/Nationalities/VichyaDominion.png"
+          />
+        </div>
+      </div>-->
+    </div>
+    <div class="main"></div>
+  </body>
 </html>
