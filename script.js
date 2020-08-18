@@ -26,6 +26,16 @@ window.onload = async function () {
       false
     );
   });
+  let tagfilter = document.querySelectorAll(".tagfilter");
+  tagfilter.forEach(function (tagadd) {
+    tagadd.addEventListener(
+      "click",
+      function () {
+        buildtaghtml(this.id);
+      },
+      false
+    );
+  });
   buildhtmlall();
 };
 
@@ -82,11 +92,21 @@ async function getjson() {
   }
 }
 
-async function getAllIndexes(arr, val, search) {
+async function getAllIndexes(arr, val, search, useloop) {
     var indexes = [], i;
+  if (useloop == false) {
     for(i = 0; i < arr.length; i++)
         if (arr[i][search] === val)
             indexes.push(i);
+    } else {
+    for(i = 0; i < arr.length; i++)
+      if (arr[i][search] != null) {
+      for(let ii = 0; ii < arr[i][search].length; ii++) {
+      if (arr[i][search][ii] === val)
+          indexes.push(i);
+    }
+    }
+    }
     return indexes;
 }
 
@@ -221,6 +241,26 @@ async function tiertext(a1) {
   return result;
 }
 
+async function buildtaghtml(a1) {
+  let shipobj = Object.entries(ships);
+  document.getElementsByClassName("main")[0].innerHTML = "";
+  if (a1 == undefined) {
+    await buildhtmlall()
+  }
+  
+  for (let i = 0; i < shipobj.length; i++) {
+  for (let ii = 0; ii < Object.keys(shipobj[i][1]).length; ii++) {
+  let index = await getAllIndexes(shipobj[i][1][Object.keys(shipobj[i][1])[ii]], a1, "tags")
+  if (index.length != 0) {
+    let hullindex = i
+    let hullname = shipobj[i][0]
+    let tier = Object.keys(shipobj[i][1])[ii]
+    await buildit(hullindex, hullname, tier, index, shipobj)
+  }
+  }
+  }
+}
+
 async function buildrarityhtml(a1) {
   let shipobj = Object.entries(ships);
   document.getElementsByClassName("main")[0].innerHTML = "";
@@ -233,17 +273,18 @@ async function buildrarityhtml(a1) {
   }
   for (let i = 0; i < shipobj.length; i++) {
   for (let ii = 0; ii < Object.keys(shipobj[i][1]).length; ii++) {
-  let index = await getAllIndexes(shipobj[i][1][Object.keys(shipobj[i][1])[ii]], a1, "rarity")
+  let index = await getAllIndexes(shipobj[i][1][Object.keys(shipobj[i][1])[ii]], a1, "rarity", true)
   if (index.length != 0) {
     let hullindex = i
     let hullname = shipobj[i][0]
     let tier = Object.keys(shipobj[i][1])[ii]
-    await buildit(hullindex, hullname, tier, index)
+    await buildit(hullindex, hullname, tier, index, shipobj)
   }
   }
   }
+}
   
- async function buildit(b1, b2, b3, b4) {
+ async function buildit(b1, b2, b3, b4, shipobj) {
    if (document.getElementsByClassName(b2).length == 0) {
     // Hulltype class
     let t = document.createElement("div");
@@ -292,7 +333,6 @@ async function buildrarityhtml(a1) {
    
       await filltierspecial(b2, s.className, b4);
     }
-}
 
 async function buildhulltypehtml(a1) {
   let shipobj = Object.entries(ships);
