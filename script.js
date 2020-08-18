@@ -26,7 +26,7 @@ window.onload = async function () {
       false
     );
   });
-  buildhtmlall();
+  //buildhtmlall();
 };
 
 window.onclick = function(event) {
@@ -640,7 +640,7 @@ async function filltierspecial(a1, a2, a3) {
       .appendChild(a);
     a = document.createElement("a");
     a.className = "link";
-    a.href = ships[`${a1}`][`${a2}`][i].wikiUrl;
+    a.href = ships[`${a1}`][`${a2}`][a3[i]].wikiUrl;
     a.target = "_blank"
     document
       .getElementsByClassName(a1)[0]
