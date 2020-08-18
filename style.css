@@ -1,6 +1,12 @@
 body {
   background-color: #160f19;
   font-family: "Lato", sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .main {
@@ -708,4 +714,31 @@ width: 60%;
   border-width: 1px;
   border-style: solid;
   border-color: white;
+}
+
+div.legend
+{  
+    width: 50px; 
+    height: 50px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+div.legend.dot {
+  height: 50px;
+  width: 50px;
+  background-image: linear-gradient(#1e8dff, #3c9dfe);
+  border-radius: 50%;
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  text-align: center;
+}
+
+div.legend.dot span {
+  line-height: 50px;
+  color: white;
+  font-size: 45px;
 }
