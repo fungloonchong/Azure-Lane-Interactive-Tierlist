@@ -41,6 +41,16 @@ window.onclick = function(event) {
     }
     identmain = undefined
     identid = undefined
+    }
+  if (!event.target.matches('.legend-dot-dropbtn')) {
+    var dropdowns = document.getElementsByClassName("legend-dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
   }
 }
 
@@ -56,6 +66,10 @@ async function myFunction(a1) {
   identid = document.getElementsByClassName(identmain)[0].parentElement.classList[0]
   // adds show to *-dropdown
   document.getElementById(identid).classList.toggle("show");
+}
+
+async function legenddropdown() {
+  document.getElementById("legend-dropdown").classList.toggle("show");
 }
 
 async function getjson() {
