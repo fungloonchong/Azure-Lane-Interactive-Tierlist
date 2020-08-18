@@ -122,7 +122,7 @@ async function tiersize(a1) {
     rawresult = 660;
   }
   if (a1 > 18) {
-    result = "1.540px";
+    result = "1540px";
     rawresult = 1.54;
   }
 
