@@ -26,7 +26,7 @@ window.onload = async function () {
       false
     );
   });
-  //buildhtmlall();
+  buildhtmlall();
 };
 
 window.onclick = function(event) {
@@ -251,6 +251,7 @@ async function buildrarityhtml(a1) {
         shipobj[b1][0].slice(1) +
         ".png";
     }
+     b.draggable = false;
     document.getElementsByClassName(shipobj[b1][0])[0].appendChild(b);
    }
     
@@ -266,6 +267,7 @@ async function buildrarityhtml(a1) {
 
       let f = document.createElement("div");
       f.className = "tierbanner";
+      f.draggable = false;
       let ttext = await tiertext(b3);
       f.innerHTML = ttext;
       f.style.width = sizecheck.rawresult - 10 + "px";
@@ -333,6 +335,7 @@ async function buildhulltypehtml(a1) {
         shipobj[i][0].slice(1) +
         ".png";
     }
+    b.draggable = false;
     document.getElementsByClassName(shipobj[i][0])[0].appendChild(b);
     for (let ii = 0; ii < Object.keys(shipobj[i][1]).length && ii < 5; ii++) {
       // s == t0 t1 t2 usw
@@ -347,6 +350,7 @@ async function buildhulltypehtml(a1) {
 
       let f = document.createElement("div");
       f.className = "tierbanner";
+      f.draggable = false;
       let ttext = await tiertext(Object.keys(shipobj[i][1])[ii]);
       f.innerHTML = ttext;
       f.style.width = sizecheck.rawresult - 10 + "px";
@@ -395,6 +399,7 @@ async function buildhulltypehtml(a1) {
         hulltypeidf.charAt(0).toUpperCase() +
         hulltypeidf.slice(1) +
         ".png";
+    b.draggable = false;
     document.getElementsByClassName(hulltypeidf)[0].appendChild(b);
     for (let i = 0; i < 8; i++) {
     switch (i) {
@@ -449,6 +454,7 @@ async function buildhulltypehtml(a1) {
 
       let f = document.createElement("div");
       f.className = "tierbanner";
+      f.draggable = false;
       let ttext = await tiertext(a1);
       f.innerHTML = ttext;
       f.style.width = sizecheck.rawresult - 10 + "px";
@@ -486,6 +492,7 @@ async function buildhtmlall(a1) {
         shipobj[i][0].slice(1) +
         ".png";
     }
+      b.draggable = false;
     document.getElementsByClassName(shipobj[i][0])[0].appendChild(b);
     for (let ii = 0; ii < Object.keys(shipobj[i][1]).length && ii < 5; ii++) {
       // s == t0 t1 t2 usw
@@ -500,6 +507,7 @@ async function buildhtmlall(a1) {
 
       let f = document.createElement("div");
       f.className = "tierbanner";
+      f.draggable = false;
       let ttext = await tiertext(Object.keys(shipobj[i][1])[ii]);
       f.innerHTML = ttext;
       f.style.width = sizecheck.rawresult - 10 + "px";
@@ -533,6 +541,7 @@ async function filltier(a1, a2) {
     a = document.createElement("a");
     a.className = "link";
     a.href = ships[`${a1}`][`${a2}`][i].wikiUrl;
+    a.draggable = false;
     a.target = "_blank"
     document
       .getElementsByClassName(a1)[0]
@@ -591,6 +600,7 @@ async function filltier(a1, a2) {
     a.className = "hulltype";
     a.src =
       "Assets/HullTypeIcons/" + ships[`${a1}`][`${a2}`][i].hullTypeId + ".png";
+    a.draggable = false;
     document
       .getElementsByClassName(a1)[0]
       .getElementsByClassName(a2)[0]
@@ -642,6 +652,7 @@ async function filltierspecial(a1, a2, a3) {
     a.className = "link";
     a.href = ships[`${a1}`][`${a2}`][a3[i]].wikiUrl;
     a.target = "_blank"
+    a.draggable = false;
     document
       .getElementsByClassName(a1)[0]
       .getElementsByClassName(a2)[0]
@@ -707,6 +718,7 @@ async function filltierspecial(a1, a2, a3) {
     a.className = "hulltype";
     a.src =
       "Assets/HullTypeIcons/" + ships[`${a1}`][`${a2}`][a3[i]].hullTypeId + ".png";
+    a.draggable = false;
     document
       .getElementsByClassName(a1)[0]
       .getElementsByClassName(a2)[0]
