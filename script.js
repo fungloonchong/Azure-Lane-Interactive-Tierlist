@@ -36,7 +36,27 @@ window.onload = async function () {
       false
     );
   });
-  buildhtmlall();
+  let tierfilter = document.querySelectorAll(".tierfilter");
+  tierfilter.forEach(function (tieradd) {
+    tieradd.addEventListener(
+      "click",
+      function () {
+        buildtierhtml(this.id);
+      },
+      false
+    );
+  });
+  let nationalityfilter = document.querySelectorAll(".nationality");
+  nationalityfilter.forEach(function (nationalityadd) {
+    nationalityadd.addEventListener(
+      "click",
+      function () {
+        buildnationalityhtml(this.classList[1]);
+      },
+      false
+    );
+  });
+  //buildhtmlall();
 };
 
 window.onclick = function(event) {
@@ -96,13 +116,13 @@ async function getAllIndexes(arr, val, search, useloop) {
     var indexes = [], i;
   if (useloop == false) {
     for(i = 0; i < arr.length; i++)
-        if (arr[i][search] === val)
+        if (arr[i][search] == val)
             indexes.push(i);
     } else {
     for(i = 0; i < arr.length; i++)
       if (arr[i][search] != null) {
       for(let ii = 0; ii < arr[i][search].length; ii++) {
-      if (arr[i][search][ii] === val)
+      if (arr[i][search][ii] == val)
           indexes.push(i);
     }
     }
@@ -240,6 +260,45 @@ async function tiertext(a1) {
   var result = a1.toUpperCase();
   return result;
 }
+async function buildnationalityhtml(a1) {
+  a1 = a1.replace("_", " ")
+  let shipobj = Object.entries(ships);
+  document.getElementsByClassName("main")[0].innerHTML = "";
+  if (a1 == undefined) {
+    await buildhtmlall()
+  }
+  
+  for (let i = 0; i < shipobj.length; i++) {
+  for (let ii = 0; ii < Object.keys(shipobj[i][1]).length; ii++) {
+  let index = await getAllIndexes(shipobj[i][1][Object.keys(shipobj[i][1])[ii]], a1, "nationality", false)
+  if (index.length != 0) {
+    let hullindex = i
+    let hullname = shipobj[i][0]
+    let tier = Object.keys(shipobj[i][1])[ii]
+    await buildit(hullindex, hullname, tier, index, shipobj)
+  }
+  }
+  }
+}
+
+async function buildtierhtml(a1) {
+  let shipobj = Object.entries(ships);
+  document.getElementsByClassName("main")[0].innerHTML = "";
+  if (a1 == undefined) {
+    await buildhtmlall()
+  }
+  let ii = a1.match(/\d+/)[0]
+  
+  for (let i = 0; i < shipobj.length; i++) {
+  let index = await getAllIndexes(shipobj[i][1][Object.keys(shipobj[i][1])[ii]], ii, "usagitier", false)
+  if (index.length != 0) {
+    let hullindex = i
+    let hullname = shipobj[i][0]
+    let tier = a1
+    await buildit(hullindex, hullname, tier, index, shipobj)
+  }
+  }
+}
 
 async function buildtaghtml(a1) {
   let shipobj = Object.entries(ships);
@@ -250,7 +309,7 @@ async function buildtaghtml(a1) {
   
   for (let i = 0; i < shipobj.length; i++) {
   for (let ii = 0; ii < Object.keys(shipobj[i][1]).length; ii++) {
-  let index = await getAllIndexes(shipobj[i][1][Object.keys(shipobj[i][1])[ii]], a1, "tags")
+  let index = await getAllIndexes(shipobj[i][1][Object.keys(shipobj[i][1])[ii]], a1, "tags", true)
   if (index.length != 0) {
     let hullindex = i
     let hullname = shipobj[i][0]
@@ -273,7 +332,7 @@ async function buildrarityhtml(a1) {
   }
   for (let i = 0; i < shipobj.length; i++) {
   for (let ii = 0; ii < Object.keys(shipobj[i][1]).length; ii++) {
-  let index = await getAllIndexes(shipobj[i][1][Object.keys(shipobj[i][1])[ii]], a1, "rarity", true)
+  let index = await getAllIndexes(shipobj[i][1][Object.keys(shipobj[i][1])[ii]], a1, "rarity", false)
   if (index.length != 0) {
     let hullindex = i
     let hullname = shipobj[i][0]
@@ -483,7 +542,7 @@ async function buildhulltypehtml(a1) {
         break;
     }
 
-    let index = await getAllIndexes(shipobj[idf][1][tier], a1, "hullTypeId")
+    let index = await getAllIndexes(shipobj[idf][1][tier], a1, "hullTypeId", false)
     if (index.length != 0) {
       await buildspecialtier(tier, index, hulltypeidf)
       /*console.log("Search term: ", a1)
