@@ -1,12 +1,12 @@
 body {
   background-color: #160f19;
   font-family: "Lato", sans-serif;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .main {
@@ -367,7 +367,12 @@ div.t7>div.tierbanner {
   text-align: center;
 }
 
-#Normal, #Rare, #Elite, #SuperRare, #Priority, #Decisive {
+#Normal,
+#Rare,
+#Elite,
+#SuperRare,
+#Priority,
+#Decisive {
   width: 20%;
 }
 
@@ -645,15 +650,16 @@ div.t7>div.tierbanner {
 }
 
 #n1, #n2, #n3, #n4, #n5, #n6, #n7, #n8, #n9, #n10, #n11, #n13, #n14, #n15 {
-      width: 100%;
-    z-index: 100;
-    filter: invert(100%);
+  width: 100%;
+  z-index: 100;
+  filter: invert(100%);
   position: inherit;
+  object-fit: contain;
 }
 
 #n12 {
-        width: 100%;
-    z-index: 100;
+  width: 100%;
+  z-index: 100;
   position: inherit;
 }
 
@@ -672,6 +678,7 @@ div.t7>div.tierbanner {
   background-color: DeepSkyBlue;
   position: absolute;
 }
+
 .natparent.n3back {
   z-index: 99;
   width: 100%;
@@ -679,6 +686,7 @@ div.t7>div.tierbanner {
   background-color: Crimson;
   position: absolute;
 }
+
 .natparent.n4back {
   z-index: 99;
   width: 100%;
@@ -686,6 +694,7 @@ div.t7>div.tierbanner {
   background-color: #8EE7F1;
   position: absolute;
 }
+
 .natparent.n5back {
   z-index: 99;
   width: 100%;
@@ -693,6 +702,7 @@ div.t7>div.tierbanner {
   background-color: Blue;
   position: absolute;
 }
+
 .natparent.n6back {
   z-index: 99;
   width: 100%;
@@ -700,6 +710,7 @@ div.t7>div.tierbanner {
   background-color: Red;
   position: absolute;
 }
+
 .natparent.n7back {
   z-index: 99;
   width: 100%;
@@ -707,6 +718,7 @@ div.t7>div.tierbanner {
   background-color: pink;
   position: absolute;
 }
+
 .natparent.n8back {
   z-index: 99;
   width: 100%;
@@ -714,6 +726,7 @@ div.t7>div.tierbanner {
   background-color: MediumOrchid;
   position: absolute;
 }
+
 .natparent.n9back {
   z-index: 99;
   width: 100%;
@@ -721,6 +734,7 @@ div.t7>div.tierbanner {
   background-color: Grey;
   position: absolute;
 }
+
 .natparent.n10back {
   z-index: 99;
   width: 100%;
@@ -728,6 +742,7 @@ div.t7>div.tierbanner {
   background-color: Navy;
   position: absolute;
 }
+
 .natparent.n11back {
   z-index: 99;
   width: 100%;
@@ -735,6 +750,7 @@ div.t7>div.tierbanner {
   background-color: Pink;
   position: absolute;
 }
+
 .natparent.n12back {
   z-index: 99;
   width: 100%;
@@ -742,12 +758,14 @@ div.t7>div.tierbanner {
   background-color: white;
   position: absolute;
 }
+
 .natparent.n13back {
   z-index: 99;
   width: 100%;
   height: 100%;
   position: absolute;
 }
+
 .natparent.n14back {
   z-index: 99;
   width: 100%;
@@ -755,6 +773,7 @@ div.t7>div.tierbanner {
   background-color: Crimson;
   position: absolute;
 }
+
 .natparent.n15back {
   z-index: 99;
   width: 100%;
@@ -972,15 +991,15 @@ div.t7>div.tierbanner {
 
 .legend-dropdown-content span {
   vertical-align: middle;
-    font-size: 15px;
-    display: inline-block;
+  font-size: 15px;
+  display: inline-block;
   min-width: 60%;
 }
 
 .legend-dropdown.icon1 {
   top: 5px;
   left: 5px;
-  }
+}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .legend-dropdown-content.show {
@@ -994,6 +1013,6 @@ div.t7>div.tierbanner {
 }
 
 button:focus {
-    border: none;
-    outline: none;
+  border: none;
+  outline: none;
 }

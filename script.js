@@ -59,7 +59,7 @@ window.onload = async function () {
   buildhtmlall();
 };
 
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (!event.target.matches('.' + identmain)) {
     var dropdowns = document.getElementsByClassName(identid + "-content");
     var i;
@@ -71,7 +71,7 @@ window.onclick = function(event) {
     }
     identmain = undefined
     identid = undefined
-    }
+  }
   if (!event.target.matches('.legend-dot-dropbtn')) {
     var dropdowns = document.getElementsByClassName("legend-dropdown-content");
     var i;
@@ -113,21 +113,22 @@ async function getjson() {
 }
 
 async function getAllIndexes(arr, val, search, useloop) {
-    var indexes = [], i;
+  var indexes = [],
+    i;
   if (useloop == false) {
-    for(i = 0; i < arr.length; i++)
-        if (arr[i][search] == val)
-            indexes.push(i);
-    } else {
-    for(i = 0; i < arr.length; i++)
+    for (i = 0; i < arr.length; i++)
+      if (arr[i][search] == val)
+        indexes.push(i);
+  } else {
+    for (i = 0; i < arr.length; i++)
       if (arr[i][search] != null) {
-      for(let ii = 0; ii < arr[i][search].length; ii++) {
-      if (arr[i][search][ii] == val)
-          indexes.push(i);
-    }
-    }
-    }
-    return indexes;
+        for (let ii = 0; ii < arr[i][search].length; ii++) {
+          if (arr[i][search][ii] == val)
+            indexes.push(i);
+        }
+      }
+  }
+  return indexes;
 }
 
 async function countspaces(a1) {
@@ -267,17 +268,17 @@ async function buildnationalityhtml(a1) {
   if (a1 == undefined) {
     await buildhtmlall()
   }
-  
+
   for (let i = 0; i < shipobj.length; i++) {
-  for (let ii = 0; ii < Object.keys(shipobj[i][1]).length; ii++) {
-  let index = await getAllIndexes(shipobj[i][1][Object.keys(shipobj[i][1])[ii]], a1, "nationality", false)
-  if (index.length != 0) {
-    let hullindex = i
-    let hullname = shipobj[i][0]
-    let tier = Object.keys(shipobj[i][1])[ii]
-    await buildit(hullindex, hullname, tier, index, shipobj)
-  }
-  }
+    for (let ii = 0; ii < Object.keys(shipobj[i][1]).length; ii++) {
+      let index = await getAllIndexes(shipobj[i][1][Object.keys(shipobj[i][1])[ii]], a1, "nationality", false)
+      if (index.length != 0) {
+        let hullindex = i
+        let hullname = shipobj[i][0]
+        let tier = Object.keys(shipobj[i][1])[ii]
+        await buildit(hullindex, hullname, tier, index, shipobj)
+      }
+    }
   }
 }
 
@@ -288,15 +289,15 @@ async function buildtierhtml(a1) {
     await buildhtmlall()
   }
   let ii = a1.match(/\d+/)[0]
-  
+
   for (let i = 0; i < shipobj.length; i++) {
-  let index = await getAllIndexes(shipobj[i][1][Object.keys(shipobj[i][1])[ii]], ii, "usagitier", false)
-  if (index.length != 0) {
-    let hullindex = i
-    let hullname = shipobj[i][0]
-    let tier = a1
-    await buildit(hullindex, hullname, tier, index, shipobj)
-  }
+    let index = await getAllIndexes(shipobj[i][1][Object.keys(shipobj[i][1])[ii]], ii, "usagitier", false)
+    if (index.length != 0) {
+      let hullindex = i
+      let hullname = shipobj[i][0]
+      let tier = a1
+      await buildit(hullindex, hullname, tier, index, shipobj)
+    }
   }
 }
 
@@ -306,17 +307,17 @@ async function buildtaghtml(a1) {
   if (a1 == undefined) {
     await buildhtmlall()
   }
-  
+
   for (let i = 0; i < shipobj.length; i++) {
-  for (let ii = 0; ii < Object.keys(shipobj[i][1]).length; ii++) {
-  let index = await getAllIndexes(shipobj[i][1][Object.keys(shipobj[i][1])[ii]], a1, "tags", true)
-  if (index.length != 0) {
-    let hullindex = i
-    let hullname = shipobj[i][0]
-    let tier = Object.keys(shipobj[i][1])[ii]
-    await buildit(hullindex, hullname, tier, index, shipobj)
-  }
-  }
+    for (let ii = 0; ii < Object.keys(shipobj[i][1]).length; ii++) {
+      let index = await getAllIndexes(shipobj[i][1][Object.keys(shipobj[i][1])[ii]], a1, "tags", true)
+      if (index.length != 0) {
+        let hullindex = i
+        let hullname = shipobj[i][0]
+        let tier = Object.keys(shipobj[i][1])[ii]
+        await buildit(hullindex, hullname, tier, index, shipobj)
+      }
+    }
   }
 }
 
@@ -331,20 +332,20 @@ async function buildrarityhtml(a1) {
     }
   }
   for (let i = 0; i < shipobj.length; i++) {
-  for (let ii = 0; ii < Object.keys(shipobj[i][1]).length; ii++) {
-  let index = await getAllIndexes(shipobj[i][1][Object.keys(shipobj[i][1])[ii]], a1, "rarity", false)
-  if (index.length != 0) {
-    let hullindex = i
-    let hullname = shipobj[i][0]
-    let tier = Object.keys(shipobj[i][1])[ii]
-    await buildit(hullindex, hullname, tier, index, shipobj)
-  }
-  }
+    for (let ii = 0; ii < Object.keys(shipobj[i][1]).length; ii++) {
+      let index = await getAllIndexes(shipobj[i][1][Object.keys(shipobj[i][1])[ii]], a1, "rarity", false)
+      if (index.length != 0) {
+        let hullindex = i
+        let hullname = shipobj[i][0]
+        let tier = Object.keys(shipobj[i][1])[ii]
+        await buildit(hullindex, hullname, tier, index, shipobj)
+      }
+    }
   }
 }
-  
- async function buildit(b1, b2, b3, b4, shipobj) {
-   if (document.getElementsByClassName(b2).length == 0) {
+
+async function buildit(b1, b2, b3, b4, shipobj) {
+  if (document.getElementsByClassName(b2).length == 0) {
     // Hulltype class
     let t = document.createElement("div");
     t.className = shipobj[b1][0] + " all";
@@ -365,39 +366,39 @@ async function buildrarityhtml(a1) {
         shipobj[b1][0].slice(1) +
         ".png";
     }
-     b.draggable = false;
+    b.draggable = false;
     document.getElementsByClassName(shipobj[b1][0])[0].appendChild(b);
-   }
-    
-      // s == t0 t1 t2 usw
-      let s = document.createElement("div");
-      s.className = b3;
-      let sizecheck = await tiersize(
-        b4.length
-      );
-      s.style.width = sizecheck.result;
-      s.style.marginRight = "20px";
-      document.getElementsByClassName(b2)[0].appendChild(s);
+  }
 
-      let f = document.createElement("div");
-      f.className = "tierbanner";
-      f.draggable = false;
-      let ttext = await tiertext(b3);
-      f.innerHTML = ttext;
-      f.style.width = sizecheck.rawresult - 10 + "px";
-      document
-        .getElementsByClassName(b2)[0]
-        .getElementsByClassName(b3)[0]
-        .appendChild(f);
-   
-      await filltierspecial(b2, s.className, b4);
-    }
+  // s == t0 t1 t2 usw
+  let s = document.createElement("div");
+  s.className = b3;
+  let sizecheck = await tiersize(
+    b4.length
+  );
+  s.style.width = sizecheck.result;
+  s.style.marginRight = "20px";
+  document.getElementsByClassName(b2)[0].appendChild(s);
+
+  let f = document.createElement("div");
+  f.className = "tierbanner";
+  f.draggable = false;
+  let ttext = await tiertext(b3);
+  f.innerHTML = ttext;
+  f.style.width = sizecheck.rawresult - 10 + "px";
+  document
+    .getElementsByClassName(b2)[0]
+    .getElementsByClassName(b3)[0]
+    .appendChild(f);
+
+  await filltierspecial(b2, s.className, b4);
+}
 
 async function buildhulltypehtml(a1) {
   let shipobj = Object.entries(ships);
   document.getElementsByClassName("main")[0].innerHTML = "";
-  
-    if (a1 == undefined) {
+
+  if (a1 == undefined) {
     await buildhtmlall()
   } else {
     if (a1 == "AviationBattleship" || a1 == "Monitor" || a1 == "Repairship" || a1 == "SubmarineCarrier") {
@@ -406,25 +407,25 @@ async function buildhulltypehtml(a1) {
       await buildhulltype(a1)
     }
   }
-    async function buildhulltype(a1) {
+  async function buildhulltype(a1) {
     let i
     switch (a1) {
       case "destroyer":
         i = 0
         break;
-        case "battleship":
+      case "battleship":
         i = 1
         break;
-        case "carrier":
+      case "carrier":
         i = 2
         break;
-        case "heavycruiser":
+      case "heavycruiser":
         i = 3
         break;
-        case "lightcruiser":
+      case "lightcruiser":
         i = 4
         break;
-        case "submarine":
+      case "submarine":
         i = 5
         break;
     }
@@ -475,7 +476,7 @@ async function buildhulltypehtml(a1) {
       await filltier(classname, s.className);
     }
   }
-  
+
   async function buildspecialtype(a1) {
     let tier;
     let hulltypeidf
@@ -485,15 +486,15 @@ async function buildhulltypehtml(a1) {
         hulltypeidf = "battleship"
         idf = 1
         break;
-        case "Monitor":
+      case "Monitor":
         hulltypeidf = "battleship"
         idf = 1
         break;
-        case "Repairship":
+      case "Repairship":
         hulltypeidf = "carrier"
         idf = 2
         break;
-        case "SubmarineCarrier":
+      case "SubmarineCarrier":
         hulltypeidf = "submarine"
         idf = 5
         break;
@@ -508,83 +509,83 @@ async function buildhulltypehtml(a1) {
     b.className = hulltypeidf + "banner";
     b.style.marginRight = "30px";
     b.src =
-        "Assets/TierClassBanner/" +
-        hulltypeidf.charAt(0).toUpperCase() +
-        hulltypeidf.slice(1) +
-        ".png";
+      "Assets/TierClassBanner/" +
+      hulltypeidf.charAt(0).toUpperCase() +
+      hulltypeidf.slice(1) +
+      ".png";
     b.draggable = false;
     document.getElementsByClassName(hulltypeidf)[0].appendChild(b);
     for (let i = 0; i < 8; i++) {
-    switch (i) {
-      case 0:
-        tier = "t0"
-        break;
+      switch (i) {
+        case 0:
+          tier = "t0"
+          break;
         case 1:
-        tier = "t1"
-        break;
+          tier = "t1"
+          break;
         case 2:
-        tier = "t2"
-        break;
+          tier = "t2"
+          break;
         case 3:
-        tier = "t3"
-        break;
+          tier = "t3"
+          break;
         case 4:
-        tier = "t4"
-        break;
+          tier = "t4"
+          break;
         case 5:
-        tier = "t5"
-        break;
+          tier = "t5"
+          break;
         case 6:
-        tier = "t6"
-        break;
+          tier = "t6"
+          break;
         case 7:
-        tier = "t7"
-        break;
-    }
+          tier = "t7"
+          break;
+      }
 
-    let index = await getAllIndexes(shipobj[idf][1][tier], a1, "hullTypeId", false)
-    if (index.length != 0) {
-      await buildspecialtier(tier, index, hulltypeidf)
-      /*console.log("Search term: ", a1)
-      console.log("Found index: ", index, " in: ", tier)
-      
-      for (let ii = 0; ii < index.length; ii++) {
-        console.log("Ships from index: ", shipobj[1][1][tier][index[ii]])
-      }*/
+      let index = await getAllIndexes(shipobj[idf][1][tier], a1, "hullTypeId", false)
+      if (index.length != 0) {
+        await buildspecialtier(tier, index, hulltypeidf)
+        /*console.log("Search term: ", a1)
+        console.log("Found index: ", index, " in: ", tier)
+        
+        for (let ii = 0; ii < index.length; ii++) {
+          console.log("Ships from index: ", shipobj[1][1][tier][index[ii]])
+        }*/
+      }
     }
-}
-}
+  }
   async function buildspecialtier(a1, a2, a3) {
-      // s == t0 t1 t2 usw
-      let s = document.createElement("div");
-      s.className = a1;
-      let sizecheck = await tiersize(
-        a2.length
-      );
-      s.style.width = sizecheck.result;
-      s.style.marginRight = "20px";
-      document.getElementsByClassName(a3)[0].appendChild(s);
+    // s == t0 t1 t2 usw
+    let s = document.createElement("div");
+    s.className = a1;
+    let sizecheck = await tiersize(
+      a2.length
+    );
+    s.style.width = sizecheck.result;
+    s.style.marginRight = "20px";
+    document.getElementsByClassName(a3)[0].appendChild(s);
 
-      let f = document.createElement("div");
-      f.className = "tierbanner";
-      f.draggable = false;
-      let ttext = await tiertext(a1);
-      f.innerHTML = ttext;
-      f.style.width = sizecheck.rawresult - 10 + "px";
-      document
-        .getElementsByClassName(a3)[0]
-        .getElementsByClassName(a1)[0]
-        .appendChild(f);
+    let f = document.createElement("div");
+    f.className = "tierbanner";
+    f.draggable = false;
+    let ttext = await tiertext(a1);
+    f.innerHTML = ttext;
+    f.style.width = sizecheck.rawresult - 10 + "px";
+    document
+      .getElementsByClassName(a3)[0]
+      .getElementsByClassName(a1)[0]
+      .appendChild(f);
 
-      await filltierspecial(a3, s.className, a2);
-    }
+    await filltierspecial(a3, s.className, a2);
+  }
 }
 
 async function buildhtmlall(a1) {
   let shipobj = Object.entries(ships);
   document.getElementsByClassName("main")[0].innerHTML = "";
-  
-    for (let i = 0; i < shipobj.length; i++) {
+
+  for (let i = 0; i < shipobj.length; i++) {
     // Hulltype class
     let t = document.createElement("div");
     t.className = shipobj[i][0] + " all";
@@ -605,7 +606,7 @@ async function buildhtmlall(a1) {
         shipobj[i][0].slice(1) +
         ".png";
     }
-      b.draggable = false;
+    b.draggable = false;
     document.getElementsByClassName(shipobj[i][0])[0].appendChild(b);
     for (let ii = 0; ii < Object.keys(shipobj[i][1]).length && ii < 5; ii++) {
       // s == t0 t1 t2 usw
@@ -633,7 +634,7 @@ async function buildhtmlall(a1) {
     }
   }
 }
-  
+
 async function filltier(a1, a2) {
   for (let i = 0; i < ships[`${a1}`][`${a2}`].length; i++) {
     // Main div
@@ -753,7 +754,7 @@ async function filltier(a1, a2) {
 }
 
 async function filltierspecial(a1, a2, a3) {
-    for (let i = 0; i < a3.length; i++) {
+  for (let i = 0; i < a3.length; i++) {
     // Main div
     let a = document.createElement("div");
     a.className = "parent";

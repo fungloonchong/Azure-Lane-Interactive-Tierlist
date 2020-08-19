@@ -1,352 +1,172 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Ah yes Tier List</title>
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="./script.js"></script>
-  </head>
 
-  <body>
-    <div class="dropdowns">
-      <div class="hulltype-dropdown">
-        <button onclick="myFunction(this.classList)" class="hulltype-dropbtn">
-          Hull Type
-        </button>
-        <div id="hulltype-dropdown" class="hulltype-dropdown-content">
-          <img
-            class="hulltypefilter"
-            id="destroyer"
-            src="Assets/HullTypeIcons/Destroyer.png"
-          />
-          <img
-            class="hulltypefilter"
-            id="battleship"
-            src="Assets/HullTypeIcons/Battleship.png"
-          />
-          <img
-            class="hulltypefilter"
-            id="carrier"
-            src="Assets/HullTypeIcons/AircraftCarrier.png"
-          />
-          <img
-            class="hulltypefilter"
-            id="heavycruiser"
-            src="Assets/HullTypeIcons/HeavyCruiser.png"
-          />
-          <img
-            class="hulltypefilter"
-            id="lightcruiser"
-            src="Assets/HullTypeIcons/LightCruiser.png"
-          />
-          <img
-            class="hulltypefilter"
-            id="submarine"
-            src="Assets/HullTypeIcons/Submarine.png"
-          />
-          <img
-            class="hulltypefilter"
-            id="AviationBattleship"
-            src="Assets/HullTypeIcons/AviationBattleship.png"
-          />
-          <img
-            class="hulltypefilter"
-            id="Monitor"
-            src="Assets/HullTypeIcons/Monitor.png"
-          />
-          <img
-            class="hulltypefilter"
-            id="Repairship"
-            src="Assets/HullTypeIcons/Repairship.png"
-          />
-          <img
-            class="hulltypefilter"
-            id="SubmarineCarrier"
-            src="Assets/HullTypeIcons/SubmarineCarrier.png"
-          />
-        </div>
+<head>
+  <title>Ah yes Tier List</title>
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet" />
+  <script src="./script.js"></script>
+</head>
+
+<body>
+  <div class="dropdowns">
+    <div class="hulltype-dropdown">
+      <button onclick="myFunction(this.classList)" class="hulltype-dropbtn">
+        Hull Type
+      </button>
+      <div id="hulltype-dropdown" class="hulltype-dropdown-content">
+        <img class="hulltypefilter" id="destroyer" src="Assets/HullTypeIcons/Destroyer.png" />
+        <img class="hulltypefilter" id="battleship" src="Assets/HullTypeIcons/Battleship.png" />
+        <img class="hulltypefilter" id="carrier" src="Assets/HullTypeIcons/AircraftCarrier.png" />
+        <img class="hulltypefilter" id="heavycruiser" src="Assets/HullTypeIcons/HeavyCruiser.png" />
+        <img class="hulltypefilter" id="lightcruiser" src="Assets/HullTypeIcons/LightCruiser.png" />
+        <img class="hulltypefilter" id="submarine" src="Assets/HullTypeIcons/Submarine.png" />
+        <img class="hulltypefilter" id="AviationBattleship" src="Assets/HullTypeIcons/AviationBattleship.png" />
+        <img class="hulltypefilter" id="Monitor" src="Assets/HullTypeIcons/Monitor.png" />
+        <img class="hulltypefilter" id="Repairship" src="Assets/HullTypeIcons/Repairship.png" />
+        <img class="hulltypefilter" id="SubmarineCarrier" src="Assets/HullTypeIcons/SubmarineCarrier.png" />
       </div>
-      <div class="rarity-dropdown">
-        <button onclick="myFunction(this.classList)" class="rarity-dropbtn">
-          Rarity
-        </button>
-        <div id="rarity-dropdown" class="rarity-dropdown-content">
-          <img
-            class="rarityfilter"
-            id="Normal"
-            src="Assets/RarityBGs/Normal.png"
-          />
-          <img class="rarityfilter" id="Rare" src="Assets/RarityBGs/Rare.png" />
-          <img
-            class="rarityfilter"
-            id="Elite"
-            src="Assets/RarityBGs/Elite.png"
-          />
-          <img
-            class="rarityfilter"
-            id="SuperRare"
-            src="Assets/RarityBGs/SuperRare.png"
-          />
-          <img
-            class="rarityfilter"
-            id="Priority"
-            src="Assets/RarityBGs/Priority.png"
-          />
-          <img
-            class="rarityfilter"
-            id="Decisive"
-            src="Assets/RarityBGs/Decisive.png"
-          />
-        </div>
+    </div>
+    <div class="rarity-dropdown">
+      <button onclick="myFunction(this.classList)" class="rarity-dropbtn">
+        Rarity
+      </button>
+      <div id="rarity-dropdown" class="rarity-dropdown-content">
+        <img class="rarityfilter" id="Normal" src="Assets/RarityBGs/Normal.png" />
+        <img class="rarityfilter" id="Rare" src="Assets/RarityBGs/Rare.png" />
+        <img class="rarityfilter" id="Elite" src="Assets/RarityBGs/Elite.png" />
+        <img class="rarityfilter" id="SuperRare" src="Assets/RarityBGs/SuperRare.png" />
+        <img class="rarityfilter" id="Priority" src="Assets/RarityBGs/Priority.png" />
+        <img class="rarityfilter" id="Decisive" src="Assets/RarityBGs/Decisive.png" />
       </div>
-      <div class="tag-dropdown">
-        <button onclick="myFunction(this.classList)" class="tag-dropbtn">
-          Tag
-        </button>
-        <div id="tag-dropdown" class="tag-dropdown-content">
-          <img class="tagfilter" id="AA" src="Assets/TagIcons/EN/AA.png" />
-          <img class="tagfilter" id="AS" src="Assets/TagIcons/EN/AS.png" />
-          <img class="tagfilter" id="BA" src="Assets/TagIcons/EN/BA.png" />
-          <img
-            class="tagfilter"
-            id="BUFFAA"
-            src="Assets/TagIcons/EN/BUFFAA.png"
-          />
-          <img
-            class="tagfilter"
-            id="BUFFAIR"
-            src="Assets/TagIcons/EN/BUFFAIR.png"
-          />
-          <img
-            class="tagfilter"
-            id="BUFFDEF"
-            src="Assets/TagIcons/EN/BUFFDEF.png"
-          />
-          <img
-            class="tagfilter"
-            id="BUFFDMG"
-            src="Assets/TagIcons/EN/BUFFDMG.png"
-          />
-          <img
-            class="tagfilter"
-            id="BUFFEXP"
-            src="Assets/TagIcons/EN/BUFFEXP.png"
-          />
-          <img
-            class="tagfilter"
-            id="BUFFSHL"
-            src="Assets/TagIcons/EN/BUFFSHL.png"
-          />
-          <img
-            class="tagfilter"
-            id="BUFFTRP"
-            src="Assets/TagIcons/EN/BUFFTRP.png"
-          />
-          <img class="tagfilter" id="DEF" src="Assets/TagIcons/EN/DEF.png" />
-          <img class="tagfilter" id="HEAL" src="Assets/TagIcons/EN/HEAL.png" />
-          <img class="tagfilter" id="MG+1" src="Assets/TagIcons/EN/MG+1.png" />
-          <img class="tagfilter" id="TRP" src="Assets/TagIcons/EN/TRP.png" />
-        </div>
+    </div>
+    <div class="tag-dropdown">
+      <button onclick="myFunction(this.classList)" class="tag-dropbtn">
+        Tag
+      </button>
+      <div id="tag-dropdown" class="tag-dropdown-content">
+        <img class="tagfilter" id="AA" src="Assets/TagIcons/EN/AA.png" />
+        <img class="tagfilter" id="AS" src="Assets/TagIcons/EN/AS.png" />
+        <img class="tagfilter" id="BA" src="Assets/TagIcons/EN/BA.png" />
+        <img class="tagfilter" id="BUFFAA" src="Assets/TagIcons/EN/BUFFAA.png" />
+        <img class="tagfilter" id="BUFFAIR" src="Assets/TagIcons/EN/BUFFAIR.png" />
+        <img class="tagfilter" id="BUFFDEF" src="Assets/TagIcons/EN/BUFFDEF.png" />
+        <img class="tagfilter" id="BUFFDMG" src="Assets/TagIcons/EN/BUFFDMG.png" />
+        <img class="tagfilter" id="BUFFEXP" src="Assets/TagIcons/EN/BUFFEXP.png" />
+        <img class="tagfilter" id="BUFFSHL" src="Assets/TagIcons/EN/BUFFSHL.png" />
+        <img class="tagfilter" id="BUFFTRP" src="Assets/TagIcons/EN/BUFFTRP.png" />
+        <img class="tagfilter" id="DEF" src="Assets/TagIcons/EN/DEF.png" />
+        <img class="tagfilter" id="HEAL" src="Assets/TagIcons/EN/HEAL.png" />
+        <img class="tagfilter" id="MG+1" src="Assets/TagIcons/EN/MG+1.png" />
+        <img class="tagfilter" id="TRP" src="Assets/TagIcons/EN/TRP.png" />
       </div>
-      <div class="tier-dropdown">
-        <button onclick="myFunction(this.classList)" class="tier-dropbtn">
-          Tier
-        </button>
-        <div id="tier-dropdown" class="tier-dropdown-content">
-          <div class="tierfilter" id="t0" >T0</div>
-          <div class="tierfilter" id="t1" >T1</div>
-          <div class="tierfilter" id="t2" >T2</div>
-          <div class="tierfilter" id="t3" >T3</div>
-          <div class="tierfilter" id="t4" >T4</div>
-          <div class="tierfilter" id="t5" >T5</div>
-          <div class="tierfilter" id="t6" >T6</div>
-          <div class="tierfilter" id="t7" >T7</div>
-        </div>
+    </div>
+    <div class="tier-dropdown">
+      <button onclick="myFunction(this.classList)" class="tier-dropbtn">
+        Tier
+      </button>
+      <div id="tier-dropdown" class="tier-dropdown-content">
+        <div class="tierfilter" id="t0">T0</div>
+        <div class="tierfilter" id="t1">T1</div>
+        <div class="tierfilter" id="t2">T2</div>
+        <div class="tierfilter" id="t3">T3</div>
+        <div class="tierfilter" id="t4">T4</div>
+        <div class="tierfilter" id="t5">T5</div>
+        <div class="tierfilter" id="t6">T6</div>
+        <div class="tierfilter" id="t7">T7</div>
       </div>
-      <div class="nationality-dropdown">
-        <button
-          onclick="myFunction(this.classList)"
-          class="nationality-dropbtn"
-        >
-          Nationality
-        </button>
-        <div id="nationality-dropdown" class="nationality-dropdown-content">
-          <div class="natparent">
-            <img class="natparent n1back" />
-            <img
-              class="natparent Bilibili nationality"
-              id="n1"
-              src="Assets/Nationalities/Bilibili.png"
-            />
-          </div>
-          <div class="natparent">
-            <img class="natparent n2back" />
-            <img
-              class="natparent Eagle_Union nationality"
-              id="n2"
-              src="Assets/Nationalities/EagleUnion.png"
-            />
-          </div>
-          <div class="natparent">
-            <img class="natparent n3back" />
-            <img
-              class="natparent Eastern_Radiance nationality"
-              id="n3"
-              src="Assets/Nationalities/EasternRadiance.png"
-            />
-          </div>
-          <div class="natparent">
-            <img class="natparent n4back" />
-            <img
-              class="natparent Hololive nationality"
-              id="n4"
-              src="Assets/Nationalities/Hololive.png"
-            />
-          </div>
-          <div class="natparent">
-            <img class="natparent n5back" />
-            <img
-              class="natparent Iris_Libre nationality"
-              id="n5"
-              src="Assets/Nationalities/IrisLibre.png"
-            />
-          </div>
-          <div class="natparent">
-            <img class="natparent n6back" />
-            <img
-              class="natparent Ironblood nationality"
-              id="n6"
-              src="Assets/Nationalities/Ironblood.png"
-            />
-          </div>
-          <div class="natparent">
-            <img class="natparent n7back" />
-            <img
-              class="natparent KizunaAI nationality"
-              id="n7"
-              src="Assets/Nationalities/KizunaAI.png"
-            />
-          </div>
-          <div class="natparent">
-            <img class="natparent n8back" />
-            <img
-              class="natparent Neptunia nationality"
-              id="n8"
-              src="Assets/Nationalities/Neptunia.png"
-            />
-          </div>
-          <div class="natparent">
-            <img class="natparent n9back" />
-            <img
-              class="natparent North_Union nationality"
-              id="n9"
-              src="Assets/Nationalities/NorthUnion.png"
-            />
-          </div>
-          <div class="natparent">
-            <img class="natparent n10back" />
-            <img
-              class="natparent Royal_Navy nationality"
-              id="n10"
-              src="Assets/Nationalities/RoyalNavy.png"
-            />
-          </div>
-          <div class="natparent">
-            <img class="natparent n11back" />
-            <img
-              class="natparent Sakura_Empire nationality"
-              id="n11"
-              src="Assets/Nationalities/SakuraEmpire.png"
-            />
-          </div>
-          <div class="natparent">
-            <img class="natparent n12back" />
-            <img
-              class="natparent Sardegna_Empire nationality"
-              id="n12"
-              src="Assets/Nationalities/SardegnaEmpire.png"
-            />
-          </div>
-          <div class="natparent">
-            <img class="natparent n13back" />
-            <img
-              class="natparent Universal nationality"
-              id="n13"
-              src="Assets/Nationalities/Universal.png"
-            />
-          </div>
-          <div class="natparent">
-            <img class="natparent n14back" />
-            <img
-              class="natparent Utawarerumono nationality"
-              id="n14"
-              src="Assets/Nationalities/Utawarerumono.png"
-            />
-          </div>
-          <div class="natparent">
-            <img class="natparent n15back" />
-            <img
-              class="natparent Vichya_Dominion nationality"
-              id="n15"
-              src="Assets/Nationalities/VichyaDominion.png"
-            />
-          </div>
+    </div>
+    <div class="nationality-dropdown">
+      <button onclick="myFunction(this.classList)" class="nationality-dropbtn">
+        Nationality
+      </button>
+      <div id="nationality-dropdown" class="nationality-dropdown-content">
+        <div class="natparent">
+          <img class="natparent n1back" />
+          <img class="natparent Bilibili nationality" id="n1" src="Assets/Nationalities/Bilibili.png" />
+        </div>
+        <div class="natparent">
+          <img class="natparent n2back" />
+          <img class="natparent Eagle_Union nationality" id="n2" src="Assets/Nationalities/EagleUnion.png" />
+        </div>
+        <div class="natparent">
+          <img class="natparent n3back" />
+          <img class="natparent Eastern_Radiance nationality" id="n3" src="Assets/Nationalities/EasternRadiance.png" />
+        </div>
+        <div class="natparent">
+          <img class="natparent n4back" />
+          <img class="natparent Hololive nationality" id="n4" src="Assets/Nationalities/Hololive.png" />
+        </div>
+        <div class="natparent">
+          <img class="natparent n5back" />
+          <img class="natparent Iris_Libre nationality" id="n5" src="Assets/Nationalities/IrisLibre.png" />
+        </div>
+        <div class="natparent">
+          <img class="natparent n6back" />
+          <img class="natparent Ironblood nationality" id="n6" src="Assets/Nationalities/Ironblood.png" />
+        </div>
+        <div class="natparent">
+          <img class="natparent n7back" />
+          <img class="natparent KizunaAI nationality" id="n7" src="Assets/Nationalities/KizunaAI.png" />
+        </div>
+        <div class="natparent">
+          <img class="natparent n8back" />
+          <img class="natparent Neptunia nationality" id="n8" src="Assets/Nationalities/Neptunia.png" />
+        </div>
+        <div class="natparent">
+          <img class="natparent n9back" />
+          <img class="natparent North_Union nationality" id="n9" src="Assets/Nationalities/NorthUnion.png" />
+        </div>
+        <div class="natparent">
+          <img class="natparent n10back" />
+          <img class="natparent Royal_Navy nationality" id="n10" src="Assets/Nationalities/RoyalNavy.png" />
+        </div>
+        <div class="natparent">
+          <img class="natparent n11back" />
+          <img class="natparent Sakura_Empire nationality" id="n11" src="Assets/Nationalities/SakuraEmpire.png" />
+        </div>
+        <div class="natparent">
+          <img class="natparent n12back" />
+          <img class="natparent Sardegna_Empire nationality" id="n12" src="Assets/Nationalities/SardegnaEmpire.png" />
+        </div>
+        <div class="natparent">
+          <img class="natparent n13back" />
+          <img class="natparent Universal nationality" id="n13" src="Assets/Nationalities/Universal.png" />
+        </div>
+        <div class="natparent">
+          <img class="natparent n14back" />
+          <img class="natparent Utawarerumono nationality" id="n14" src="Assets/Nationalities/Utawarerumono.png" />
+        </div>
+        <div class="natparent">
+          <img class="natparent n15back" />
+          <img class="natparent Vichya_Dominion nationality" id="n15" src="Assets/Nationalities/VichyaDominion.png" />
         </div>
       </div>
     </div>
-    <div class="main"></div>
-    <div class="dropdownsbot">
-      <div class="legend-dropdowns">
-        <button onclick="legenddropdown()" class="legend-dot-dropbtn">?</button>
+  </div>
+  <div class="main"></div>
+  <div class="dropdownsbot">
+    <div class="legend-dropdowns">
+      <button onclick="legenddropdown()" class="legend-dot-dropbtn">?</button>
 
-        <div id="legend-dropdown" class="legend-dropdown-content">
-          <img class="legendicon" src="Assets/TagIcons/EN/AA.png" /><span
-            >Anti-Air</span
-          >
-          <img class="legendicon" src="Assets/TagIcons/EN/AS.png" /><span
-            >Anti-Submarine</span
-          >
-          <img class="legendicon" src="Assets/TagIcons/EN/BA.png" /><span
-            >Barrage/Aerial</span
-          >
-          <img class="legendicon" src="Assets/TagIcons/EN/BUFFAA.png" /><span
-            >Anti-Air Buff</span
-          >
-          <img class="legendicon" src="Assets/TagIcons/EN/BUFFAIR.png" /><span
-            >Air Power Buff</span
-          >
-          <img class="legendicon" src="Assets/TagIcons/EN/BUFFDEF.png" /><span
-            >Defense Buff</span
-          >
-          <img class="legendicon" src="Assets/TagIcons/EN/BUFFDMG.png" /><span
-            >Damage Buff</span
-          >
-          <img class="legendicon" src="Assets/TagIcons/EN/BUFFEXP.png" /><span
-            >Experience Buff</span
-          >
-          <img class="legendicon" src="Assets/TagIcons/EN/BUFFSHL.png" /><span
-            >Shelling Buff</span
-          >
-          <img class="legendicon" src="Assets/TagIcons/EN/BUFFTRP.png" /><span
-            >Torpedo Buff</span
-          >
-          <img class="legendicon" src="Assets/TagIcons/EN/DEF.png" /><span
-            >Defense</span
-          >
-          <img class="legendicon" src="Assets/TagIcons/EN/HEAL.png" /><span
-            >Healing</span
-          >
-          <img class="legendicon" src="Assets/TagIcons/EN/MG+1.png" /><span
-            >Main Gun +1</span
-          >
-          <img class="legendicon" src="Assets/TagIcons/EN/TRP.png" /><span
-            >Torpedo</span
-          >
-        </div>
+      <div id="legend-dropdown" class="legend-dropdown-content">
+        <img class="legendicon" src="Assets/TagIcons/EN/AA.png" /><span>Anti-Air</span>
+        <img class="legendicon" src="Assets/TagIcons/EN/AS.png" /><span>Anti-Submarine</span>
+        <img class="legendicon" src="Assets/TagIcons/EN/BA.png" /><span>Barrage/Aerial</span>
+        <img class="legendicon" src="Assets/TagIcons/EN/BUFFAA.png" /><span>Anti-Air Buff</span>
+        <img class="legendicon" src="Assets/TagIcons/EN/BUFFAIR.png" /><span>Air Power Buff</span>
+        <img class="legendicon" src="Assets/TagIcons/EN/BUFFDEF.png" /><span>Defense Buff</span>
+        <img class="legendicon" src="Assets/TagIcons/EN/BUFFDMG.png" /><span>Damage Buff</span>
+        <img class="legendicon" src="Assets/TagIcons/EN/BUFFEXP.png" /><span>Experience Buff</span>
+        <img class="legendicon" src="Assets/TagIcons/EN/BUFFSHL.png" /><span>Shelling Buff</span>
+        <img class="legendicon" src="Assets/TagIcons/EN/BUFFTRP.png" /><span>Torpedo Buff</span>
+        <img class="legendicon" src="Assets/TagIcons/EN/DEF.png" /><span>Defense</span>
+        <img class="legendicon" src="Assets/TagIcons/EN/HEAL.png" /><span>Healing</span>
+        <img class="legendicon" src="Assets/TagIcons/EN/MG+1.png" /><span>Main Gun +1</span>
+        <img class="legendicon" src="Assets/TagIcons/EN/TRP.png" /><span>Torpedo</span>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
