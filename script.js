@@ -7,6 +7,7 @@ window.onload = async function () {
   maincont = document.getElementsByClassName("main")[0];
   ships = await getjson();
   let gethulltype = document.querySelectorAll(".hulltypefilter");
+  await nodrag("hulltypefilter")
   gethulltype.forEach(function (hulltypeadd) {
     hulltypeadd.addEventListener(
       "click",
@@ -17,6 +18,7 @@ window.onload = async function () {
     );
   });
   let rarityfilter = document.querySelectorAll(".rarityfilter");
+  await nodrag("rarityfilter")
   rarityfilter.forEach(function (rarityadd) {
     rarityadd.addEventListener(
       "click",
@@ -27,6 +29,7 @@ window.onload = async function () {
     );
   });
   let tagfilter = document.querySelectorAll(".tagfilter");
+  await nodrag("tagfilter")
   tagfilter.forEach(function (tagadd) {
     tagadd.addEventListener(
       "click",
@@ -37,6 +40,7 @@ window.onload = async function () {
     );
   });
   let tierfilter = document.querySelectorAll(".tierfilter");
+  await nodrag("tierfilter")
   tierfilter.forEach(function (tieradd) {
     tieradd.addEventListener(
       "click",
@@ -47,6 +51,7 @@ window.onload = async function () {
     );
   });
   let nationalityfilter = document.querySelectorAll(".nationality");
+  await nodrag("nationality")
   nationalityfilter.forEach(function (nationalityadd) {
     nationalityadd.addEventListener(
       "click",
@@ -56,7 +61,17 @@ window.onload = async function () {
       false
     );
   });
-  buildhtmlall();
+  //buildhtmlall();
+  async function nodrag(a1) {
+  var images = document.getElementsByClassName(a1);
+    var i
+    for (i = 0; i < images.length; i++) {
+    var addnodrag = images[i];
+      if (addnodrag.draggable == true) {
+        addnodrag.draggable = false;
+      }
+    }
+  }
 };
 
 window.onclick = function (event) {
