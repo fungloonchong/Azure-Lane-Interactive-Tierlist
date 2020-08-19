@@ -139,6 +139,7 @@ body {
   font-size: 12px;
   width: 68px;
   text-align: center;
+  text-shadow: 2px 1px #00000070;
   color: white;
   z-index: 10;
   position: absolute;
@@ -152,6 +153,7 @@ body {
   line-height: 9px;
   width: 68px;
   text-align: center;
+  text-shadow: 2px 1px #00000070;
   color: white;
   z-index: 10;
   position: absolute;
@@ -164,6 +166,7 @@ div.t0>div.tierbanner {
   background-image: linear-gradient(#ff6d00, #ff9900);
   border-radius: 10px;
   text-align: center;
+  text-shadow: 4px 2px #00000070;
   height: 45px;
   line-height: 45px;
   color: white;
@@ -175,6 +178,7 @@ div.t1>div.tierbanner {
   background-image: linear-gradient(#fe016e, #fe012f);
   border-radius: 10px;
   text-align: center;
+  text-shadow: 4px 2px #00000070;
   height: 45px;
   line-height: 45px;
   color: white;
@@ -186,6 +190,7 @@ div.t2>div.tierbanner {
   background-image: linear-gradient(#ff0a96, #ff5cd1);
   border-radius: 10px;
   text-align: center;
+  text-shadow: 4px 2px #00000070;
   height: 45px;
   line-height: 45px;
   color: white;
@@ -197,6 +202,7 @@ div.t3>div.tierbanner {
   background-image: linear-gradient(#b002ff, #9320ff);
   border-radius: 10px;
   text-align: center;
+  text-shadow: 4px 2px #00000070;
   height: 45px;
   line-height: 45px;
   color: white;
@@ -208,6 +214,7 @@ div.t4>div.tierbanner {
   background-image: linear-gradient(#009eff, #0056fe);
   border-radius: 10px;
   text-align: center;
+  text-shadow: 4px 2px #00000070;
   height: 45px;
   line-height: 45px;
   color: white;
@@ -216,9 +223,10 @@ div.t4>div.tierbanner {
 }
 
 div.t5>div.tierbanner {
-  background-image: linear-gradient(#1e8dff, #3c9dfe);
+  background-image: linear-gradient(#009eff, #0056fe);
   border-radius: 10px;
   text-align: center;
+  text-shadow: 4px 2px #00000070;
   height: 45px;
   line-height: 45px;
   color: white;
@@ -227,9 +235,10 @@ div.t5>div.tierbanner {
 }
 
 div.t6>div.tierbanner {
-  background-image: linear-gradient(#1e8dff, #3c9dfe);
+  background-image: linear-gradient(#009eff, #0056fe);
   border-radius: 10px;
   text-align: center;
+  text-shadow: 4px 2px #00000070;
   height: 45px;
   line-height: 45px;
   color: white;
@@ -238,9 +247,10 @@ div.t6>div.tierbanner {
 }
 
 div.t7>div.tierbanner {
-  background-image: linear-gradient(#1e8dff, #3c9dfe);
+  background-image: linear-gradient(#009eff, #0056fe);
   border-radius: 10px;
   text-align: center;
+  text-shadow: 4px 2px #00000070;
   height: 45px;
   line-height: 45px;
   color: white;
@@ -367,12 +377,7 @@ div.t7>div.tierbanner {
   text-align: center;
 }
 
-#Normal,
-#Rare,
-#Elite,
-#SuperRare,
-#Priority,
-#Decisive {
+#Normal, #Rare, #Elite, #SuperRare, #Priority, #Decisive {
   width: 20%;
 }
 
@@ -786,6 +791,7 @@ div.t7>div.tierbanner {
   background-image: linear-gradient(#ff6d00, #ff9900);
   border-radius: 10px;
   text-align: center;
+  text-shadow: 2px 1px #00000070;
   height: 25px;
   line-height: 25px;
   color: white;
@@ -800,6 +806,7 @@ div.t7>div.tierbanner {
   background-image: linear-gradient(#fe016e, #fe012f);
   border-radius: 10px;
   text-align: center;
+  text-shadow: 2px 1px #00000070;
   height: 25px;
   line-height: 25px;
   color: white;
@@ -814,6 +821,7 @@ div.t7>div.tierbanner {
   background-image: linear-gradient(#ff0a96, #ff5cd1);
   border-radius: 10px;
   text-align: center;
+  text-shadow: 2px 1px #00000070;
   height: 25px;
   line-height: 25px;
   color: white;
@@ -828,6 +836,7 @@ div.t7>div.tierbanner {
   background-image: linear-gradient(#b002ff, #9320ff);
   border-radius: 10px;
   text-align: center;
+  text-shadow: 2px 1px #00000070;
   height: 25px;
   line-height: 25px;
   color: white;
@@ -842,6 +851,7 @@ div.t7>div.tierbanner {
   background-image: linear-gradient(#009eff, #0056fe);
   border-radius: 10px;
   text-align: center;
+  text-shadow: 2px 1px #00000070;
   height: 25px;
   line-height: 25px;
   color: white;
@@ -853,9 +863,10 @@ div.t7>div.tierbanner {
 }
 
 #t5.tierfilter {
-  background-image: linear-gradient(#1e8dff, #3c9dfe);
+  background-image: linear-gradient(#009eff, #0056fe);
   border-radius: 10px;
   text-align: center;
+  text-shadow: 2px 1px #00000070;
   height: 25px;
   line-height: 25px;
   color: white;
@@ -867,9 +878,10 @@ div.t7>div.tierbanner {
 }
 
 #t6.tierfilter {
-  background-image: linear-gradient(#1e8dff, #3c9dfe);
+  background-image: linear-gradient(#009eff, #0056fe);
   border-radius: 10px;
   text-align: center;
+  text-shadow: 2px 1px #00000070;
   height: 25px;
   line-height: 25px;
   color: white;
@@ -881,9 +893,10 @@ div.t7>div.tierbanner {
 }
 
 #t7.tierfilter {
-  background-image: linear-gradient(#1e8dff, #3c9dfe);
+  background-image: linear-gradient(#009eff, #0056fe);
   border-radius: 10px;
   text-align: center;
+  text-shadow: 2px 1px #00000070;
   height: 25px;
   line-height: 25px;
   color: white;
