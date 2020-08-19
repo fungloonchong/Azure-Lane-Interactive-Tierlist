@@ -63,10 +63,10 @@ window.onload = async function () {
   });
   buildhtmlall();
   async function nodrag(a1) {
-  var images = document.getElementsByClassName(a1);
+    var images = document.getElementsByClassName(a1);
     var i
     for (i = 0; i < images.length; i++) {
-    var addnodrag = images[i];
+      var addnodrag = images[i];
       if (addnodrag.draggable == true) {
         addnodrag.draggable = false;
       }
@@ -97,6 +97,10 @@ window.onclick = function (event) {
       }
     }
   }
+}
+
+async function shipnamecheck() {
+
 }
 
 async function myFunction(a1) {
