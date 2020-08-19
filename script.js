@@ -56,7 +56,7 @@ window.onload = async function () {
       false
     );
   });
-  //buildhtmlall();
+  buildhtmlall();
 };
 
 window.onclick = function(event) {
