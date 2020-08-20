@@ -2,6 +2,9 @@ let maincont;
 let ships;
 let identid;
 let identmain;
+let language;
+let languageid = "en";
+
 
 window.onload = async function () {
   maincont = document.getElementsByClassName("main")[0];
@@ -61,7 +64,18 @@ window.onload = async function () {
       false
     );
   });
-  buildhtmlall();
+  // Namechange selector
+  let langchange = document.querySelectorAll(".lang");
+  langchange.forEach(function (langadd) {
+    langadd.addEventListener(
+      "click",
+      function () {
+        shipnamecheck(this.classList[1], this.id);
+      },
+      false
+    );
+  });
+  //buildhtmlall();
   async function nodrag(a1) {
     var images = document.getElementsByClassName(a1);
     var i
@@ -98,9 +112,147 @@ window.onclick = function (event) {
     }
   }
 }
-
-async function shipnamecheck() {
-
+// Namechange function
+async function shipnamecheck(a1, a2) {
+  switch (a1) {
+    case "en":
+      languageid = "en"
+      if (!document.getElementsByClassName("en")[0].classList.contains('active')) {
+        document.getElementsByClassName("en")[0].classList.add('active')
+      }
+      document.getElementsByClassName("jp")[0].classList.remove('active');
+      document.getElementsByClassName("cn")[0].classList.remove('active');
+      for (let i = 0; i < document.getElementsByClassName("text_en").length; i++) {
+        if (!document.getElementsByClassName("text_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("text_en")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("text_jp")[i].classList.contains('show')) {
+          document.getElementsByClassName("text_jp")[i].classList.remove('show')
+        }
+        if (document.getElementsByClassName("text_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("text_cn")[i].classList.remove('show')
+        }
+      }
+      for (let i = 0; i < document.getElementsByClassName("tagfilter eng").length; i++) {
+        if (!document.getElementsByClassName("tagfilter eng")[i].classList.contains('show')) {
+          document.getElementsByClassName("tagfilter eng")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("tagfilter cna")[i].classList.contains('show')) {
+          document.getElementsByClassName("tagfilter cna")[i].classList.remove('show')
+        }
+      }
+      for (let i = 0; i < document.getElementsByClassName("legendicon eng").length; i++) {
+        if (!document.getElementsByClassName("legendicon eng")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendicon eng")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("legendicon cna")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendicon cna")[i].classList.remove('show')
+        }
+      }
+      for (let i = 0; i < document.getElementsByClassName("legendspan eng").length; i++) {
+        if (!document.getElementsByClassName("legendspan eng")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendspan eng")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("legendspan cna")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendspan cna")[i].classList.remove('show')
+        }
+      }
+      for (let i = 0; i < document.getElementsByClassName("tags eng").length; i++) {
+        if (!document.getElementsByClassName("tags eng")[i].classList.contains('show')) {
+          document.getElementsByClassName("tags eng")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("tags cna")[i].classList.contains('show')) {
+          document.getElementsByClassName("tags cna")[i].classList.remove('show')
+        }
+        for (let ii = 0; ii < document.getElementsByClassName("tags eng")[i].children.length; ii++) {
+          if (!document.getElementsByClassName("tags eng")[i].children[ii].classList.contains('show')) {
+            document.getElementsByClassName("tags eng")[i].children[ii].classList.add('show')
+          }
+          if (document.getElementsByClassName("tags cna")[i].children[ii].classList.contains('show')) {
+            document.getElementsByClassName("tags cna")[i].children[ii].classList.remove('show')
+          }
+        }
+      }
+      break;
+    case "jp":
+      languageid = "jp"
+      if (!document.getElementsByClassName("jp")[0].classList.contains('active')) {
+        document.getElementsByClassName("jp")[0].classList.add('active')
+      }
+      document.getElementsByClassName("en")[0].classList.remove('active');
+      document.getElementsByClassName("cn")[0].classList.remove('active');
+      for (let i = 0; i < document.getElementsByClassName("text_jp").length; i++) {
+        if (!document.getElementsByClassName("text_jp")[i].classList.contains('show')) {
+          document.getElementsByClassName("text_jp")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("text_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("text_en")[i].classList.remove('show')
+        }
+        if (document.getElementsByClassName("text_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("text_cn")[i].classList.remove('show')
+        }
+      }
+      break;
+    case "cn":
+      languageid = "cn"
+      if (!document.getElementsByClassName("cn")[0].classList.contains('active')) {
+        document.getElementsByClassName("cn")[0].classList.add('active')
+      }
+      document.getElementsByClassName("jp")[0].classList.remove('active');
+      document.getElementsByClassName("en")[0].classList.remove('active');
+      for (let i = 0; i < document.getElementsByClassName("text_cn").length; i++) {
+        if (!document.getElementsByClassName("text_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("text_cn")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("text_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("text_en")[i].classList.remove('show')
+        }
+        if (document.getElementsByClassName("text_jp")[i].classList.contains('show')) {
+          document.getElementsByClassName("text_jp")[i].classList.remove('show')
+        }
+      }
+      for (let i = 0; i < document.getElementsByClassName("tagfilter cna").length; i++) {
+        if (!document.getElementsByClassName("tagfilter cna")[i].classList.contains('show')) {
+          document.getElementsByClassName("tagfilter cna")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("tagfilter eng")[i].classList.contains('show')) {
+          document.getElementsByClassName("tagfilter eng")[i].classList.remove('show')
+        }
+      }
+      for (let i = 0; i < document.getElementsByClassName("legendicon cna").length; i++) {
+        if (!document.getElementsByClassName("legendicon cna")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendicon cna")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("legendicon eng")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendicon eng")[i].classList.remove('show')
+        }
+      }
+      for (let i = 0; i < document.getElementsByClassName("legendspan cna").length; i++) {
+        if (!document.getElementsByClassName("legendspan cna")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendspan cna")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("legendspan eng")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendspan eng")[i].classList.remove('show')
+        }
+      }
+      for (let i = 0; i < document.getElementsByClassName("tags cna").length; i++) {
+        if (!document.getElementsByClassName("tags cna")[i].classList.contains('show')) {
+          document.getElementsByClassName("tags cna")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("tags eng")[i].classList.contains('show')) {
+          document.getElementsByClassName("tags eng")[i].classList.remove('show')
+        }
+        for (let ii = 0; ii < document.getElementsByClassName("tags cna")[i].children.length; ii++) {
+          if (!document.getElementsByClassName("tags cna")[i].children[ii].classList.contains('show')) {
+            document.getElementsByClassName("tags cna")[i].children[ii].classList.add('show')
+          }
+          if (document.getElementsByClassName("tags eng")[i].children[ii].classList.contains('show')) {
+            document.getElementsByClassName("tags eng")[i].children[ii].classList.remove('show')
+          }
+        }
+      }
+      break;
+  }
 }
 
 async function myFunction(a1) {
@@ -321,6 +473,9 @@ async function buildtierhtml(a1) {
 }
 
 async function buildtaghtml(a1) {
+  a1 = a1.replace(" en", "")
+  a1 = a1.replace(" jp", "")
+  a1 = a1.replace(" cn", "")
   let shipobj = Object.entries(ships);
   document.getElementsByClassName("main")[0].innerHTML = "";
   if (a1 == undefined) {
@@ -655,6 +810,7 @@ async function buildhtmlall(a1) {
 }
 
 async function filltier(a1, a2) {
+  let lang;
   for (let i = 0; i < ships[`${a1}`][`${a2}`].length; i++) {
     // Main div
     let a = document.createElement("div");
@@ -708,7 +864,20 @@ async function filltier(a1, a2) {
         .getElementsByClassName(a2)[0]
         .getElementsByClassName("parent")[i].appendChild(a);
     }
-    // Tags
+    // Tags en
+    a = document.createElement("div");
+    a.className = "tags eng";
+    document
+      .getElementsByClassName(a1)[0]
+      .getElementsByClassName(a2)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    a = document.createElement("div");
+    a.className = "tags cna";
+    document
+      .getElementsByClassName(a1)[0]
+      .getElementsByClassName(a2)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    // tags filler
     if (ships[`${a1}`][`${a2}`][i].tags != null) {
       for (let ii = 0; ii < ships[`${a1}`][`${a2}`][i].tags.length; ii++) {
         a = document.createElement("img");
@@ -718,7 +887,15 @@ async function filltier(a1, a2) {
         document
           .getElementsByClassName(a1)[0]
           .getElementsByClassName(a2)[0]
-          .getElementsByClassName("parent")[i].appendChild(a);
+          .getElementsByClassName("tags eng")[i].appendChild(a);
+        a = document.createElement("img");
+        a.className = "tag" + (ii + 1);
+        a.src =
+          "Assets/TagIcons/CN/" + ships[`${a1}`][`${a2}`][i].tags[ii] + ".png";
+        document
+          .getElementsByClassName(a1)[0]
+          .getElementsByClassName(a2)[0]
+          .getElementsByClassName("tags cna")[i].appendChild(a);
       }
     }
     // Greyblock
@@ -739,6 +916,7 @@ async function filltier(a1, a2) {
       .getElementsByClassName(a2)[0]
       .getElementsByClassName("parent")[i].appendChild(a);
     // Textblock
+    /*a
     a = document.createElement("div");
     a.className = "text";
     document
@@ -770,9 +948,98 @@ async function filltier(a1, a2) {
       .getElementsByClassName("parent")[i].getElementsByClassName("text")[0]
       .appendChild(a);
   }
+}*/
+
+    // Namechange html builder
+    // Textblock jp
+    a = document.createElement("div");
+    if (languageid == "en") {
+      a.className = "text_en show";
+    } else {
+      a.className = "text_en";
+    }
+    document
+      .getElementsByClassName(a1)[0]
+      .getElementsByClassName(a2)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    // Textblock jp
+    a = document.createElement("div");
+    if (languageid == "jp") {
+      a.className = "text_jp show";
+    } else {
+      a.className = "text_jp";
+    }
+    document
+      .getElementsByClassName(a1)[0]
+      .getElementsByClassName(a2)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    // Textblock kr
+    a = document.createElement("div");
+    a.className = "text_kr";
+    document
+      .getElementsByClassName(a1)[0]
+      .getElementsByClassName(a2)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    // Textblock cn
+    a = document.createElement("div");
+    if (languageid == "cn") {
+      a.className = "text_cn show";
+    } else {
+      a.className = "text_cn";
+    }
+    document
+      .getElementsByClassName(a1)[0]
+      .getElementsByClassName(a2)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    // Span text
+    for (let ii = 0; ii < 3; ii++) {
+      a = document.createElement("span");
+      switch (ii) {
+        case 0:
+          language = "en"
+          lang = "en"
+          break;
+        case 1:
+          language = "jp"
+          lang = "jp"
+          break;
+        case 2:
+          language = "cn"
+          lang = "cn"
+          break;
+      }
+      if (ships[`${a1}`][`${a2}`][i].names[language] == null) {
+        lang = "en"
+      }
+
+      let textcheck = await texthandler(
+        ships[`${a1}`][`${a2}`][i].names[lang].length,
+        ships[`${a1}`][`${a2}`][i].names[lang]
+      );
+
+      if (textcheck.className != undefined) {
+        a.className = textcheck.className;
+      }
+
+      if (textcheck.fontSize != undefined) {
+        a.style.fontSize = textcheck.fontSize;
+      }
+
+      if (textcheck.lineHeight != undefined) {
+        a.style.lineHeight = textcheck.lineHeight;
+      }
+      a.innerHTML = ships[`${a1}`][`${a2}`][i].names[lang];
+      document
+        .getElementsByClassName(a1)[0]
+        .getElementsByClassName(a2)[0]
+        .getElementsByClassName("parent")[i].getElementsByClassName("text_" + language)[0]
+        .appendChild(a);
+    }
+  }
 }
 
 async function filltierspecial(a1, a2, a3) {
+  let lang;
   for (let i = 0; i < a3.length; i++) {
     // Main div
     let a = document.createElement("div");
@@ -826,17 +1093,55 @@ async function filltierspecial(a1, a2, a3) {
         .getElementsByClassName(a2)[0]
         .getElementsByClassName("parent")[i].appendChild(a);
     }
-    // Tags
-    if (ships[`${a1}`][`${a2}`][a3[i]].tags != null) {
-      for (let ii = 0; ii < ships[`${a1}`][`${a2}`][a3[i]].tags.length; ii++) {
+    // Tags en
+    a = document.createElement("div");
+    if (languageid == "en") {
+      a.className = "tags eng show";
+    } else {
+      a.className = "tags eng";
+    }
+    document
+      .getElementsByClassName(a1)[0]
+      .getElementsByClassName(a2)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    a = document.createElement("div");
+    if (languageid == "cn") {
+      a.className = "tags cna show";
+    } else {
+      a.className = "tags cna";
+    }
+    document
+      .getElementsByClassName(a1)[0]
+      .getElementsByClassName(a2)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    // tags filler
+    if (ships[`${a1}`][`${a2}`][i].tags != null) {
+      for (let ii = 0; ii < ships[`${a1}`][`${a2}`][i].tags.length; ii++) {
         a = document.createElement("img");
-        a.className = "tag" + (ii + 1);
+        if (languageid == "en") {
+          a.className = "tag" + (ii + 1) + " show";
+        } else {
+          a.className = "tag" + (ii + 1);
+        }
         a.src =
-          "Assets/TagIcons/EN/" + ships[`${a1}`][`${a2}`][a3[i]].tags[ii] + ".png";
+          "Assets/TagIcons/EN/" + ships[`${a1}`][`${a2}`][i].tags[ii] + ".png";
         document
           .getElementsByClassName(a1)[0]
           .getElementsByClassName(a2)[0]
-          .getElementsByClassName("parent")[i].appendChild(a);
+          .getElementsByClassName("tags eng")[i].appendChild(a);
+
+        a = document.createElement("img");
+        if (languageid == "cn") {
+          a.className = "tag" + (ii + 1) + " show";
+        } else {
+          a.className = "tag" + (ii + 1);
+        }
+        a.src =
+          "Assets/TagIcons/CN/" + ships[`${a1}`][`${a2}`][i].tags[ii] + ".png";
+        document
+          .getElementsByClassName(a1)[0]
+          .getElementsByClassName(a2)[0]
+          .getElementsByClassName("tags cna")[i].appendChild(a);
       }
     }
     // Greyblock
@@ -857,7 +1162,7 @@ async function filltierspecial(a1, a2, a3) {
       .getElementsByClassName(a2)[0]
       .getElementsByClassName("parent")[i].appendChild(a);
     // Textblock
-    a = document.createElement("div");
+    /*a = document.createElement("div");
     a.className = "text";
     document
       .getElementsByClassName(a1)[0]
@@ -887,5 +1192,92 @@ async function filltierspecial(a1, a2, a3) {
       .getElementsByClassName(a2)[0]
       .getElementsByClassName("parent")[i].getElementsByClassName("text")[0]
       .appendChild(a);
+  }
+}*/
+    // Namechange html builder
+    // Textblock en
+    a = document.createElement("div");
+    if (languageid == "en") {
+      a.className = "text_en show";
+    } else {
+      a.className = "text_en";
+    }
+    document
+      .getElementsByClassName(a1)[0]
+      .getElementsByClassName(a2)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    // Textblock jp
+    a = document.createElement("div");
+    if (languageid == "jp") {
+      a.className = "text_jp show";
+    } else {
+      a.className = "text_jp";
+    }
+    document
+      .getElementsByClassName(a1)[0]
+      .getElementsByClassName(a2)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    // Textblock kr
+    a = document.createElement("div");
+    a.className = "text_kr";
+    document
+      .getElementsByClassName(a1)[0]
+      .getElementsByClassName(a2)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    // Textblock cn
+    a = document.createElement("div");
+    if (languageid == "cn") {
+      a.className = "text_cn show";
+    } else {
+      a.className = "text_cn";
+    }
+    document
+      .getElementsByClassName(a1)[0]
+      .getElementsByClassName(a2)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    // Span text
+    for (let ii = 0; ii < 3; ii++) {
+      a = document.createElement("span");
+      switch (ii) {
+        case 0:
+          language = "en"
+          lang = "en"
+          break;
+        case 1:
+          language = "jp"
+          lang = "jp"
+          break;
+        case 2:
+          language = "cn"
+          lang = "cn"
+          break;
+      }
+      if (ships[`${a1}`][`${a2}`][a3[i]].names[language] == null) {
+        lang = "en"
+      }
+
+      let textcheck = await texthandler(
+        ships[`${a1}`][`${a2}`][a3[i]].names[lang].length,
+        ships[`${a1}`][`${a2}`][a3[i]].names[lang]
+      );
+
+      if (textcheck.className != undefined) {
+        a.className = textcheck.className;
+      }
+
+      if (textcheck.fontSize != undefined) {
+        a.style.fontSize = textcheck.fontSize;
+      }
+
+      if (textcheck.lineHeight != undefined) {
+        a.style.lineHeight = textcheck.lineHeight;
+      }
+      a.innerHTML = ships[`${a1}`][`${a2}`][a3[i]].names[lang];
+      document
+        .getElementsByClassName(a1)[0]
+        .getElementsByClassName(a2)[0]
+        .getElementsByClassName("parent")[i].getElementsByClassName("text_" + language)[0]
+        .appendChild(a);
+    }
   }
 }

@@ -81,6 +81,11 @@ body {
   z-index: 2;
   position: absolute;
   margin-top: 75px;
+  display: none;
+}
+
+.tag1.show {
+  display: block;
 }
 
 .tag2 {
@@ -88,6 +93,11 @@ body {
   position: absolute;
   margin-top: 75px;
   margin-left: 25px;
+  display: none;
+}
+
+.tag2.show {
+  display: block;
 }
 
 .tag3 {
@@ -95,6 +105,11 @@ body {
   position: absolute;
   margin-top: 75px;
   margin-left: 50px;
+  display: none;
+}
+
+.tag3.show {
+  display: block;
 }
 
 .tag4 {
@@ -102,6 +117,11 @@ body {
   position: absolute;
   margin-top: 75px;
   margin-left: 75px;
+  display: none;
+}
+
+.tag4.show {
+  display: block;
 }
 
 .greyblock {
@@ -128,11 +148,29 @@ body {
   height: 100px;
 }
 
-.text {
+/*.text {
   margin-top: 100px;
   margin-left: 32px;
   height: 20px;
   line-height: 20px;
+}*/
+
+.text_en,
+.text_jp,
+.text_kr,
+.text_cn {
+  margin-top: 100px;
+  margin-left: 32px;
+  height: 20px;
+  line-height: 20px;
+  display: none;
+}
+
+.text_en show,
+.text_jp show,
+.text_kr show,
+.text_cn show {
+  display: block;
 }
 
 .shipname {
@@ -377,7 +415,12 @@ div.t7>div.tierbanner {
   text-align: center;
 }
 
-#Normal, #Rare, #Elite, #SuperRare, #Priority, #Decisive {
+#Normal,
+#Rare,
+#Elite,
+#SuperRare,
+#Priority,
+#Decisive {
   width: 20%;
 }
 
@@ -654,7 +697,20 @@ div.t7>div.tierbanner {
   position: relative;
 }
 
-#n1, #n2, #n3, #n4, #n5, #n6, #n7, #n8, #n9, #n10, #n11, #n13, #n14, #n15 {
+#n1,
+#n2,
+#n3,
+#n4,
+#n5,
+#n6,
+#n7,
+#n8,
+#n9,
+#n10,
+#n11,
+#n13,
+#n14,
+#n15 {
   width: 100%;
   z-index: 100;
   filter: invert(100%);
@@ -1028,4 +1084,93 @@ div.t7>div.tierbanner {
 button:focus {
   border: none;
   outline: none;
+}
+
+.language {
+  font-family: "Lato", sans-serif;
+  color: white;
+  margin-left: 100px;
+  position: fixed;
+  display: inline-block;
+  width: 65px;
+  height: 50px;
+  top: 10px;
+  right: 40px;
+  z-index: 100;
+}
+
+.lang:hover {
+  background-color: #2980B9;
+}
+
+.lang:active {
+  background-color: #2980B9;
+}
+
+.tagfilter.eng {
+  display: none;
+}
+
+.tagfilter.cna {
+  display: none;
+}
+
+.tagfilter.ico {
+  display: none;
+}
+
+.tagfilter.eng.show {
+  display: inline-block;
+}
+
+.tagfilter.cna.show {
+  display: inline-block;
+}
+
+.legendicon.eng {
+  display: none;
+}
+
+.legendicon.cna {
+  display: none;
+}
+
+.legendicon.eng.show {
+  display: inline-block;
+}
+
+.legendicon.cna.show {
+  display: inline-block;
+}
+
+.legendspan.eng {
+  display: none;
+}
+
+.legendspan.cna {
+  display: none;
+}
+
+.legendspan.eng.show {
+  display: inline-block;
+}
+
+.legendspan.cna.show {
+  display: inline-block;
+}
+
+.tags.eng {
+  display: none;
+}
+
+.tags.cna {
+  display: none;
+}
+
+.tags.eng.show {
+  display: block;
+}
+
+.tags.cna.show {
+  display: block;
 }
