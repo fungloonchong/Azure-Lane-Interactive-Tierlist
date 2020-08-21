@@ -31,8 +31,9 @@ window.onload = async function () {
       false
     );
   });
-  let tagfilter = document.querySelectorAll(".tagfilter");
-  await nodrag("tagfilter")
+  let tagfilter = document.querySelectorAll(".tagfilter_en, .tagfilter_cn");
+  await nodrag("tagfilter_en")
+  await nodrag("tagfilter_cn")
   tagfilter.forEach(function (tagadd) {
     tagadd.addEventListener(
       "click",
@@ -75,7 +76,7 @@ window.onload = async function () {
       false
     );
   });
-  //buildhtmlall();
+  buildhtmlall();
   async function nodrag(a1) {
     var images = document.getElementsByClassName(a1);
     var i
@@ -133,43 +134,43 @@ async function shipnamecheck(a1, a2) {
           document.getElementsByClassName("text_cn")[i].classList.remove('show')
         }
       }
-      for (let i = 0; i < document.getElementsByClassName("tagfilter eng").length; i++) {
-        if (!document.getElementsByClassName("tagfilter eng")[i].classList.contains('show')) {
-          document.getElementsByClassName("tagfilter eng")[i].classList.add('show')
+      for (let i = 0; i < document.getElementsByClassName("tagfilter_en").length; i++) {
+        if (!document.getElementsByClassName("tagfilter_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("tagfilter_en")[i].classList.add('show')
         }
-        if (document.getElementsByClassName("tagfilter cna")[i].classList.contains('show')) {
-          document.getElementsByClassName("tagfilter cna")[i].classList.remove('show')
-        }
-      }
-      for (let i = 0; i < document.getElementsByClassName("legendicon eng").length; i++) {
-        if (!document.getElementsByClassName("legendicon eng")[i].classList.contains('show')) {
-          document.getElementsByClassName("legendicon eng")[i].classList.add('show')
-        }
-        if (document.getElementsByClassName("legendicon cna")[i].classList.contains('show')) {
-          document.getElementsByClassName("legendicon cna")[i].classList.remove('show')
+        if (document.getElementsByClassName("tagfilter_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("tagfilter_cn")[i].classList.remove('show')
         }
       }
-      for (let i = 0; i < document.getElementsByClassName("legendspan eng").length; i++) {
-        if (!document.getElementsByClassName("legendspan eng")[i].classList.contains('show')) {
-          document.getElementsByClassName("legendspan eng")[i].classList.add('show')
+      for (let i = 0; i < document.getElementsByClassName("legendicon_en").length; i++) {
+        if (!document.getElementsByClassName("legendicon_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendicon_en")[i].classList.add('show')
         }
-        if (document.getElementsByClassName("legendspan cna")[i].classList.contains('show')) {
-          document.getElementsByClassName("legendspan cna")[i].classList.remove('show')
+        if (document.getElementsByClassName("legendicon_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendicon_cn")[i].classList.remove('show')
         }
       }
-      for (let i = 0; i < document.getElementsByClassName("tags eng").length; i++) {
-        if (!document.getElementsByClassName("tags eng")[i].classList.contains('show')) {
-          document.getElementsByClassName("tags eng")[i].classList.add('show')
+      for (let i = 0; i < document.getElementsByClassName("legendspan_en").length; i++) {
+        if (!document.getElementsByClassName("legendspan_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendspan_en")[i].classList.add('show')
         }
-        if (document.getElementsByClassName("tags cna")[i].classList.contains('show')) {
-          document.getElementsByClassName("tags cna")[i].classList.remove('show')
+        if (document.getElementsByClassName("legendspan_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendspan_cn")[i].classList.remove('show')
         }
-        for (let ii = 0; ii < document.getElementsByClassName("tags eng")[i].children.length; ii++) {
-          if (!document.getElementsByClassName("tags eng")[i].children[ii].classList.contains('show')) {
-            document.getElementsByClassName("tags eng")[i].children[ii].classList.add('show')
+      }
+      for (let i = 0; i < document.getElementsByClassName("tags_en").length; i++) {
+        if (!document.getElementsByClassName("tags_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("tags_en")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("tags_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("tags_cn")[i].classList.remove('show')
+        }
+        for (let ii = 0; ii < document.getElementsByClassName("tags_en")[i].children.length; ii++) {
+          if (!document.getElementsByClassName("tags_en")[i].children[ii].classList.contains('show')) {
+            document.getElementsByClassName("tags_en")[i].children[ii].classList.add('show')
           }
-          if (document.getElementsByClassName("tags cna")[i].children[ii].classList.contains('show')) {
-            document.getElementsByClassName("tags cna")[i].children[ii].classList.remove('show')
+          if (document.getElementsByClassName("tags_cn")[i].children[ii].classList.contains('show')) {
+            document.getElementsByClassName("tags_cn")[i].children[ii].classList.remove('show')
           }
         }
       }
@@ -193,43 +194,43 @@ async function shipnamecheck(a1, a2) {
         }
       }
       // for now eng
-      for (let i = 0; i < document.getElementsByClassName("tagfilter eng").length; i++) {
-        if (!document.getElementsByClassName("tagfilter eng")[i].classList.contains('show')) {
-          document.getElementsByClassName("tagfilter eng")[i].classList.add('show')
+      for (let i = 0; i < document.getElementsByClassName("tagfilter_en").length; i++) {
+        if (!document.getElementsByClassName("tagfilter_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("tagfilter_en")[i].classList.add('show')
         }
-        if (document.getElementsByClassName("tagfilter cna")[i].classList.contains('show')) {
-          document.getElementsByClassName("tagfilter cna")[i].classList.remove('show')
-        }
-      }
-      for (let i = 0; i < document.getElementsByClassName("legendicon eng").length; i++) {
-        if (!document.getElementsByClassName("legendicon eng")[i].classList.contains('show')) {
-          document.getElementsByClassName("legendicon eng")[i].classList.add('show')
-        }
-        if (document.getElementsByClassName("legendicon cna")[i].classList.contains('show')) {
-          document.getElementsByClassName("legendicon cna")[i].classList.remove('show')
+        if (document.getElementsByClassName("tagfilter_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("tagfilter_cn")[i].classList.remove('show')
         }
       }
-      for (let i = 0; i < document.getElementsByClassName("legendspan eng").length; i++) {
-        if (!document.getElementsByClassName("legendspan eng")[i].classList.contains('show')) {
-          document.getElementsByClassName("legendspan eng")[i].classList.add('show')
+      for (let i = 0; i < document.getElementsByClassName("legendicon_en").length; i++) {
+        if (!document.getElementsByClassName("legendicon_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendicon_en")[i].classList.add('show')
         }
-        if (document.getElementsByClassName("legendspan cna")[i].classList.contains('show')) {
-          document.getElementsByClassName("legendspan cna")[i].classList.remove('show')
+        if (document.getElementsByClassName("legendicon_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendicon_cn")[i].classList.remove('show')
         }
       }
-      for (let i = 0; i < document.getElementsByClassName("tags eng").length; i++) {
-        if (!document.getElementsByClassName("tags eng")[i].classList.contains('show')) {
-          document.getElementsByClassName("tags eng")[i].classList.add('show')
+      for (let i = 0; i < document.getElementsByClassName("legendspan_en").length; i++) {
+        if (!document.getElementsByClassName("legendspan_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendspan_en")[i].classList.add('show')
         }
-        if (document.getElementsByClassName("tags cna")[i].classList.contains('show')) {
-          document.getElementsByClassName("tags cna")[i].classList.remove('show')
+        if (document.getElementsByClassName("legendspan_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendspan_cn")[i].classList.remove('show')
         }
-        for (let ii = 0; ii < document.getElementsByClassName("tags eng")[i].children.length; ii++) {
-          if (!document.getElementsByClassName("tags eng")[i].children[ii].classList.contains('show')) {
-            document.getElementsByClassName("tags eng")[i].children[ii].classList.add('show')
+      }
+      for (let i = 0; i < document.getElementsByClassName("tags_en").length; i++) {
+        if (!document.getElementsByClassName("tags_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("tags_en")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("tags_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("tags_cn")[i].classList.remove('show')
+        }
+        for (let ii = 0; ii < document.getElementsByClassName("tags_en")[i].children.length; ii++) {
+          if (!document.getElementsByClassName("tags_en")[i].children[ii].classList.contains('show')) {
+            document.getElementsByClassName("tags_en")[i].children[ii].classList.add('show')
           }
-          if (document.getElementsByClassName("tags cna")[i].children[ii].classList.contains('show')) {
-            document.getElementsByClassName("tags cna")[i].children[ii].classList.remove('show')
+          if (document.getElementsByClassName("tags_cn")[i].children[ii].classList.contains('show')) {
+            document.getElementsByClassName("tags_cn")[i].children[ii].classList.remove('show')
           }
         }
       }
@@ -252,43 +253,43 @@ async function shipnamecheck(a1, a2) {
           document.getElementsByClassName("text_jp")[i].classList.remove('show')
         }
       }
-      for (let i = 0; i < document.getElementsByClassName("tagfilter cna").length; i++) {
-        if (!document.getElementsByClassName("tagfilter cna")[i].classList.contains('show')) {
-          document.getElementsByClassName("tagfilter cna")[i].classList.add('show')
+      for (let i = 0; i < document.getElementsByClassName("tagfilter_cn").length; i++) {
+        if (!document.getElementsByClassName("tagfilter_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("tagfilter_cn")[i].classList.add('show')
         }
-        if (document.getElementsByClassName("tagfilter eng")[i].classList.contains('show')) {
-          document.getElementsByClassName("tagfilter eng")[i].classList.remove('show')
-        }
-      }
-      for (let i = 0; i < document.getElementsByClassName("legendicon cna").length; i++) {
-        if (!document.getElementsByClassName("legendicon cna")[i].classList.contains('show')) {
-          document.getElementsByClassName("legendicon cna")[i].classList.add('show')
-        }
-        if (document.getElementsByClassName("legendicon eng")[i].classList.contains('show')) {
-          document.getElementsByClassName("legendicon eng")[i].classList.remove('show')
+        if (document.getElementsByClassName("tagfilter_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("tagfilter_en")[i].classList.remove('show')
         }
       }
-      for (let i = 0; i < document.getElementsByClassName("legendspan cna").length; i++) {
-        if (!document.getElementsByClassName("legendspan cna")[i].classList.contains('show')) {
-          document.getElementsByClassName("legendspan cna")[i].classList.add('show')
+      for (let i = 0; i < document.getElementsByClassName("legendicon_cn").length; i++) {
+        if (!document.getElementsByClassName("legendicon_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendicon_cn")[i].classList.add('show')
         }
-        if (document.getElementsByClassName("legendspan eng")[i].classList.contains('show')) {
-          document.getElementsByClassName("legendspan eng")[i].classList.remove('show')
+        if (document.getElementsByClassName("legendicon_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendicon_en")[i].classList.remove('show')
         }
       }
-      for (let i = 0; i < document.getElementsByClassName("tags cna").length; i++) {
-        if (!document.getElementsByClassName("tags cna")[i].classList.contains('show')) {
-          document.getElementsByClassName("tags cna")[i].classList.add('show')
+      for (let i = 0; i < document.getElementsByClassName("legendspan_cn").length; i++) {
+        if (!document.getElementsByClassName("legendspan_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendspan_cn")[i].classList.add('show')
         }
-        if (document.getElementsByClassName("tags eng")[i].classList.contains('show')) {
-          document.getElementsByClassName("tags eng")[i].classList.remove('show')
+        if (document.getElementsByClassName("legendspan_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendspan_en")[i].classList.remove('show')
         }
-        for (let ii = 0; ii < document.getElementsByClassName("tags cna")[i].children.length; ii++) {
-          if (!document.getElementsByClassName("tags cna")[i].children[ii].classList.contains('show')) {
-            document.getElementsByClassName("tags cna")[i].children[ii].classList.add('show')
+      }
+      for (let i = 0; i < document.getElementsByClassName("tags_cn").length; i++) {
+        if (!document.getElementsByClassName("tags_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("tags_cn")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("tags_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("tags_en")[i].classList.remove('show')
+        }
+        for (let ii = 0; ii < document.getElementsByClassName("tags_cn")[i].children.length; ii++) {
+          if (!document.getElementsByClassName("tags_cn")[i].children[ii].classList.contains('show')) {
+            document.getElementsByClassName("tags_cn")[i].children[ii].classList.add('show')
           }
-          if (document.getElementsByClassName("tags eng")[i].children[ii].classList.contains('show')) {
-            document.getElementsByClassName("tags eng")[i].children[ii].classList.remove('show')
+          if (document.getElementsByClassName("tags_en")[i].children[ii].classList.contains('show')) {
+            document.getElementsByClassName("tags_en")[i].children[ii].classList.remove('show')
           }
         }
       }
@@ -415,64 +416,64 @@ async function texthandler(a1, a2, a3) {
       className = "shipnamealt";
     }
   } else {
-  // Check if the sting is 13 or longer
-  if (a1 >= 13) {
-    className = "shipnamealt";
-    // If the str has no empty spaces
-    if ((await countcheck.count) == 0) {
-      fontSize = "10px";
-      lineHeight = "2";
-    }
-    // Check if the str has at least one empty space
-    if ((await countcheck.count) == 1) {
-      // If the second str is at least 9 => 10+ long
-      if (
-        (await countcheck.countafter[1].length) == 10 &&
-        (await countcheck.countafter[1].length) > 8
-      ) {
-        fontSize = "11px";
+    // Check if the sting is 13 or longer
+    if (a1 >= 13) {
+      className = "shipnamealt";
+      // If the str has no empty spaces
+      if ((await countcheck.count) == 0) {
+        fontSize = "10px";
+        lineHeight = "2";
       }
-      // If the second str is longer then 10
-      if ((await countcheck.countafter[1].length) > 10) {
+      // Check if the str has at least one empty space
+      if ((await countcheck.count) == 1) {
+        // If the second str is at least 9 => 10+ long
+        if (
+          (await countcheck.countafter[1].length) == 10 &&
+          (await countcheck.countafter[1].length) > 8
+        ) {
+          fontSize = "11px";
+        }
+        // If the second str is longer then 10
+        if ((await countcheck.countafter[1].length) > 10) {
+          fontSize = "10px";
+        }
+        // If the second str is smaller or 8 long
+        if (countcheck.countafter[1].length <= 8) {
+          fontSize = "12px";
+        }
+      } else if ((await countcheck.count) == 2) {
+        // If the second str is at least 9 => 10+ long
+        if (
+          (await countcheck.countafter[1].length) == 10 &&
+          (await countcheck.countafter[1].length) > 8
+        ) {
+          fontSize = "11px";
+        }
+        // If the second str is longer then 10
+        if ((await countcheck.countafter[1].length) > 10) {
+          fontSize = "10px";
+        }
+        // If the second str is smaller or 8 long
+        if (countcheck.countafter[1].length <= 8) {
+          fontSize = "12px";
+        }
+      } else {
         fontSize = "10px";
       }
-      // If the second str is smaller or 8 long
-      if (countcheck.countafter[1].length <= 8) {
-        fontSize = "12px";
-      }
-    } else if ((await countcheck.count) == 2) {
-      // If the second str is at least 9 => 10+ long
-      if (
-        (await countcheck.countafter[1].length) == 10 &&
-        (await countcheck.countafter[1].length) > 8
-      ) {
+      // If the sting is 17 or longer
+      if (a1 >= 17) {
         fontSize = "11px";
-      }
-      // If the second str is longer then 10
-      if ((await countcheck.countafter[1].length) > 10) {
-        fontSize = "10px";
-      }
-      // If the second str is smaller or 8 long
-      if (countcheck.countafter[1].length <= 8) {
-        fontSize = "12px";
       }
     } else {
-      fontSize = "10px";
+      if ((await countcheck.count) == 0 && a1 >= 12) {
+        fontSize = "10px";
+      }
+      if ((await countcheck.count) >= 1) {
+        fontSize = "10px";
+      }
+      className = "shipname";
     }
-    // If the sting is 17 or longer
-    if (a1 >= 17) {
-      fontSize = "11px";
-    }
-  } else {
-    if ((await countcheck.count) == 0 && a1 >= 12) {
-      fontSize = "10px";
-    }
-    if ((await countcheck.count) >= 1) {
-      fontSize = "10px";
-    }
-    className = "shipname";
   }
-}
   return {
     className,
     fontSize,
@@ -919,9 +920,9 @@ async function filltier(a1, a2) {
     // Tags en
     a = document.createElement("div");
     if (languageid == "en" || languageid == "jp") {
-      a.className = "tags eng show";
+      a.className = "tags_en show";
     } else {
-      a.className = "tags eng";
+      a.className = "tags_en";
     }
     document
       .getElementsByClassName(a1)[0]
@@ -929,9 +930,9 @@ async function filltier(a1, a2) {
       .getElementsByClassName("parent")[i].appendChild(a);
     a = document.createElement("div");
     if (languageid == "cn") {
-      a.className = "tags cna show";
+      a.className = "tags_cn show";
     } else {
-      a.className = "tags cna";
+      a.className = "tags_cn";
     }
     document
       .getElementsByClassName(a1)[0]
@@ -951,7 +952,7 @@ async function filltier(a1, a2) {
         document
           .getElementsByClassName(a1)[0]
           .getElementsByClassName(a2)[0]
-          .getElementsByClassName("tags eng")[i].appendChild(a);
+          .getElementsByClassName("tags_en")[i].appendChild(a);
 
         a = document.createElement("img");
         if (languageid == "cn") {
@@ -964,7 +965,7 @@ async function filltier(a1, a2) {
         document
           .getElementsByClassName(a1)[0]
           .getElementsByClassName(a2)[0]
-          .getElementsByClassName("tags cna")[i].appendChild(a);
+          .getElementsByClassName("tags_cn")[i].appendChild(a);
       }
     }
     // Greyblock
@@ -1165,9 +1166,9 @@ async function filltierspecial(a1, a2, a3) {
     // Tags en
     a = document.createElement("div");
     if (languageid == "en" || languageid == "jp") {
-      a.className = "tags eng show";
+      a.className = "tags_en show";
     } else {
-      a.className = "tags eng";
+      a.className = "tags_en";
     }
     document
       .getElementsByClassName(a1)[0]
@@ -1175,9 +1176,9 @@ async function filltierspecial(a1, a2, a3) {
       .getElementsByClassName("parent")[i].appendChild(a);
     a = document.createElement("div");
     if (languageid == "cn") {
-      a.className = "tags cna show";
+      a.className = "tags_cn show";
     } else {
-      a.className = "tags cna";
+      a.className = "tags_cn";
     }
     document
       .getElementsByClassName(a1)[0]
@@ -1197,7 +1198,7 @@ async function filltierspecial(a1, a2, a3) {
         document
           .getElementsByClassName(a1)[0]
           .getElementsByClassName(a2)[0]
-          .getElementsByClassName("tags eng")[i].appendChild(a);
+          .getElementsByClassName("tags_en")[i].appendChild(a);
 
         a = document.createElement("img");
         if (languageid == "cn") {
@@ -1210,7 +1211,7 @@ async function filltierspecial(a1, a2, a3) {
         document
           .getElementsByClassName(a1)[0]
           .getElementsByClassName(a2)[0]
-          .getElementsByClassName("tags cna")[i].appendChild(a);
+          .getElementsByClassName("tags_cn")[i].appendChild(a);
       }
     }
     // Greyblock
