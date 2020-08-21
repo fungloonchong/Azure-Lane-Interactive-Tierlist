@@ -123,6 +123,7 @@ async function shipnamecheck(a1, a2) {
       }
       document.getElementsByClassName("jp")[0].classList.remove('active');
       document.getElementsByClassName("cn")[0].classList.remove('active');
+      document.getElementsByClassName("kr")[0].classList.remove('active');
       for (let i = 0; i < document.getElementsByClassName("text_en").length; i++) {
         if (!document.getElementsByClassName("text_en")[i].classList.contains('show')) {
           document.getElementsByClassName("text_en")[i].classList.add('show')
@@ -132,6 +133,9 @@ async function shipnamecheck(a1, a2) {
         }
         if (document.getElementsByClassName("text_cn")[i].classList.contains('show')) {
           document.getElementsByClassName("text_cn")[i].classList.remove('show')
+        }
+        if (document.getElementsByClassName("text_kr")[i].classList.contains('show')) {
+          document.getElementsByClassName("text_kr")[i].classList.remove('show')
         }
       }
       for (let i = 0; i < document.getElementsByClassName("tagfilter_en").length; i++) {
@@ -182,6 +186,7 @@ async function shipnamecheck(a1, a2) {
       }
       document.getElementsByClassName("en")[0].classList.remove('active');
       document.getElementsByClassName("cn")[0].classList.remove('active');
+      document.getElementsByClassName("kr")[0].classList.remove('active');
       for (let i = 0; i < document.getElementsByClassName("text_jp").length; i++) {
         if (!document.getElementsByClassName("text_jp")[i].classList.contains('show')) {
           document.getElementsByClassName("text_jp")[i].classList.add('show')
@@ -191,6 +196,9 @@ async function shipnamecheck(a1, a2) {
         }
         if (document.getElementsByClassName("text_cn")[i].classList.contains('show')) {
           document.getElementsByClassName("text_cn")[i].classList.remove('show')
+        }
+        if (document.getElementsByClassName("text_kr")[i].classList.contains('show')) {
+          document.getElementsByClassName("text_kr")[i].classList.remove('show')
         }
       }
       // for now eng
@@ -242,6 +250,7 @@ async function shipnamecheck(a1, a2) {
       }
       document.getElementsByClassName("jp")[0].classList.remove('active');
       document.getElementsByClassName("en")[0].classList.remove('active');
+      document.getElementsByClassName("kr")[0].classList.remove('active');
       for (let i = 0; i < document.getElementsByClassName("text_cn").length; i++) {
         if (!document.getElementsByClassName("text_cn")[i].classList.contains('show')) {
           document.getElementsByClassName("text_cn")[i].classList.add('show')
@@ -251,6 +260,9 @@ async function shipnamecheck(a1, a2) {
         }
         if (document.getElementsByClassName("text_jp")[i].classList.contains('show')) {
           document.getElementsByClassName("text_jp")[i].classList.remove('show')
+        }
+        if (document.getElementsByClassName("text_kr")[i].classList.contains('show')) {
+          document.getElementsByClassName("text_kr")[i].classList.remove('show')
         }
       }
       for (let i = 0; i < document.getElementsByClassName("tagfilter_cn").length; i++) {
@@ -294,6 +306,69 @@ async function shipnamecheck(a1, a2) {
         }
       }
       break;
+      case "kr":
+      languageid = "kr"
+      if (!document.getElementsByClassName("kr")[0].classList.contains('active')) {
+        document.getElementsByClassName("kr")[0].classList.add('active')
+      }
+      document.getElementsByClassName("jp")[0].classList.remove('active');
+      document.getElementsByClassName("en")[0].classList.remove('active');
+      document.getElementsByClassName("cn")[0].classList.remove('active');
+      for (let i = 0; i < document.getElementsByClassName("text_kr").length; i++) {
+        if (!document.getElementsByClassName("text_kr")[i].classList.contains('show')) {
+          document.getElementsByClassName("text_kr")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("text_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("text_en")[i].classList.remove('show')
+        }
+        if (document.getElementsByClassName("text_jp")[i].classList.contains('show')) {
+          document.getElementsByClassName("text_jp")[i].classList.remove('show')
+        }
+        if (document.getElementsByClassName("text_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("text_cn")[i].classList.remove('show')
+        }
+      }
+      for (let i = 0; i < document.getElementsByClassName("tagfilter_en").length; i++) {
+        if (!document.getElementsByClassName("tagfilter_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("tagfilter_en")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("tagfilter_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("tagfilter_cn")[i].classList.remove('show')
+        }
+      }
+      for (let i = 0; i < document.getElementsByClassName("legendicon_en").length; i++) {
+        if (!document.getElementsByClassName("legendicon_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendicon_en")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("legendicon_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendicon_cn")[i].classList.remove('show')
+        }
+      }
+      for (let i = 0; i < document.getElementsByClassName("legendspan_en").length; i++) {
+        if (!document.getElementsByClassName("legendspan_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendspan_en")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("legendspan_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendspan_cn")[i].classList.remove('show')
+        }
+      }
+      for (let i = 0; i < document.getElementsByClassName("tags_en").length; i++) {
+        if (!document.getElementsByClassName("tags_en")[i].classList.contains('show')) {
+          document.getElementsByClassName("tags_en")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("tags_cn")[i].classList.contains('show')) {
+          document.getElementsByClassName("tags_cn")[i].classList.remove('show')
+        }
+        for (let ii = 0; ii < document.getElementsByClassName("tags_en")[i].children.length; ii++) {
+          if (!document.getElementsByClassName("tags_en")[i].children[ii].classList.contains('show')) {
+            document.getElementsByClassName("tags_en")[i].children[ii].classList.add('show')
+          }
+          if (document.getElementsByClassName("tags_cn")[i].children[ii].classList.contains('show')) {
+            document.getElementsByClassName("tags_cn")[i].children[ii].classList.remove('show')
+          }
+        }
+      }
+      break;
   }
 }
 
@@ -307,6 +382,7 @@ async function myFunction(a1) {
   identmain = a1[0];
   // identid == *-dropdown
   identid = document.getElementsByClassName(identmain)[0].parentElement.classList[0]
+  console.log(identid)
   // adds show to *-dropdown
   document.getElementById(identid).classList.toggle("show");
 }
@@ -405,7 +481,7 @@ async function texthandler(a1, a2, a3) {
   let fontSize;
   let lineHeight;
   let countcheck = await countspaces(a2);
-  if (a3 != "en") {
+  if (a3 != "en" && a3 != "code") {
     if (a1 < 7) {
       fontSize = "10px";
       lineHeight = "20px";
@@ -415,65 +491,76 @@ async function texthandler(a1, a2, a3) {
       lineHeight = "9px";
       className = "shipnamealt";
     }
-  } else {
-    // Check if the sting is 13 or longer
-    if (a1 >= 13) {
-      className = "shipnamealt";
-      // If the str has no empty spaces
-      if ((await countcheck.count) == 0) {
-        fontSize = "10px";
-        lineHeight = "2";
-      }
-      // Check if the str has at least one empty space
-      if ((await countcheck.count) == 1) {
-        // If the second str is at least 9 => 10+ long
-        if (
-          (await countcheck.countafter[1].length) == 10 &&
-          (await countcheck.countafter[1].length) > 8
-        ) {
-          fontSize = "11px";
-        }
-        // If the second str is longer then 10
-        if ((await countcheck.countafter[1].length) > 10) {
-          fontSize = "10px";
-        }
-        // If the second str is smaller or 8 long
-        if (countcheck.countafter[1].length <= 8) {
-          fontSize = "12px";
-        }
-      } else if ((await countcheck.count) == 2) {
-        // If the second str is at least 9 => 10+ long
-        if (
-          (await countcheck.countafter[1].length) == 10 &&
-          (await countcheck.countafter[1].length) > 8
-        ) {
-          fontSize = "11px";
-        }
-        // If the second str is longer then 10
-        if ((await countcheck.countafter[1].length) > 10) {
-          fontSize = "10px";
-        }
-        // If the second str is smaller or 8 long
-        if (countcheck.countafter[1].length <= 8) {
-          fontSize = "12px";
-        }
+    if (a3 == "kr") {
+      if (a1 < 9) {
+      fontSize = "10px";
+      lineHeight = "20px";
+      className = "shipname";
       } else {
-        fontSize = "10px";
-      }
-      // If the sting is 17 or longer
-      if (a1 >= 17) {
+      fontSize = "10px";
+      lineHeight = "9px";
+      className = "shipnamealt";
+    }
+    }
+  } else {
+  // Check if the sting is 13 or longer
+  if (a1 >= 13) {
+    className = "shipnamealt";
+    // If the str has no empty spaces
+    if ((await countcheck.count) == 0) {
+      fontSize = "10px";
+      lineHeight = "2";
+    }
+    // Check if the str has at least one empty space
+    if ((await countcheck.count) == 1) {
+      // If the second str is at least 9 => 10+ long
+      if (
+        (await countcheck.countafter[1].length) == 10 &&
+        (await countcheck.countafter[1].length) > 8
+      ) {
         fontSize = "11px";
       }
+      // If the second str is longer then 10
+      if ((await countcheck.countafter[1].length) > 10) {
+        fontSize = "10px";
+      }
+      // If the second str is smaller or 8 long
+      if (countcheck.countafter[1].length <= 8) {
+        fontSize = "12px";
+      }
+    } else if ((await countcheck.count) == 2) {
+      // If the second str is at least 9 => 10+ long
+      if (
+        (await countcheck.countafter[1].length) == 10 &&
+        (await countcheck.countafter[1].length) > 8
+      ) {
+        fontSize = "11px";
+      }
+      // If the second str is longer then 10
+      if ((await countcheck.countafter[1].length) > 10) {
+        fontSize = "10px";
+      }
+      // If the second str is smaller or 8 long
+      if (countcheck.countafter[1].length <= 8) {
+        fontSize = "12px";
+      }
     } else {
-      if ((await countcheck.count) == 0 && a1 >= 12) {
-        fontSize = "10px";
-      }
-      if ((await countcheck.count) >= 1) {
-        fontSize = "10px";
-      }
-      className = "shipname";
+      fontSize = "10px";
     }
+    // If the sting is 17 or longer
+    if (a1 >= 17) {
+      fontSize = "11px";
+    }
+  } else {
+    if ((await countcheck.count) == 0 && a1 >= 12) {
+      fontSize = "10px";
+    }
+    if ((await countcheck.count) >= 1) {
+      fontSize = "10px";
+    }
+    className = "shipname";
   }
+}
   return {
     className,
     fontSize,
@@ -864,6 +951,7 @@ async function buildhtmlall(a1) {
 
 async function filltier(a1, a2) {
   let lang;
+  let textcheck;
   for (let i = 0; i < ships[`${a1}`][`${a2}`].length; i++) {
     // Main div
     let a = document.createElement("div");
@@ -919,7 +1007,7 @@ async function filltier(a1, a2) {
     }
     // Tags en
     a = document.createElement("div");
-    if (languageid == "en" || languageid == "jp") {
+    if (languageid == "en" || languageid == "jp" || languageid == "kr") {
       a.className = "tags_en show";
     } else {
       a.className = "tags_en";
@@ -942,7 +1030,7 @@ async function filltier(a1, a2) {
     if (ships[`${a1}`][`${a2}`][i].tags != null) {
       for (let ii = 0; ii < ships[`${a1}`][`${a2}`][i].tags.length; ii++) {
         a = document.createElement("img");
-        if (languageid == "en" || languageid == "jp") {
+        if (languageid == "en" || languageid == "jp" || languageid == "kr") {
           a.className = "tag" + (ii + 1) + " show";
         } else {
           a.className = "tag" + (ii + 1);
@@ -985,41 +1073,7 @@ async function filltier(a1, a2) {
       .getElementsByClassName(a1)[0]
       .getElementsByClassName(a2)[0]
       .getElementsByClassName("parent")[i].appendChild(a);
-    // Textblock
-    /*a
-    a = document.createElement("div");
-    a.className = "text";
-    document
-      .getElementsByClassName(a1)[0]
-      .getElementsByClassName(a2)[0]
-      .getElementsByClassName("parent")[i].appendChild(a);
-    // Span text
-    a = document.createElement("span");
-    let textcheck = await texthandler(
-      ships[`${a1}`][`${a2}`][i].names.en.length,
-      ships[`${a1}`][`${a2}`][i].names.en
-    );
-
-    if (textcheck.className != undefined) {
-      a.className = textcheck.className;
-    }
-
-    if (textcheck.fontSize != undefined) {
-      a.style.fontSize = textcheck.fontSize;
-    }
-
-    if (textcheck.lineHeight != undefined) {
-      a.style.lineHeight = textcheck.lineHeight;
-    }
-    a.innerHTML = ships[`${a1}`][`${a2}`][i].names.en;
-    document
-      .getElementsByClassName(a1)[0]
-      .getElementsByClassName(a2)[0]
-      .getElementsByClassName("parent")[i].getElementsByClassName("text")[0]
-      .appendChild(a);
-  }
-}*/
-
+    
     // Namechange html builder
     // Textblock jp
     a = document.createElement("div");
@@ -1045,7 +1099,11 @@ async function filltier(a1, a2) {
       .getElementsByClassName("parent")[i].appendChild(a);
     // Textblock kr
     a = document.createElement("div");
-    a.className = "text_kr";
+        if (languageid == "kr") {
+      a.className = "text_kr show";
+    } else {
+      a.className = "text_kr";
+    }
     document
       .getElementsByClassName(a1)[0]
       .getElementsByClassName(a2)[0]
@@ -1062,7 +1120,7 @@ async function filltier(a1, a2) {
       .getElementsByClassName(a2)[0]
       .getElementsByClassName("parent")[i].appendChild(a);
     // Span text
-    for (let ii = 0; ii < 3; ii++) {
+    for (let ii = 0; ii < 4; ii++) {
       a = document.createElement("span");
       switch (ii) {
         case 0:
@@ -1077,15 +1135,23 @@ async function filltier(a1, a2) {
           language = "cn"
           lang = "cn"
           break;
+        case 3:
+          language = "kr"
+          lang = "kr"
+          break;
       }
       if (ships[`${a1}`][`${a2}`][i].names[language] == null) {
-        lang = "en"
-      }
-
-      let textcheck = await texthandler(
+        lang = "code"
+        textcheck = await texthandler(
         ships[`${a1}`][`${a2}`][i].names[lang].length,
         ships[`${a1}`][`${a2}`][i].names[lang], lang
+      )
+      } else {
+        textcheck = await texthandler(
+        ships[`${a1}`][`${a2}`][i].names[lang].length,
+        ships[`${a1}`][`${a2}`][i].names[lang], language
       );
+      }
 
       if (textcheck.className != undefined) {
         a.className = textcheck.className;
@@ -1110,6 +1176,7 @@ async function filltier(a1, a2) {
 
 async function filltierspecial(a1, a2, a3) {
   let lang;
+  let textcheck;
   for (let i = 0; i < a3.length; i++) {
     // Main div
     let a = document.createElement("div");
@@ -1165,7 +1232,7 @@ async function filltierspecial(a1, a2, a3) {
     }
     // Tags en
     a = document.createElement("div");
-    if (languageid == "en" || languageid == "jp") {
+    if (languageid == "en" || languageid == "jp" || languageid == "kr") {
       a.className = "tags_en show";
     } else {
       a.className = "tags_en";
@@ -1188,7 +1255,7 @@ async function filltierspecial(a1, a2, a3) {
     if (ships[`${a1}`][`${a2}`][a3[i]].tags != null) {
       for (let ii = 0; ii < ships[`${a1}`][`${a2}`][a3[i]].tags.length; ii++) {
         a = document.createElement("img");
-        if (languageid == "en" || languageid == "jp") {
+        if (languageid == "en" || languageid == "jp" || languageid == "kr") {
           a.className = "tag" + (ii + 1) + " show";
         } else {
           a.className = "tag" + (ii + 1);
@@ -1231,39 +1298,7 @@ async function filltierspecial(a1, a2, a3) {
       .getElementsByClassName(a1)[0]
       .getElementsByClassName(a2)[0]
       .getElementsByClassName("parent")[i].appendChild(a);
-    // Textblock
-    /*a = document.createElement("div");
-    a.className = "text";
-    document
-      .getElementsByClassName(a1)[0]
-      .getElementsByClassName(a2)[0]
-      .getElementsByClassName("parent")[i].appendChild(a);
-    // Span text
-    a = document.createElement("span");
-    let textcheck = await texthandler(
-      ships[`${a1}`][`${a2}`][a3[i]].names.en.length,
-      ships[`${a1}`][`${a2}`][a3[i]].names.en
-    );
 
-    if (textcheck.className != undefined) {
-      a.className = textcheck.className;
-    }
-
-    if (textcheck.fontSize != undefined) {
-      a.style.fontSize = textcheck.fontSize;
-    }
-
-    if (textcheck.lineHeight != undefined) {
-      a.style.lineHeight = textcheck.lineHeight;
-    }
-    a.innerHTML = ships[`${a1}`][`${a2}`][a3[i]].names.en;
-    document
-      .getElementsByClassName(a1)[0]
-      .getElementsByClassName(a2)[0]
-      .getElementsByClassName("parent")[i].getElementsByClassName("text")[0]
-      .appendChild(a);
-  }
-}*/
     // Namechange html builder
     // Textblock en
     a = document.createElement("div");
@@ -1289,7 +1324,11 @@ async function filltierspecial(a1, a2, a3) {
       .getElementsByClassName("parent")[i].appendChild(a);
     // Textblock kr
     a = document.createElement("div");
-    a.className = "text_kr";
+    if (languageid == "kr") {
+      a.className = "text_kr show";
+    } else {
+      a.className = "text_kr";
+    }
     document
       .getElementsByClassName(a1)[0]
       .getElementsByClassName(a2)[0]
@@ -1306,7 +1345,7 @@ async function filltierspecial(a1, a2, a3) {
       .getElementsByClassName(a2)[0]
       .getElementsByClassName("parent")[i].appendChild(a);
     // Span text
-    for (let ii = 0; ii < 3; ii++) {
+    for (let ii = 0; ii < 4; ii++) {
       a = document.createElement("span");
       switch (ii) {
         case 0:
@@ -1321,15 +1360,23 @@ async function filltierspecial(a1, a2, a3) {
           language = "cn"
           lang = "cn"
           break;
+        case 2:
+          language = "kr"
+          lang = "kr"
+          break;
       }
       if (ships[`${a1}`][`${a2}`][a3[i]].names[language] == null) {
-        lang = "en"
-      }
-
-      let textcheck = await texthandler(
+        lang = "code"
+        textcheck = await texthandler(
+        ships[`${a1}`][`${a2}`][i].names[lang].length,
+        ships[`${a1}`][`${a2}`][i].names[lang], lang
+        )
+      } else {
+        textcheck = await texthandler(
         ships[`${a1}`][`${a2}`][a3[i]].names[lang].length,
-        ships[`${a1}`][`${a2}`][a3[i]].names[lang], lang
+        ships[`${a1}`][`${a2}`][a3[i]].names[lang], language
       );
+      }
 
       if (textcheck.className != undefined) {
         a.className = textcheck.className;
