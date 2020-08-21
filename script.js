@@ -75,7 +75,7 @@ window.onload = async function () {
       false
     );
   });
-  //buildhtmlall();
+  buildhtmlall();
   async function nodrag(a1) {
     var images = document.getElementsByClassName(a1);
     var i
