@@ -75,7 +75,7 @@ window.onload = async function () {
       false
     );
   });
-  buildhtmlall();
+  //buildhtmlall();
   async function nodrag(a1) {
     var images = document.getElementsByClassName(a1);
     var i
@@ -190,6 +190,47 @@ async function shipnamecheck(a1, a2) {
         }
         if (document.getElementsByClassName("text_cn")[i].classList.contains('show')) {
           document.getElementsByClassName("text_cn")[i].classList.remove('show')
+        }
+      }
+      // for now eng
+      for (let i = 0; i < document.getElementsByClassName("tagfilter eng").length; i++) {
+        if (!document.getElementsByClassName("tagfilter eng")[i].classList.contains('show')) {
+          document.getElementsByClassName("tagfilter eng")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("tagfilter cna")[i].classList.contains('show')) {
+          document.getElementsByClassName("tagfilter cna")[i].classList.remove('show')
+        }
+      }
+      for (let i = 0; i < document.getElementsByClassName("legendicon eng").length; i++) {
+        if (!document.getElementsByClassName("legendicon eng")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendicon eng")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("legendicon cna")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendicon cna")[i].classList.remove('show')
+        }
+      }
+      for (let i = 0; i < document.getElementsByClassName("legendspan eng").length; i++) {
+        if (!document.getElementsByClassName("legendspan eng")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendspan eng")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("legendspan cna")[i].classList.contains('show')) {
+          document.getElementsByClassName("legendspan cna")[i].classList.remove('show')
+        }
+      }
+      for (let i = 0; i < document.getElementsByClassName("tags eng").length; i++) {
+        if (!document.getElementsByClassName("tags eng")[i].classList.contains('show')) {
+          document.getElementsByClassName("tags eng")[i].classList.add('show')
+        }
+        if (document.getElementsByClassName("tags cna")[i].classList.contains('show')) {
+          document.getElementsByClassName("tags cna")[i].classList.remove('show')
+        }
+        for (let ii = 0; ii < document.getElementsByClassName("tags eng")[i].children.length; ii++) {
+          if (!document.getElementsByClassName("tags eng")[i].children[ii].classList.contains('show')) {
+            document.getElementsByClassName("tags eng")[i].children[ii].classList.add('show')
+          }
+          if (document.getElementsByClassName("tags cna")[i].children[ii].classList.contains('show')) {
+            document.getElementsByClassName("tags cna")[i].children[ii].classList.remove('show')
+          }
         }
       }
       break;
@@ -358,11 +399,22 @@ async function tiersize(a1) {
   };
 }
 
-async function texthandler(a1, a2) {
+async function texthandler(a1, a2, a3) {
   let className;
   let fontSize;
   let lineHeight;
   let countcheck = await countspaces(a2);
+  if (a3 != "en") {
+    if (a1 < 7) {
+      fontSize = "10px";
+      lineHeight = "20px";
+      className = "shipname";
+    } else {
+      fontSize = "10px";
+      lineHeight = "9px";
+      className = "shipnamealt";
+    }
+  } else {
   // Check if the sting is 13 or longer
   if (a1 >= 13) {
     className = "shipnamealt";
@@ -420,7 +472,7 @@ async function texthandler(a1, a2) {
     }
     className = "shipname";
   }
-
+}
   return {
     className,
     fontSize,
@@ -866,13 +918,21 @@ async function filltier(a1, a2) {
     }
     // Tags en
     a = document.createElement("div");
-    a.className = "tags eng";
+    if (languageid == "en" || languageid == "jp") {
+      a.className = "tags eng show";
+    } else {
+      a.className = "tags eng";
+    }
     document
       .getElementsByClassName(a1)[0]
       .getElementsByClassName(a2)[0]
       .getElementsByClassName("parent")[i].appendChild(a);
     a = document.createElement("div");
-    a.className = "tags cna";
+    if (languageid == "cn") {
+      a.className = "tags cna show";
+    } else {
+      a.className = "tags cna";
+    }
     document
       .getElementsByClassName(a1)[0]
       .getElementsByClassName(a2)[0]
@@ -881,15 +941,24 @@ async function filltier(a1, a2) {
     if (ships[`${a1}`][`${a2}`][i].tags != null) {
       for (let ii = 0; ii < ships[`${a1}`][`${a2}`][i].tags.length; ii++) {
         a = document.createElement("img");
-        a.className = "tag" + (ii + 1);
+        if (languageid == "en" || languageid == "jp") {
+          a.className = "tag" + (ii + 1) + " show";
+        } else {
+          a.className = "tag" + (ii + 1);
+        }
         a.src =
           "Assets/TagIcons/EN/" + ships[`${a1}`][`${a2}`][i].tags[ii] + ".png";
         document
           .getElementsByClassName(a1)[0]
           .getElementsByClassName(a2)[0]
           .getElementsByClassName("tags eng")[i].appendChild(a);
+
         a = document.createElement("img");
-        a.className = "tag" + (ii + 1);
+        if (languageid == "cn") {
+          a.className = "tag" + (ii + 1) + " show";
+        } else {
+          a.className = "tag" + (ii + 1);
+        }
         a.src =
           "Assets/TagIcons/CN/" + ships[`${a1}`][`${a2}`][i].tags[ii] + ".png";
         document
@@ -1014,7 +1083,7 @@ async function filltier(a1, a2) {
 
       let textcheck = await texthandler(
         ships[`${a1}`][`${a2}`][i].names[lang].length,
-        ships[`${a1}`][`${a2}`][i].names[lang]
+        ships[`${a1}`][`${a2}`][i].names[lang], lang
       );
 
       if (textcheck.className != undefined) {
@@ -1095,7 +1164,7 @@ async function filltierspecial(a1, a2, a3) {
     }
     // Tags en
     a = document.createElement("div");
-    if (languageid == "en") {
+    if (languageid == "en" || languageid == "jp") {
       a.className = "tags eng show";
     } else {
       a.className = "tags eng";
@@ -1115,16 +1184,16 @@ async function filltierspecial(a1, a2, a3) {
       .getElementsByClassName(a2)[0]
       .getElementsByClassName("parent")[i].appendChild(a);
     // tags filler
-    if (ships[`${a1}`][`${a2}`][i].tags != null) {
-      for (let ii = 0; ii < ships[`${a1}`][`${a2}`][i].tags.length; ii++) {
+    if (ships[`${a1}`][`${a2}`][a3[i]].tags != null) {
+      for (let ii = 0; ii < ships[`${a1}`][`${a2}`][a3[i]].tags.length; ii++) {
         a = document.createElement("img");
-        if (languageid == "en") {
+        if (languageid == "en" || languageid == "jp") {
           a.className = "tag" + (ii + 1) + " show";
         } else {
           a.className = "tag" + (ii + 1);
         }
         a.src =
-          "Assets/TagIcons/EN/" + ships[`${a1}`][`${a2}`][i].tags[ii] + ".png";
+          "Assets/TagIcons/EN/" + ships[`${a1}`][`${a2}`][a3[i]].tags[ii] + ".png";
         document
           .getElementsByClassName(a1)[0]
           .getElementsByClassName(a2)[0]
@@ -1137,7 +1206,7 @@ async function filltierspecial(a1, a2, a3) {
           a.className = "tag" + (ii + 1);
         }
         a.src =
-          "Assets/TagIcons/CN/" + ships[`${a1}`][`${a2}`][i].tags[ii] + ".png";
+          "Assets/TagIcons/CN/" + ships[`${a1}`][`${a2}`][a3[i]].tags[ii] + ".png";
         document
           .getElementsByClassName(a1)[0]
           .getElementsByClassName(a2)[0]
@@ -1258,7 +1327,7 @@ async function filltierspecial(a1, a2, a3) {
 
       let textcheck = await texthandler(
         ships[`${a1}`][`${a2}`][a3[i]].names[lang].length,
-        ships[`${a1}`][`${a2}`][a3[i]].names[lang]
+        ships[`${a1}`][`${a2}`][a3[i]].names[lang], lang
       );
 
       if (textcheck.className != undefined) {
