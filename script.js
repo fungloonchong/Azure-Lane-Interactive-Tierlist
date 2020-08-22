@@ -1360,7 +1360,7 @@ async function filltierspecial(a1, a2, a3) {
           language = "cn"
           lang = "cn"
           break;
-        case 2:
+        case 3:
           language = "kr"
           lang = "kr"
           break;
