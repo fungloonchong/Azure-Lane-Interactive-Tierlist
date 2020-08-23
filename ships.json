@@ -1,6 +1,7 @@
 {
   "destroyer": {
-    "t0": [{
+    "t0": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Kitakaze",
         "id": "Plan009",
         "names": {
@@ -23,7 +24,10 @@
         "bannerlink": "Assets/Banner/Research.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "BA"]
+        "tags": [
+          "MG+1",
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Ayanami",
@@ -48,7 +52,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BA"]
+        "tags": [
+          "TRP",
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Tashkent",
@@ -73,7 +80,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "DEF"]
+        "tags": [
+          "BA",
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Laffey",
@@ -98,7 +108,9 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Z23",
@@ -123,7 +135,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDEF"]
+        "tags": [
+          "BA",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Yukikaze",
@@ -148,10 +163,16 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "DEF", "HEAL", "BUFFDEF"]
+        "tags": [
+          "TRP",
+          "DEF",
+          "HEAL",
+          "BUFFDEF"
+        ]
       }
     ],
-    "t1": [{
+    "t1": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Shirakami_Fubuki",
         "id": "Collab051",
         "names": {
@@ -174,7 +195,10 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BA"]
+        "tags": [
+          "TRP",
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Javelin",
@@ -199,7 +223,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "DEF"]
+        "tags": [
+          "BA",
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Z1",
@@ -224,7 +251,12 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BA", "BUFFSHL", "BUFFDEF"]
+        "tags": [
+          "TRP",
+          "BA",
+          "BUFFSHL",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Nicholas",
@@ -249,7 +281,11 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["DEF", "AS", "BUFFDEF"]
+        "tags": [
+          "DEF",
+          "AS",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Le_Malin",
@@ -274,7 +310,9 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Le_Triomphant",
@@ -324,7 +362,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/An_Shan",
@@ -349,7 +389,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Chang_Chun",
@@ -374,10 +417,14 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFDMG"
+        ]
       }
     ],
-    "t2": [{
+    "t2": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Kawakaze",
         "id": "288",
         "names": {
@@ -400,7 +447,10 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BUFFDMG"]
+        "tags": [
+          "TRP",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Shigure",
@@ -425,7 +475,12 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BA", "DEF", "HEAL"]
+        "tags": [
+          "TRP",
+          "BA",
+          "DEF",
+          "HEAL"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Yuudachi",
@@ -450,7 +505,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BA"]
+        "tags": [
+          "TRP",
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Z46",
@@ -475,7 +533,10 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "AA"]
+        "tags": [
+          "BA",
+          "AA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Yoizuki",
@@ -500,7 +561,10 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "AA"]
+        "tags": [
+          "MG+1",
+          "AA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Harutsuki",
@@ -525,7 +589,10 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "AA"]
+        "tags": [
+          "MG+1",
+          "AA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Hanazuki",
@@ -550,7 +617,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "AA"]
+        "tags": [
+          "MG+1",
+          "AA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Eskimo",
@@ -575,7 +645,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1"]
+        "tags": [
+          "MG+1"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Tanikaze",
@@ -600,7 +672,11 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "DEF", "BUFFDMG"]
+        "tags": [
+          "TRP",
+          "DEF",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Ardent",
@@ -625,7 +701,10 @@
         "bannerlink": "Assets/Banner/ENEventRetrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFAIR", "BUFFDMG"]
+        "tags": [
+          "BUFFAIR",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Fu_Shun",
@@ -650,7 +729,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Tai_Yuan",
@@ -675,10 +756,13 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       }
     ],
-    "t3": [{
+    "t3": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Carabiniere",
         "id": "415",
         "names": {
@@ -701,7 +785,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDMG"]
+        "tags": [
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Hamakaze",
@@ -726,7 +812,10 @@
         "bannerlink": "Assets/Banner/EventRetrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "DEF"]
+        "tags": [
+          "TRP",
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Kagerou",
@@ -751,7 +840,11 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BUFFTRP", "BUFFDMG"]
+        "tags": [
+          "TRP",
+          "BUFFTRP",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Kizuna_AI",
@@ -776,7 +869,12 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BA", "DEF", "BUFFDMG"]
+        "tags": [
+          "TRP",
+          "BA",
+          "DEF",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Naganami",
@@ -801,7 +899,11 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BUFFTRP", "BUFFDEF"]
+        "tags": [
+          "TRP",
+          "BUFFTRP",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Hatsuharu",
@@ -826,7 +928,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BUFFTRP"]
+        "tags": [
+          "TRP",
+          "BUFFTRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Amazon",
@@ -851,7 +956,11 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["AA", "BUFFDEF", "BUFFEXP"]
+        "tags": [
+          "AA",
+          "BUFFDEF",
+          "BUFFEXP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Yuugure",
@@ -876,7 +985,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BUFFAIR"]
+        "tags": [
+          "TRP",
+          "BUFFAIR"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Hatsushimo",
@@ -901,10 +1013,14 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BUFFDEF"]
+        "tags": [
+          "TRP",
+          "BUFFDEF"
+        ]
       }
     ],
-    "t4": [{
+    "t4": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Hibiki",
         "id": "160",
         "names": {
@@ -927,7 +1043,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "DEF"]
+        "tags": [
+          "TRP",
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Tartu",
@@ -952,7 +1071,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFSHL", "BUFFAA"]
+        "tags": [
+          "BUFFSHL",
+          "BUFFAA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Fortune",
@@ -977,7 +1099,9 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Cooper",
@@ -1002,7 +1126,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["AS"]
+        "tags": [
+          "AS"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Fubuki",
@@ -1027,7 +1153,11 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BUFFTRP", "BUFFDMG"]
+        "tags": [
+          "TRP",
+          "BUFFTRP",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Icarus",
@@ -1052,7 +1182,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Kiyonami",
@@ -1077,7 +1209,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP"]
+        "tags": [
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Cygnet",
@@ -1102,7 +1236,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["DEF", "BUFFDEF"]
+        "tags": [
+          "DEF",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Shiranui",
@@ -1127,7 +1264,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BUFFAIR"]
+        "tags": [
+          "TRP",
+          "BUFFAIR"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Fletcher",
@@ -1152,10 +1292,14 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["DEF", "BUFFDMG"]
+        "tags": [
+          "DEF",
+          "BUFFDMG"
+        ]
       }
     ],
-    "t5": [{
+    "t5": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/White_Heart",
         "id": "Collab007",
         "names": {
@@ -1178,7 +1322,10 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BA"]
+        "tags": [
+          "TRP",
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Nekone",
@@ -1203,7 +1350,10 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["HEAL", "BA"]
+        "tags": [
+          "HEAL",
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Makinami",
@@ -1228,7 +1378,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP"]
+        "tags": [
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Hardy",
@@ -1253,7 +1405,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFTRP"]
+        "tags": [
+          "BUFFTRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Z2",
@@ -1303,7 +1457,9 @@
         "bannerlink": "Assets/Banner/ENEventRetrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDMG"]
+        "tags": [
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Forbin",
@@ -1328,7 +1484,9 @@
         "bannerlink": "Assets/Banner/ENEventRetrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Grenville",
@@ -1353,7 +1511,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFSHL"]
+        "tags": [
+          "BUFFSHL"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Le_Téméraire",
@@ -1378,7 +1538,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFSHL"]
+        "tags": [
+          "BUFFSHL"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/L'Opiniâtre",
@@ -1403,7 +1565,9 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Vampire",
@@ -1428,7 +1592,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["DEF"]
+        "tags": [
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Maury",
@@ -1453,7 +1619,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "DEF"]
+        "tags": [
+          "TRP",
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Niizuki",
@@ -1478,7 +1647,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1"]
+        "tags": [
+          "MG+1"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Matchless",
@@ -1503,7 +1674,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDMG"]
+        "tags": [
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Vauquelin",
@@ -1528,7 +1701,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BUFFDEF"]
+        "tags": [
+          "TRP",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Musketeer",
@@ -1553,7 +1729,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP"]
+        "tags": [
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Matsukaze",
@@ -1628,7 +1806,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFSHL", "BUFFDEF"]
+        "tags": [
+          "BUFFSHL",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Hammann",
@@ -1653,7 +1834,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["AA", "BUFFDEF"]
+        "tags": [
+          "AA",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Acasta",
@@ -1678,7 +1862,9 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Z25",
@@ -1703,7 +1889,9 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Grozny",
@@ -1728,7 +1916,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["AA"]
+        "tags": [
+          "AA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Minsk",
@@ -1753,7 +1943,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Foxhound",
@@ -1778,7 +1970,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF", "BUFFDMG"]
+        "tags": [
+          "BUFFDEF",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Crescent",
@@ -1803,7 +1998,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["DEF", "BUFFDEF"]
+        "tags": [
+          "DEF",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Comet",
@@ -1828,10 +2026,14 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFTRP", "BUFFDEF"]
+        "tags": [
+          "BUFFTRP",
+          "BUFFDEF"
+        ]
       }
     ],
-    "t6": [{
+    "t6": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Blanc",
         "id": "Collab003",
         "names": {
@@ -1904,7 +2106,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDMG", "BUFFDEF"]
+        "tags": [
+          "BUFFDMG",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Mullany",
@@ -1954,7 +2159,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Glowworm",
@@ -1979,7 +2186,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Uranami",
@@ -2004,7 +2213,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "HEAL"]
+        "tags": [
+          "TRP",
+          "HEAL"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Nowaki",
@@ -2029,7 +2241,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP"]
+        "tags": [
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Z35",
@@ -2079,7 +2293,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP"]
+        "tags": [
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Oyashio",
@@ -2104,7 +2320,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP"]
+        "tags": [
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Michishio",
@@ -2129,7 +2347,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BUFFDEF"]
+        "tags": [
+          "TRP",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Asashio",
@@ -2154,7 +2375,9 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDMG"]
+        "tags": [
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Echo",
@@ -2179,7 +2402,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Aylwin",
@@ -2229,7 +2454,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Hatakaze",
@@ -2254,7 +2481,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Cassin",
@@ -2329,7 +2558,9 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP"]
+        "tags": [
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Kisaragi",
@@ -2379,7 +2610,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BUFFTRP"]
+        "tags": [
+          "TRP",
+          "BUFFTRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Jupiter",
@@ -2404,7 +2638,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Shiratsuyu",
@@ -2429,7 +2665,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BUFFTRP"]
+        "tags": [
+          "TRP",
+          "BUFFTRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Halsey_Powell",
@@ -2454,7 +2693,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["AS"]
+        "tags": [
+          "AS"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Urakaze",
@@ -2479,7 +2720,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP"]
+        "tags": [
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Isokaze",
@@ -2504,7 +2747,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP"]
+        "tags": [
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Ikazuchi",
@@ -2529,7 +2774,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP"]
+        "tags": [
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Inazuma",
@@ -2554,7 +2801,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP"]
+        "tags": [
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Wakaba",
@@ -2579,7 +2828,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP"]
+        "tags": [
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Benson",
@@ -2604,7 +2855,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFAIR"]
+        "tags": [
+          "BUFFAIR"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Dewey",
@@ -2629,7 +2882,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Akatsuki",
@@ -2654,7 +2909,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP"]
+        "tags": [
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Radford",
@@ -2754,7 +3011,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP"]
+        "tags": [
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Hobby",
@@ -2779,7 +3038,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDMG"]
+        "tags": [
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Juno",
@@ -2804,7 +3065,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Smalley",
@@ -2829,10 +3092,13 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       }
     ],
-    "t7": [{
+    "t7": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/22",
         "id": "Collab021",
         "names": {
@@ -3560,7 +3826,8 @@
     ]
   },
   "battleship": {
-    "t0": [{
+    "t0": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Friedrich_der_Große",
         "id": "Plan011",
         "names": {
@@ -3583,7 +3850,10 @@
         "bannerlink": "Assets/Banner/Research.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "DEF"]
+        "tags": [
+          "BA",
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Monarch",
@@ -3608,7 +3878,10 @@
         "bannerlink": "Assets/Banner/Research.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "DEF"]
+        "tags": [
+          "BA",
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Warspite",
@@ -3633,7 +3906,10 @@
         "bannerlink": "Assets/Banner/EventRetrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "DEF"]
+        "tags": [
+          "BA",
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Georgia",
@@ -3658,7 +3934,9 @@
         "bannerlink": "Assets/Banner/Research.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Gascogne",
@@ -3683,7 +3961,10 @@
         "bannerlink": "Assets/Banner/Research.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "DEF"]
+        "tags": [
+          "BA",
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Odin",
@@ -3708,7 +3989,11 @@
         "bannerlink": "Assets/Banner/Research.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "DEF", "AS"]
+        "tags": [
+          "BA",
+          "DEF",
+          "AS"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Richelieu",
@@ -3733,7 +4018,11 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": "FFNFMNF",
         "banneraltlink": "Assets/BannerAlt/FFNFMNF.png",
-        "tags": ["BA", "BUFFDMG", "BUFFDEF"]
+        "tags": [
+          "BA",
+          "BUFFDMG",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Howe",
@@ -3758,7 +4047,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": "NEW",
         "banneraltlink": "Assets/BannerAlt/NEW.png",
-        "tags": ["BA", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Nagato",
@@ -3783,10 +4075,16 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": "IJN",
         "banneraltlink": "Assets/BannerAlt/IJN.png",
-        "tags": ["BA", "BUFFSHL", "BUFFAIR", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFSHL",
+          "BUFFAIR",
+          "BUFFDMG"
+        ]
       }
     ],
-    "t1": [{
+    "t1": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Champagne",
         "id": "Plan017",
         "names": {
@@ -3809,7 +4107,10 @@
         "bannerlink": "Assets/Banner/Research.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Alabama",
@@ -3834,7 +4135,11 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "DEF", "BUFFDEF"]
+        "tags": [
+          "BA",
+          "DEF",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Sovetskaya_Rossiya",
@@ -3859,7 +4164,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Bismarck",
@@ -3884,7 +4191,11 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": "KMS",
         "banneraltlink": "Assets/BannerAlt/KMS.png",
-        "tags": ["BA", "BUFFAIR", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFAIR",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Amagi",
@@ -3909,7 +4220,11 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDEF", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFDEF",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Tosa",
@@ -3934,7 +4249,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Jean_Bart",
@@ -3984,7 +4302,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/King_George_V",
@@ -4009,7 +4330,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Littorio",
@@ -4034,10 +4357,14 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDEF"]
+        "tags": [
+          "BA",
+          "BUFFDEF"
+        ]
       }
     ],
-    "t2": [{
+    "t2": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Izumo",
         "id": "Plan004",
         "names": {
@@ -4060,7 +4387,9 @@
         "bannerlink": "Assets/Banner/Research.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Super_Gamer_Kizuna_AI",
@@ -4085,7 +4414,9 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Suruga",
@@ -4110,7 +4441,11 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "DEF", "BUFFDEF"]
+        "tags": [
+          "BA",
+          "DEF",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Kaga_(Battleship)",
@@ -4135,7 +4470,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "TRP"]
+        "tags": [
+          "BA",
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Gascogne_µ",
@@ -4160,7 +4498,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDMG"]
+        "tags": [
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Tirpitz",
@@ -4185,7 +4525,9 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP"]
+        "tags": [
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Washington",
@@ -4210,7 +4552,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Hood",
@@ -4235,7 +4579,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Gangut",
@@ -4260,7 +4607,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDMG", "BUFFDEF"]
+        "tags": [
+          "BUFFDMG",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Little_Renown",
@@ -4310,7 +4660,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": "NEW",
         "banneraltlink": "Assets/BannerAlt/NEW.png",
-        "tags": ["BA", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Hyuuga",
@@ -4335,10 +4688,14 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFSHL"]
+        "tags": [
+          "BA",
+          "BUFFSHL"
+        ]
       }
     ],
-    "t3": [{
+    "t3": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Massachusetts",
         "id": "354",
         "names": {
@@ -4361,7 +4718,9 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["DEF"]
+        "tags": [
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/North_Carolina",
@@ -4386,7 +4745,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Queen_Elizabeth",
@@ -4411,7 +4772,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDMG"]
+        "tags": [
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Ise",
@@ -4436,7 +4799,9 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Fusou",
@@ -4461,7 +4826,9 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Yamashiro",
@@ -4486,10 +4853,13 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       }
     ],
-    "t4": [{
+    "t4": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Mikasa",
         "id": "320",
         "names": {
@@ -4512,7 +4882,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": "IJN",
         "banneraltlink": "Assets/BannerAlt/IJN.png",
-        "tags": ["BUFFSHL", "BUFFDMG"]
+        "tags": [
+          "BUFFSHL",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Prince_of_Wales",
@@ -4562,7 +4935,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["DEF", "BUFFDEF"]
+        "tags": [
+          "DEF",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Dunkerque",
@@ -4587,7 +4963,9 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Mutsu",
@@ -4612,7 +4990,9 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Maryland",
@@ -4637,7 +5017,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Rodney",
@@ -4662,7 +5044,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Nelson",
@@ -4687,7 +5071,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Arizona",
@@ -4712,10 +5098,13 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["HEAL"]
+        "tags": [
+          "HEAL"
+        ]
       }
     ],
-    "t5": [{
+    "t5": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Colorado",
         "id": "060",
         "names": {
@@ -4738,7 +5127,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/West_Virginia",
@@ -4763,7 +5154,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Giulio_Cesare",
@@ -4788,7 +5181,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "TRP"]
+        "tags": [
+          "BA",
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Scharnhorst",
@@ -4813,7 +5209,10 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BA"]
+        "tags": [
+          "TRP",
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Gneisenau",
@@ -4838,7 +5237,9 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP"]
+        "tags": [
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Kirishima",
@@ -4863,7 +5264,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Hiei-chan",
@@ -4888,7 +5291,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BUFFDEF"]
+        "tags": [
+          "TRP",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Erebus",
@@ -4913,7 +5319,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Terror",
@@ -4938,7 +5346,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Abercrombie",
@@ -4963,10 +5373,13 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       }
     ],
-    "t6": [{
+    "t6": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Kongou",
         "id": "204",
         "names": {
@@ -4989,7 +5402,10 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFSHL", "BUFFDEF"]
+        "tags": [
+          "BUFFSHL",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Haruna",
@@ -5039,7 +5455,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Oklahoma",
@@ -5114,10 +5532,13 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       }
     ],
-    "t7": [{
+    "t7": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Renown",
         "id": "127",
         "names": {
@@ -5165,7 +5586,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP"]
+        "tags": [
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/California",
@@ -5215,7 +5638,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Repulse",
@@ -5245,7 +5670,8 @@
     ]
   },
   "carrier": {
-    "t0": [{
+    "t0": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Essex",
         "id": "357",
         "names": {
@@ -5268,7 +5694,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDEF"]
+        "tags": [
+          "BA",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Centaur",
@@ -5293,7 +5722,12 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDMG", "BUFFAIR", "BUFFSHL"]
+        "tags": [
+          "BA",
+          "BUFFDMG",
+          "BUFFAIR",
+          "BUFFSHL"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Formidable",
@@ -5318,7 +5752,11 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDMG", "BUFFDEF"]
+        "tags": [
+          "BA",
+          "BUFFDMG",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Enterprise",
@@ -5393,7 +5831,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["HEAL", "BUFFDEF"]
+        "tags": [
+          "HEAL",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Perseus",
@@ -5418,7 +5859,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": "NEW",
         "banneraltlink": "Assets/BannerAlt/NEW.png",
-        "tags": ["HEAL"]
+        "tags": [
+          "HEAL"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Unicorn",
@@ -5443,7 +5886,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["HEAL", "BUFFDMG"]
+        "tags": [
+          "HEAL",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Akashi",
@@ -5468,10 +5914,15 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["HEAL", "DEF", "BUFFDMG"]
+        "tags": [
+          "HEAL",
+          "DEF",
+          "BUFFDMG"
+        ]
       }
     ],
-    "t1": [{
+    "t1": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Shangri-La",
         "id": "378",
         "names": {
@@ -5494,7 +5945,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Intrepid",
@@ -5519,7 +5972,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "DEF"]
+        "tags": [
+          "BA",
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Tokino_Sora",
@@ -5544,7 +6000,10 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDEF"]
+        "tags": [
+          "BA",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Illustrious",
@@ -5569,7 +6028,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Ark_Royal",
@@ -5594,7 +6055,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Shouhou",
@@ -5619,7 +6083,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["HEAL", "BUFFAIR"]
+        "tags": [
+          "HEAL",
+          "BUFFAIR"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Casablanca",
@@ -5644,7 +6111,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFAIR"]
+        "tags": [
+          "BUFFAIR"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Vestal",
@@ -5669,10 +6138,14 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["HEAL", "AA"]
+        "tags": [
+          "HEAL",
+          "AA"
+        ]
       }
     ],
-    "t2": [{
+    "t2": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Shoukaku",
         "id": "228",
         "names": {
@@ -5695,7 +6168,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDMG"]
+        "tags": [
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Zuikaku",
@@ -5720,7 +6195,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDMG"]
+        "tags": [
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Akagi",
@@ -5795,7 +6272,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Hiryuu",
@@ -5820,7 +6300,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Anniversary_Kizuna_AI",
@@ -5845,7 +6328,9 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Taihou",
@@ -5870,7 +6355,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "DEF"]
+        "tags": [
+          "BA",
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Bunker_Hill",
@@ -5895,7 +6383,10 @@
         "bannerlink": null,
         "banneralt": "USS",
         "banneraltlink": "Assets/BannerAlt/USS.png",
-        "tags": ["BA", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Victorious",
@@ -5920,7 +6411,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["DEF"]
+        "tags": [
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Akagi_µ",
@@ -5945,7 +6438,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Ranger",
@@ -5973,7 +6468,8 @@
         "tags": null
       }
     ],
-    "t3": [{
+    "t3": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Graf_Zeppelin",
         "id": "252",
         "names": {
@@ -5996,7 +6492,10 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": "KMS",
         "banneraltlink": "Assets/BannerAlt/KMS.png",
-        "tags": ["DEF", "BUFFDEF"]
+        "tags": [
+          "DEF",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Bataan",
@@ -6021,7 +6520,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFAIR"]
+        "tags": [
+          "BA",
+          "BUFFAIR"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Béarn",
@@ -6046,7 +6548,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Eagle",
@@ -6071,7 +6575,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": "NEW",
         "banneraltlink": "Assets/BannerAlt/NEW.png",
-        "tags": ["MG+1", "BA"]
+        "tags": [
+          "MG+1",
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Lexington",
@@ -6096,7 +6603,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Hornet",
@@ -6121,7 +6631,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Zeppy",
@@ -6146,7 +6658,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Chaser",
@@ -6171,10 +6685,13 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["AS"]
+        "tags": [
+          "AS"
+        ]
       }
     ],
-    "t4": [{
+    "t4": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Ookami_Mio",
         "id": "Collab057",
         "names": {
@@ -6197,7 +6714,9 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Fumiruiru",
@@ -6222,7 +6741,10 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["HEAL", "BA"]
+        "tags": [
+          "HEAL",
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Independence",
@@ -6247,7 +6769,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Ryuujou",
@@ -6272,7 +6797,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFAIR"]
+        "tags": [
+          "BA",
+          "BUFFAIR"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Yorktown",
@@ -6297,7 +6825,11 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "DEF", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "DEF",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Akagi-chan",
@@ -6322,7 +6854,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Little_Illustrious",
@@ -6347,7 +6882,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Long_Island",
@@ -6372,10 +6910,13 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFAIR"]
+        "tags": [
+          "BUFFAIR"
+        ]
       }
     ],
-    "t5": [{
+    "t5": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Green_Heart",
         "id": "Collab008",
         "names": {
@@ -6398,7 +6939,9 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Hermes",
@@ -6423,10 +6966,13 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       }
     ],
-    "t6": [{
+    "t6": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Vert",
         "id": "Collab004",
         "names": {
@@ -6474,7 +7020,9 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Houshou",
@@ -6499,7 +7047,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFEXP"]
+        "tags": [
+          "BUFFEXP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Langley",
@@ -6524,7 +7074,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFAIR", "BUFFEXP"]
+        "tags": [
+          "BUFFAIR",
+          "BUFFEXP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Bogue",
@@ -6552,7 +7105,8 @@
         "tags": null
       }
     ],
-    "t7": [{
+    "t7": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Uruuru",
         "id": "Collab034",
         "names": {
@@ -6575,7 +7129,9 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Saraana",
@@ -6600,7 +7156,9 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Hiyou",
@@ -6675,7 +7233,10 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDMG", "BUFFDEF"]
+        "tags": [
+          "BUFFDMG",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Wasp",
@@ -6705,7 +7266,8 @@
     ]
   },
   "heavycruiser": {
-    "t0": [{
+    "t0": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Azuma",
         "id": "Plan010",
         "names": {
@@ -6728,7 +7290,11 @@
         "bannerlink": "Assets/Banner/Research.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "BA", "DEF"]
+        "tags": [
+          "MG+1",
+          "BA",
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Drake",
@@ -6753,7 +7319,11 @@
         "bannerlink": "Assets/Banner/Research.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "BA", "DEF"]
+        "tags": [
+          "MG+1",
+          "BA",
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Roon",
@@ -6778,7 +7348,11 @@
         "bannerlink": "Assets/Banner/Research.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "DEF", "BUFFDEF"]
+        "tags": [
+          "MG+1",
+          "DEF",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Cheshire",
@@ -6803,7 +7377,11 @@
         "bannerlink": "Assets/Banner/Research.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["AA", "BA", "DEF"]
+        "tags": [
+          "AA",
+          "BA",
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Baltimore",
@@ -6828,7 +7406,12 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "AA", "BUFFAA", "BUFFAIR"]
+        "tags": [
+          "MG+1",
+          "AA",
+          "BUFFAA",
+          "BUFFAIR"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Zara",
@@ -6853,7 +7436,11 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "DEF", "BUFFDEF"]
+        "tags": [
+          "MG+1",
+          "DEF",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Bremerton",
@@ -6878,10 +7465,16 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "BA", "DEF", "AA"]
+        "tags": [
+          "MG+1",
+          "BA",
+          "DEF",
+          "AA"
+        ]
       }
     ],
-    "t1": [{
+    "t1": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Saint_Louis",
         "id": "Plan006",
         "names": {
@@ -6904,7 +7497,10 @@
         "bannerlink": "Assets/Banner/Research.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "DEF"]
+        "tags": [
+          "MG+1",
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Ibuki",
@@ -6929,7 +7525,10 @@
         "bannerlink": "Assets/Banner/Research.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BA"]
+        "tags": [
+          "TRP",
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Minneapolis",
@@ -6954,7 +7553,11 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "DEF", "AA"]
+        "tags": [
+          "MG+1",
+          "DEF",
+          "AA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/London",
@@ -6979,7 +7582,9 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFSHL"]
+        "tags": [
+          "BUFFSHL"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Portland",
@@ -7004,10 +7609,16 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "DEF", "AA", "BUFFDEF"]
+        "tags": [
+          "MG+1",
+          "DEF",
+          "AA",
+          "BUFFDEF"
+        ]
       }
     ],
-    "t2": [{
+    "t2": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Elegant_Kizuna_AI",
         "id": "Collab042",
         "names": {
@@ -7030,7 +7641,9 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1"]
+        "tags": [
+          "MG+1"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Algérie",
@@ -7055,7 +7668,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDEF"]
+        "tags": [
+          "BA",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/York",
@@ -7105,7 +7721,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["DEF", "BUFFDEF"]
+        "tags": [
+          "DEF",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Wichita",
@@ -7130,10 +7749,14 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "BUFFSHL"]
+        "tags": [
+          "MG+1",
+          "BUFFSHL"
+        ]
       }
     ],
-    "t3": [{
+    "t3": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Takao",
         "id": "200",
         "names": {
@@ -7231,7 +7854,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFSHL", "BUFFTRP"]
+        "tags": [
+          "BUFFSHL",
+          "BUFFTRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Admiral_Graf_Spee",
@@ -7256,7 +7882,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Deutschland",
@@ -7281,10 +7909,13 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       }
     ],
-    "t4": [{
+    "t4": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Black_Heart",
         "id": "Collab006",
         "names": {
@@ -7307,7 +7938,9 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Exeter",
@@ -7332,7 +7965,9 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Indianapolis",
@@ -7357,7 +7992,11 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "DEF", "BUFFDEF"]
+        "tags": [
+          "MG+1",
+          "DEF",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Suffolk",
@@ -7435,7 +8074,8 @@
         "tags": null
       }
     ],
-    "t5": [{
+    "t5": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Kuon",
         "id": "Collab031",
         "names": {
@@ -7458,7 +8098,9 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Nakiri_Ayame",
@@ -7483,7 +8125,9 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Astoria",
@@ -7508,7 +8152,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "BUFFSHL"]
+        "tags": [
+          "MG+1",
+          "BUFFSHL"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Quincy",
@@ -7533,7 +8180,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1"]
+        "tags": [
+          "MG+1"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Vincennes",
@@ -7558,7 +8207,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1"]
+        "tags": [
+          "MG+1"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Admiral_Hipper_µ",
@@ -7583,7 +8234,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Suzuya",
@@ -7608,7 +8261,9 @@
         "bannerlink": "Assets/Banner/ENEvent.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Admiral_Hipper",
@@ -7658,7 +8313,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP"]
+        "tags": [
+          "TRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Houston",
@@ -7683,7 +8340,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1"]
+        "tags": [
+          "MG+1"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Chicago",
@@ -7708,7 +8367,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1"]
+        "tags": [
+          "MG+1"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Northampton",
@@ -7733,10 +8394,14 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "BUFFSHL"]
+        "tags": [
+          "MG+1",
+          "BUFFSHL"
+        ]
       }
     ],
-    "t6": [{
+    "t6": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Noire",
         "id": "Collab002",
         "names": {
@@ -7809,7 +8474,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Myoukou",
@@ -7834,7 +8501,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Pensacola",
@@ -7859,7 +8528,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1"]
+        "tags": [
+          "MG+1"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Salt_Lake_City",
@@ -7884,10 +8555,13 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1"]
+        "tags": [
+          "MG+1"
+        ]
       }
     ],
-    "t7": [{
+    "t7": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Trento",
         "id": "414",
         "names": {
@@ -7985,7 +8659,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["DEF"]
+        "tags": [
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Kent",
@@ -8065,7 +8741,8 @@
     ]
   },
   "lightcruiser": {
-    "t0": [{
+    "t0": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/San_Diego",
         "id": "036",
         "names": {
@@ -8088,7 +8765,11 @@
         "bannerlink": "Assets/Banner/EventRetrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "AA", "BUFFAA"]
+        "tags": [
+          "BA",
+          "AA",
+          "BUFFAA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Helena",
@@ -8113,7 +8794,12 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "BUFFDMG", "AA", "BUFFDEF"]
+        "tags": [
+          "MG+1",
+          "BUFFDMG",
+          "AA",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Seattle",
@@ -8138,7 +8824,10 @@
         "bannerlink": "Assets/Banner/Research.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "AA"]
+        "tags": [
+          "MG+1",
+          "AA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Mainz",
@@ -8163,7 +8852,10 @@
         "bannerlink": "Assets/Banner/Research.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "DEF"]
+        "tags": [
+          "MG+1",
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/HMS_Neptune",
@@ -8188,7 +8880,10 @@
         "bannerlink": "Assets/Banner/Research.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "DEF"]
+        "tags": [
+          "BA",
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Noshiro",
@@ -8213,7 +8908,11 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["DEF", "TRP", "BUFFTRP"]
+        "tags": [
+          "DEF",
+          "TRP",
+          "BUFFTRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Chapayev",
@@ -8238,7 +8937,11 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "BA", "BUFFDMG"]
+        "tags": [
+          "MG+1",
+          "BA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Yat_Sen",
@@ -8263,7 +8966,9 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["DEF"]
+        "tags": [
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Ning_Hai",
@@ -8288,7 +8993,9 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["DEF"]
+        "tags": [
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Ping_Hai",
@@ -8313,10 +9020,13 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["DEF"]
+        "tags": [
+          "DEF"
+        ]
       }
     ],
-    "t1": [{
+    "t1": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Montpelier",
         "id": "329",
         "names": {
@@ -8339,7 +9049,12 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "AA", "BUFFSHL", "BUFFDMG"]
+        "tags": [
+          "MG+1",
+          "AA",
+          "BUFFSHL",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Swiftsure",
@@ -8364,7 +9079,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFAA", "BUFFDMG"]
+        "tags": [
+          "BUFFAA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Dido",
@@ -8389,7 +9107,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["AA", "BUFFDMG"]
+        "tags": [
+          "AA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Mogami",
@@ -8414,7 +9135,9 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1"]
+        "tags": [
+          "MG+1"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Hermione",
@@ -8439,7 +9162,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": "NEW",
         "banneraltlink": "Assets/BannerAlt/NEW.png",
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Jintsuu",
@@ -8464,7 +9189,11 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BUFFTRP", "BUFFDMG"]
+        "tags": [
+          "TRP",
+          "BUFFTRP",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Cleveland",
@@ -8489,7 +9218,11 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "AA", "BUFFDMG"]
+        "tags": [
+          "MG+1",
+          "AA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Columbia",
@@ -8514,7 +9247,11 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "AA", "BUFFDEF"]
+        "tags": [
+          "MG+1",
+          "AA",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Cleveland_µ",
@@ -8539,7 +9276,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "AA"]
+        "tags": [
+          "MG+1",
+          "AA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Birmingham",
@@ -8564,7 +9304,11 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "DEF", "AA"]
+        "tags": [
+          "MG+1",
+          "DEF",
+          "AA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Isuzu",
@@ -8589,7 +9333,9 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["AA"]
+        "tags": [
+          "AA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Aurora",
@@ -8614,10 +9360,13 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDMG"]
+        "tags": [
+          "BUFFDMG"
+        ]
       }
     ],
-    "t2": [{
+    "t2": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Kinu",
         "id": "186",
         "names": {
@@ -8640,7 +9389,11 @@
         "bannerlink": "Assets/Banner/EventRetrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "AS", "BUFFDEF"]
+        "tags": [
+          "TRP",
+          "AS",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Jeanne_d'Arc",
@@ -8665,7 +9418,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF", "HEAL"]
+        "tags": [
+          "BUFFDEF",
+          "HEAL"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Sirius",
@@ -8690,7 +9446,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFAIR"]
+        "tags": [
+          "BUFFAIR"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Belfast",
@@ -8715,7 +9473,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Avrora",
@@ -8740,7 +9500,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDMG"]
+        "tags": [
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Curlew",
@@ -8765,7 +9527,11 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "AA", "BUFFAIR"]
+        "tags": [
+          "MG+1",
+          "AA",
+          "BUFFAIR"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Curacoa",
@@ -8790,7 +9556,11 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "AA", "BUFFAA"]
+        "tags": [
+          "MG+1",
+          "AA",
+          "BUFFAA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Denver",
@@ -8815,7 +9585,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "AA"]
+        "tags": [
+          "MG+1",
+          "AA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Newcastle",
@@ -8840,7 +9613,11 @@
         "bannerlink": "Assets/Banner/EventRetrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["AA", "BUFFSHL", "BUFFDMG"]
+        "tags": [
+          "AA",
+          "BUFFSHL",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Biloxi",
@@ -8865,7 +9642,11 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "AA", "BUFFDEF"]
+        "tags": [
+          "MG+1",
+          "AA",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Sendai",
@@ -8890,7 +9671,11 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BUFFTRP", "BUFFDMG"]
+        "tags": [
+          "TRP",
+          "BUFFTRP",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Sheffield_µ",
@@ -8915,7 +9700,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Leipzig",
@@ -8940,7 +9727,12 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFSHL", "BUFFTRP", "BUFFDEF", "BUFFDMG"]
+        "tags": [
+          "BUFFSHL",
+          "BUFFTRP",
+          "BUFFDEF",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Little_Bel",
@@ -8965,7 +9757,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["DEF", "HEAL"]
+        "tags": [
+          "DEF",
+          "HEAL"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Phoenix",
@@ -8990,10 +9785,14 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "DEF"]
+        "tags": [
+          "MG+1",
+          "DEF"
+        ]
       }
     ],
-    "t3": [{
+    "t3": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Reno",
         "id": "445",
         "names": {
@@ -9016,7 +9815,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["AA", "BUFFAIR"]
+        "tags": [
+          "AA",
+          "BUFFAIR"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Émile_Bertin",
@@ -9041,7 +9843,10 @@
         "bannerlink": "Assets/Banner/ENEventRetrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFDMG"]
+        "tags": [
+          "BA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Yuubari",
@@ -9066,7 +9871,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "BUFFEXP"]
+        "tags": [
+          "BA",
+          "BUFFEXP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Ajax",
@@ -9141,7 +9949,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1"]
+        "tags": [
+          "MG+1"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Sheffield",
@@ -9166,7 +9976,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Clevelad",
@@ -9191,7 +10003,11 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "AA", "BUFFDMG"]
+        "tags": [
+          "MG+1",
+          "AA",
+          "BUFFDMG"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Lena",
@@ -9216,7 +10032,11 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "AA", "BUFFDEF"]
+        "tags": [
+          "MG+1",
+          "AA",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Brooklyn",
@@ -9241,7 +10061,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1", "BUFFSHL"]
+        "tags": [
+          "MG+1",
+          "BUFFSHL"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Leander",
@@ -9266,7 +10089,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFSHL", "BUFFDEF"]
+        "tags": [
+          "BUFFSHL",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Honolulu",
@@ -9291,10 +10117,13 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["MG+1"]
+        "tags": [
+          "MG+1"
+        ]
       }
     ],
-    "t4": [{
+    "t4": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Purple_Heart",
         "id": "Collab005",
         "names": {
@@ -9317,7 +10146,9 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Li'l_Sandy",
@@ -9342,7 +10173,12 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA", "AA", "AS", "BUFFDEF"]
+        "tags": [
+          "BA",
+          "AA",
+          "AS",
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Pamiat_Merkuria",
@@ -9367,7 +10203,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["DEF"]
+        "tags": [
+          "DEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Edinburgh",
@@ -9417,7 +10255,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Gloucester",
@@ -9442,7 +10282,9 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/La_Galissonnière",
@@ -9467,7 +10309,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["DEF", "BA"]
+        "tags": [
+          "DEF",
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Naka",
@@ -9492,7 +10337,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BUFFTRP"]
+        "tags": [
+          "TRP",
+          "BUFFTRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Köln",
@@ -9517,7 +10365,9 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["AS"]
+        "tags": [
+          "AS"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Glasgow",
@@ -9542,10 +10392,13 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDEF"]
+        "tags": [
+          "BUFFDEF"
+        ]
       }
     ],
-    "t5": [{
+    "t5": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Rurutie",
         "id": "Collab033",
         "names": {
@@ -9568,7 +10421,9 @@
         "bannerlink": "Assets/Banner/Collab.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BA"]
+        "tags": [
+          "BA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Agano",
@@ -9593,7 +10448,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFSHL", "BUFFAIR"]
+        "tags": [
+          "BUFFSHL",
+          "BUFFAIR"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Abukuma",
@@ -9618,7 +10476,10 @@
         "bannerlink": "Assets/Banner/Retrofit.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["TRP", "BUFFTRP"]
+        "tags": [
+          "TRP",
+          "BUFFTRP"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Karlsruhe",
@@ -9668,10 +10529,14 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFDMG", "BUFFDEF"]
+        "tags": [
+          "BUFFDMG",
+          "BUFFDEF"
+        ]
       }
     ],
-    "t6": [{
+    "t6": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/HDN_Neptune",
         "id": "Collab001",
         "names": {
@@ -9719,7 +10584,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFAIR"]
+        "tags": [
+          "BUFFAIR"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Fiji",
@@ -9794,7 +10661,10 @@
         "bannerlink": "Assets/Banner/Event.png",
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["AA", "BUFFAA"]
+        "tags": [
+          "AA",
+          "BUFFAA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Atlanta",
@@ -9819,7 +10689,10 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["AA", "BUFFAA"]
+        "tags": [
+          "AA",
+          "BUFFAA"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Juneau",
@@ -9844,10 +10717,13 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["AA"]
+        "tags": [
+          "AA"
+        ]
       }
     ],
-    "t7": [{
+    "t7": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Memphis",
         "id": "360",
         "names": {
@@ -10070,7 +10946,9 @@
         "bannerlink": null,
         "banneralt": null,
         "banneraltlink": null,
-        "tags": ["BUFFSHL"]
+        "tags": [
+          "BUFFSHL"
+        ]
       },
       {
         "wikiUrl": "https://azurlane.koumakan.jp/Königsberg",
@@ -10100,7 +10978,8 @@
     ]
   },
   "submarine": {
-    "t0": [{
+    "t0": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/U-101",
         "id": "399",
         "names": {
@@ -10176,7 +11055,8 @@
         "tags": null
       }
     ],
-    "t1": [{
+    "t1": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Minato_Aqua",
         "id": "Collab053",
         "names": {
@@ -10302,7 +11182,8 @@
         "tags": null
       }
     ],
-    "t2": [{
+    "t2": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/I-19",
         "id": "338",
         "names": {
@@ -10378,7 +11259,8 @@
         "tags": null
       }
     ],
-    "t3": [{
+    "t3": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/Surcouf",
         "id": "350",
         "names": {
@@ -10454,7 +11336,8 @@
         "tags": null
       }
     ],
-    "t4": [{
+    "t4": [
+      {
         "wikiUrl": "https://azurlane.koumakan.jp/U-73",
         "id": "387",
         "names": {

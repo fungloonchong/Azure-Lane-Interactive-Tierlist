@@ -13,27 +13,7 @@ body {
   display: inline-grid;
 }
 
-.destroyer {
-  display: inline-flex;
-}
-
-.battleship {
-  display: inline-flex;
-}
-
-.carrier {
-  display: inline-flex;
-}
-
-.heavycruiser {
-  display: inline-flex;
-}
-
-.lightcruiser {
-  display: inline-flex;
-}
-
-.submarine {
+.destroyer, .battleship, .carrier, .heavycruiser, .lightcruiser, .submarine {
   display: inline-flex;
 }
 
@@ -49,7 +29,7 @@ body {
   margin-right: 10px;
 }
 
-.rarityimg {
+.rarityimg, .thumbnail, .link, .bannerright {
   z-index: 0;
   position: absolute;
   width: 100px;
@@ -58,73 +38,40 @@ body {
 
 .thumbnail {
   z-index: 1;
-  position: absolute;
-  width: 100px;
-  height: 100px;
 }
 
 .link {
   z-index: 95;
-  position: absolute;
-  width: 100px;
-  height: 100px;
 }
 
 .bannerright {
   z-index: 2;
-  position: absolute;
-  width: 100px;
-  height: 100px;
 }
 
-.tag1 {
+.tag1, .tag2, .tag3, .tag4 {
   z-index: 2;
   position: absolute;
   margin-top: 75px;
   display: none;
-}
-
-.tag1.show {
-  display: block;
 }
 
 .tag2 {
-  z-index: 2;
-  position: absolute;
-  margin-top: 75px;
   margin-left: 25px;
-  display: none;
-}
-
-.tag2.show {
-  display: block;
 }
 
 .tag3 {
-  z-index: 2;
-  position: absolute;
-  margin-top: 75px;
   margin-left: 50px;
-  display: none;
-}
-
-.tag3.show {
-  display: block;
 }
 
 .tag4 {
-  z-index: 2;
-  position: absolute;
-  margin-top: 75px;
   margin-left: 75px;
-  display: none;
 }
 
-.tag4.show {
+.tag1.show, .tag2.show, .tag3.show, .tag4.show {
   display: block;
 }
 
-.greyblock {
+.greyblock, .hulltype, .bannerleft {
   z-index: 1;
   position: absolute;
   margin-top: 100px;
@@ -135,30 +82,19 @@ body {
 
 .hulltype {
   z-index: 2;
-  position: absolute;
-  margin-top: 100px;
   width: 32px;
   height: 20px;
+  background-color: transparent;
 }
 
 .bannerleft {
   z-index: 2;
-  position: absolute;
-  width: 100px;
+  margin-top: 0px;
   height: 100px;
+  background-color: transparent;
 }
 
-/*.text {
-  margin-top: 100px;
-  margin-left: 32px;
-  height: 20px;
-  line-height: 20px;
-}*/
-
-.text_en,
-.text_jp,
-.text_kr,
-.text_cn {
+.text_en, .text_jp, .text_kr, .text_cn {
   margin-top: 100px;
   margin-left: 32px;
   height: 20px;
@@ -166,14 +102,11 @@ body {
   display: none;
 }
 
-.text_en show,
-.text_jp show,
-.text_kr show,
-.text_cn show {
+.text_en.show, .text_jp.show, .text_kr.show, .text_cn.show {
   display: block;
 }
 
-.shipname {
+.shipname, .shipnamealt {
   font-size: 12px;
   width: 68px;
   text-align: center;
@@ -187,20 +120,10 @@ body {
 }
 
 .shipnamealt {
-  font-size: 12px;
   line-height: 9px;
-  width: 68px;
-  text-align: center;
-  text-shadow: 2px 1px #00000070;
-  color: white;
-  z-index: 10;
-  position: absolute;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  line-break: auto;
 }
 
-div.t0>div.tierbanner {
+div.t0>div.tierbanner, div.t1>div.tierbanner, div.t2>div.tierbanner, div.t3>div.tierbanner, div.t4>div.tierbanner, div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner{
   background-image: linear-gradient(#ff6d00, #ff9900);
   border-radius: 10px;
   text-align: center;
@@ -214,90 +137,26 @@ div.t0>div.tierbanner {
 
 div.t1>div.tierbanner {
   background-image: linear-gradient(#fe016e, #fe012f);
-  border-radius: 10px;
-  text-align: center;
-  text-shadow: 4px 2px #00000070;
-  height: 45px;
-  line-height: 45px;
-  color: white;
-  font-size: 48px;
-  margin-bottom: 5px;
 }
 
 div.t2>div.tierbanner {
   background-image: linear-gradient(#ff0a96, #ff5cd1);
-  border-radius: 10px;
-  text-align: center;
-  text-shadow: 4px 2px #00000070;
-  height: 45px;
-  line-height: 45px;
-  color: white;
-  font-size: 48px;
-  margin-bottom: 5px;
 }
 
 div.t3>div.tierbanner {
   background-image: linear-gradient(#b002ff, #9320ff);
-  border-radius: 10px;
-  text-align: center;
-  text-shadow: 4px 2px #00000070;
-  height: 45px;
-  line-height: 45px;
-  color: white;
-  font-size: 48px;
-  margin-bottom: 5px;
 }
 
 div.t4>div.tierbanner {
   background-image: linear-gradient(#009eff, #0056fe);
-  border-radius: 10px;
-  text-align: center;
-  text-shadow: 4px 2px #00000070;
-  height: 45px;
-  line-height: 45px;
-  color: white;
-  font-size: 48px;
-  margin-bottom: 5px;
 }
 
-div.t5>div.tierbanner {
+div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
   background-image: linear-gradient(#009eff, #0056fe);
-  border-radius: 10px;
-  text-align: center;
-  text-shadow: 4px 2px #00000070;
-  height: 45px;
-  line-height: 45px;
-  color: white;
-  font-size: 48px;
-  margin-bottom: 5px;
-}
-
-div.t6>div.tierbanner {
-  background-image: linear-gradient(#009eff, #0056fe);
-  border-radius: 10px;
-  text-align: center;
-  text-shadow: 4px 2px #00000070;
-  height: 45px;
-  line-height: 45px;
-  color: white;
-  font-size: 48px;
-  margin-bottom: 5px;
-}
-
-div.t7>div.tierbanner {
-  background-image: linear-gradient(#009eff, #0056fe);
-  border-radius: 10px;
-  text-align: center;
-  text-shadow: 4px 2px #00000070;
-  height: 45px;
-  line-height: 45px;
-  color: white;
-  font-size: 48px;
-  margin-bottom: 5px;
 }
 
 /* Dropdown Button */
-.hulltype-dropbtn {
+.hulltype-dropbtn, .rarity-dropbtn, .tag-dropbtn, .tier-dropbtn, .nationality-dropbtn {
   background-color: #3498DB;
   color: white;
   padding: 16px;
@@ -307,20 +166,19 @@ div.t7>div.tierbanner {
 }
 
 /* Dropdown button on hover & focus */
-.hulltype-dropbtn:hover,
-.hulltype-dropbtn:focus {
+.hulltype-dropbtn:hover, .hulltype-dropbtn:focus, .rarity-dropbtn:hover, .rarity-dropbtn:focus, .tag-dropbtn:hover, .tag-dropbtn:focus, .tier-dropbtn:hover, .tier-dropbtn:focus, .nationality-dropbtn:hover, .nationality-dropbtn:focus, .legend-dot-dropbtn:hover, .legend-dot-dropbtn:focus {
   background-color: #2980B9;
 }
 
 /* The container <div> - needed to position the dropdown content */
-.hulltype-dropdown {
+.hulltype-dropdown, .rarity-dropdown, .tag-dropdown, .tier-dropdown, .nationality-dropdown {
   margin-left: 100px;
   position: relative;
   display: inline-block;
 }
 
 /* Dropdown Content (Hidden by Default) */
-.hulltype-dropdown-content {
+.hulltype-dropdown-content, .rarity-dropdown-content, .tag-dropdown-content, .tier-dropdown-content, .nationality-dropdown-content {
   background-image: linear-gradient(#1e8dff, #3c9dfe);
   margin-top: 15px;
   padding: 7px;
@@ -338,324 +196,19 @@ div.t7>div.tierbanner {
   text-align: center;
 }
 
-.hulltype-dropdown-content::before {
-  content: " ";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -11px;
-  border-width: 11px;
-  border-style: solid;
-  border-color: transparent transparent white transparent;
-}
-
-.hulltype-dropdown-content::after {
-  content: " ";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -10px;
-  border-width: 10px;
-  border-style: solid;
-  border-color: transparent transparent #1e8dff transparent;
-}
-
-/* Links inside the dropdown */
-.hulltype-dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.hulltype-dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Dropdown Button */
-.rarity-dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.rarity-dropbtn:hover,
-.rarity-dropbtn:focus {
-  background-color: #2980B9;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.rarity-dropdown {
-  margin-left: 100px;
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.rarity-dropdown-content {
-  background-image: linear-gradient(#1e8dff, #3c9dfe);
-  margin-top: 15px;
-  padding: 7px;
-  padding-bottom: 3px;
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 140px;
-  min-height: 65px;
-  z-index: 99;
-  border-width: 1px;
-  border-style: solid;
-  border-color: white;
-  border-radius: 10px;
-  text-align: center;
-}
-
-#Normal,
-#Rare,
-#Elite,
-#SuperRare,
-#Priority,
-#Decisive {
-  width: 20%;
-}
-
-.rarity-dropdown-content::before {
-  content: " ";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -11px;
-  border-width: 11px;
-  border-style: solid;
-  border-color: transparent transparent white transparent;
-}
-
-.rarity-dropdown-content::after {
-  content: " ";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -10px;
-  border-width: 10px;
-  border-style: solid;
-  border-color: transparent transparent #1e8dff transparent;
-}
-
-/* Links inside the dropdown */
-.rarity-dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.rarity-dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Dropdown Button */
-.tag-dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.tag-dropbtn:hover,
-.tag-dropbtn:focus {
-  background-color: #2980B9;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.tag-dropdown {
-  margin-left: 100px;
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.tag-dropdown-content {
-  background-image: linear-gradient(#1e8dff, #3c9dfe);
-  margin-top: 15px;
-  padding: 7px;
-  padding-bottom: 3px;
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 140px;
-  min-height: 65px;
-  z-index: 99;
-  border-width: 1px;
-  border-style: solid;
-  border-color: white;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.tag-dropdown-content::before {
-  content: " ";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -11px;
-  border-width: 11px;
-  border-style: solid;
-  border-color: transparent transparent white transparent;
-}
-
-.tag-dropdown-content::after {
-  content: " ";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -10px;
-  border-width: 10px;
-  border-style: solid;
-  border-color: transparent transparent #1e8dff transparent;
-}
-
-/* Links inside the dropdown */
-.tag-dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.tag-dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Dropdown Button */
-.tier-dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.tier-dropbtn:hover,
-.tier-dropbtn:focus {
-  background-color: #2980B9;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.tier-dropdown {
-  margin-left: 100px;
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.tier-dropdown-content {
-  background-image: linear-gradient(#1e8dff, #3c9dfe);
-  margin-top: 15px;
-  padding: 7px;
-  padding-bottom: 3px;
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 140px;
-  min-height: 65px;
-  z-index: 99;
-  border-width: 1px;
-  border-style: solid;
-  border-color: white;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.tier-dropdown-content::before {
-  content: " ";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -11px;
-  border-width: 11px;
-  border-style: solid;
-  border-color: transparent transparent white transparent;
-}
-
-.tier-dropdown-content::after {
-  content: " ";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -10px;
-  border-width: 10px;
-  border-style: solid;
-  border-color: transparent transparent #1e8dff transparent;
-}
-
-/* Links inside the dropdown */
-.tier-dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.tier-dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Dropdown Button */
-.nationality-dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.nationality-dropbtn:hover,
-.nationality-dropbtn:focus {
-  background-color: #2980B9;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.nationality-dropdown {
-  margin-left: 100px;
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
 .nationality-dropdown-content {
-  background-image: linear-gradient(#1e8dff, #3c9dfe);
-  margin-top: 15px;
-  padding: 7px;
-  padding-bottom: 3px;
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
   min-width: 210px;
-  min-height: 65px;
-  z-index: 99;
-  border-width: 1px;
-  border-style: solid;
-  border-color: white;
-  border-radius: 10px;
-  text-align: center;
 }
 
-.nationality-dropdown-content::before {
+.hulltype-dropdown-content.show, .rarity-dropdown-content.show, .tag-dropdown-content.show, .tier-dropdown-content.show, .nationality-dropdown-content.show {
+  display: block;
+}
+
+.nationality-dropdown-content.show {
+  display: block;
+}
+
+.hulltype-dropdown-content::before, .rarity-dropdown-content::before, .tag-dropdown-content::before, .tier-dropdown-content::before, .nationality-dropdown-content::before, .legend-dropdown-content::before {
   content: " ";
   position: absolute;
   bottom: 100%;
@@ -666,7 +219,15 @@ div.t7>div.tierbanner {
   border-color: transparent transparent white transparent;
 }
 
-.nationality-dropdown-content::after {
+
+.legend-dropdown-content::before {
+  bottom: 0%;
+  top: 100%;
+  left: 50%;
+  border-color: white transparent transparent transparent;
+}
+
+.hulltype-dropdown-content::after, .rarity-dropdown-content::after, .tag-dropdown-content::after, .tier-dropdown-content::after, .nationality-dropdown-content::after, .legend-dropdown-content::after {
   content: " ";
   position: absolute;
   bottom: 100%;
@@ -677,17 +238,15 @@ div.t7>div.tierbanner {
   border-color: transparent transparent #1e8dff transparent;
 }
 
-/* Links inside the dropdown */
-.nationality-dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+.legend-dropdown-content::after {
+  bottom: 0%;
+  top: 100%;
+  left: 50%;
+  border-color: #1e8dff transparent transparent transparent;
 }
 
-/* Change color of dropdown links on hover */
-.nationality-dropdown-content a:hover {
-  background-color: #ddd;
+#Normal, #Rare, #Elite, #SuperRare, #Priority, #Decisive {
+  width: 20%;
 }
 
 .natparent {
@@ -697,20 +256,7 @@ div.t7>div.tierbanner {
   position: relative;
 }
 
-#n1,
-#n2,
-#n3,
-#n4,
-#n5,
-#n6,
-#n7,
-#n8,
-#n9,
-#n10,
-#n11,
-#n13,
-#n14,
-#n15 {
+#n1, #n2, #n3, #n4, #n5, #n6, #n7, #n8, #n9, #n10, #n11, #n12, #n13, #n14, #n15 {
   width: 100%;
   z-index: 100;
   filter: invert(100%);
@@ -719,20 +265,10 @@ div.t7>div.tierbanner {
 }
 
 #n12 {
-  width: 100%;
-  z-index: 100;
-  position: inherit;
+  filter: invert(0%);
 }
 
-.natparent.n1back {
-  z-index: 99;
-  width: 100%;
-  height: 100%;
-  background-color: DeepSkyBlue;
-  position: absolute;
-}
-
-.natparent.n2back {
+.natparent.n1back, .natparent.n2back, .natparent.n3back, .natparent.n4back, .natparent.n5back, .natparent.n6back, .natparent.n7back, .natparent.n8back, .natparent.n9back, .natparent.n10back, .natparent.n11back, .natparent.n12back, .natparent.n13back, .natparent.n14back, .natparent.n15back{
   z-index: 99;
   width: 100%;
   height: 100%;
@@ -741,109 +277,58 @@ div.t7>div.tierbanner {
 }
 
 .natparent.n3back {
-  z-index: 99;
-  width: 100%;
-  height: 100%;
   background-color: Crimson;
-  position: absolute;
 }
 
 .natparent.n4back {
-  z-index: 99;
-  width: 100%;
-  height: 100%;
   background-color: #8EE7F1;
-  position: absolute;
 }
 
 .natparent.n5back {
-  z-index: 99;
-  width: 100%;
-  height: 100%;
   background-color: Blue;
-  position: absolute;
 }
 
 .natparent.n6back {
-  z-index: 99;
-  width: 100%;
-  height: 100%;
   background-color: Red;
-  position: absolute;
 }
 
 .natparent.n7back {
-  z-index: 99;
-  width: 100%;
-  height: 100%;
   background-color: pink;
-  position: absolute;
 }
 
 .natparent.n8back {
-  z-index: 99;
-  width: 100%;
-  height: 100%;
   background-color: MediumOrchid;
-  position: absolute;
 }
 
 .natparent.n9back {
-  z-index: 99;
-  width: 100%;
-  height: 100%;
   background-color: Grey;
-  position: absolute;
 }
 
 .natparent.n10back {
-  z-index: 99;
-  width: 100%;
-  height: 100%;
   background-color: Navy;
-  position: absolute;
 }
 
 .natparent.n11back {
-  z-index: 99;
-  width: 100%;
-  height: 100%;
   background-color: Pink;
-  position: absolute;
 }
 
 .natparent.n12back {
-  z-index: 99;
-  width: 100%;
-  height: 100%;
   background-color: white;
-  position: absolute;
 }
 
 .natparent.n13back {
-  z-index: 99;
-  width: 100%;
-  height: 100%;
-  position: absolute;
+  background-color: none;
 }
 
 .natparent.n14back {
-  z-index: 99;
-  width: 100%;
-  height: 100%;
   background-color: Crimson;
-  position: absolute;
 }
 
 .natparent.n15back {
-  z-index: 99;
-  width: 100%;
-  height: 100%;
   background-color: Crimson;
-  position: absolute;
 }
 
-#t0.tierfilter {
+#t0.tierfilter, #t1.tierfilter, #t2.tierfilter, #t3.tierfilter, #t4.tierfilter, #t5.tierfilter, #t6.tierfilter, #t7.tierfilter {
   background-image: linear-gradient(#ff6d00, #ff9900);
   border-radius: 10px;
   text-align: center;
@@ -860,111 +345,18 @@ div.t7>div.tierbanner {
 
 #t1.tierfilter {
   background-image: linear-gradient(#fe016e, #fe012f);
-  border-radius: 10px;
-  text-align: center;
-  text-shadow: 2px 1px #00000070;
-  height: 25px;
-  line-height: 25px;
-  color: white;
-  font-size: 28px;
-  margin-bottom: 5px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: white;
 }
 
 #t2.tierfilter {
   background-image: linear-gradient(#ff0a96, #ff5cd1);
-  border-radius: 10px;
-  text-align: center;
-  text-shadow: 2px 1px #00000070;
-  height: 25px;
-  line-height: 25px;
-  color: white;
-  font-size: 28px;
-  margin-bottom: 5px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: white;
 }
 
 #t3.tierfilter {
   background-image: linear-gradient(#b002ff, #9320ff);
-  border-radius: 10px;
-  text-align: center;
-  text-shadow: 2px 1px #00000070;
-  height: 25px;
-  line-height: 25px;
-  color: white;
-  font-size: 28px;
-  margin-bottom: 5px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: white;
 }
 
-#t4.tierfilter {
+#t4.tierfilter, #t5.tierfilter, #t6.tierfilter, #t7.tierfilter {
   background-image: linear-gradient(#009eff, #0056fe);
-  border-radius: 10px;
-  text-align: center;
-  text-shadow: 2px 1px #00000070;
-  height: 25px;
-  line-height: 25px;
-  color: white;
-  font-size: 28px;
-  margin-bottom: 5px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: white;
-}
-
-#t5.tierfilter {
-  background-image: linear-gradient(#009eff, #0056fe);
-  border-radius: 10px;
-  text-align: center;
-  text-shadow: 2px 1px #00000070;
-  height: 25px;
-  line-height: 25px;
-  color: white;
-  font-size: 28px;
-  margin-bottom: 5px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: white;
-}
-
-#t6.tierfilter {
-  background-image: linear-gradient(#009eff, #0056fe);
-  border-radius: 10px;
-  text-align: center;
-  text-shadow: 2px 1px #00000070;
-  height: 25px;
-  line-height: 25px;
-  color: white;
-  font-size: 28px;
-  margin-bottom: 5px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: white;
-}
-
-#t7.tierfilter {
-  background-image: linear-gradient(#009eff, #0056fe);
-  border-radius: 10px;
-  text-align: center;
-  text-shadow: 2px 1px #00000070;
-  height: 25px;
-  line-height: 25px;
-  color: white;
-  font-size: 28px;
-  margin-bottom: 5px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: white;
-}
-
-.show {
-  display: block;
 }
 
 .legend-dot-dropbtn {
@@ -984,13 +376,6 @@ div.t7>div.tierbanner {
   z-index: 100;
 }
 
-/* Dropdown button on hover & focus */
-.legend-dot-dropbtn:hover,
-.legend-dot-dropbtn:focus {
-  background-color: #2980B9;
-}
-
-/* The container <div> - needed to position the dropdown content */
 .legend-dropdowns {
   margin-left: 100px;
   position: fixed;
@@ -1023,48 +408,6 @@ div.t7>div.tierbanner {
   bottom: 50px;
 }
 
-.legend-dropdown-content::before {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -11px;
-  border-width: 11px;
-  border-style: solid;
-  border-color: white transparent transparent transparent;
-}
-
-.legend-dropdown-content::after {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -10px;
-  border-width: 10px;
-  border-style: solid;
-  border-color: #1e8dff transparent transparent transparent;
-}
-
-/* Links inside the dropdown */
-.legend-dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.legend-dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-.legend-dropdown-content span {
-  vertical-align: middle;
-  font-size: 15px;
-  display: inline-block;
-  min-width: 60%;
-}
-
 .legend-dropdown.icon1 {
   top: 5px;
   left: 5px;
@@ -1075,11 +418,6 @@ div.t7>div.tierbanner {
   display: block;
 }
 
-.legendicon {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 5px;
-}
 
 button:focus {
   border: none;
@@ -1099,78 +437,43 @@ button:focus {
   z-index: 100;
 }
 
-.lang:hover {
+.lang:hover, .lang:active {
   background-color: #2980B9;
 }
 
-.lang:active {
-  background-color: #2980B9;
-}
-
-.tagfilter.eng {
+.tagfilter_en, .tagfilter_cn, .tagfilter_ico {
   display: none;
 }
 
-.tagfilter.cna {
-  display: none;
-}
-
-.tagfilter.ico {
-  display: none;
-}
-
-.tagfilter.eng.show {
+.tagfilter_en.show, .tagfilter_cn.show {
   display: inline-block;
 }
 
-.tagfilter.cna.show {
+.legendicon_en, .legendicon_cn {
+  display: none;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.legendicon_en.show, .legendicon_cn.show {
   display: inline-block;
 }
 
-.legendicon.eng {
+.legendspan_en, .legendspan_cn {
   display: none;
+  vertical-align: middle;
+  font-size: 15px;
+  min-width: 60%;
 }
 
-.legendicon.cna {
-  display: none;
-}
-
-.legendicon.eng.show {
+.legendspan_en.show, .legendspan_cn.show {
   display: inline-block;
 }
 
-.legendicon.cna.show {
-  display: inline-block;
-}
-
-.legendspan.eng {
+.tags_en, .tags_cn {
   display: none;
 }
 
-.legendspan.cna {
-  display: none;
-}
-
-.legendspan.eng.show {
-  display: inline-block;
-}
-
-.legendspan.cna.show {
-  display: inline-block;
-}
-
-.tags.eng {
-  display: none;
-}
-
-.tags.cna {
-  display: none;
-}
-
-.tags.eng.show {
-  display: block;
-}
-
-.tags.cna.show {
+.tags_en.show, .tags_cn.show {
   display: block;
 }
