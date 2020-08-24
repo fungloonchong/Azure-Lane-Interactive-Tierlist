@@ -5,7 +5,6 @@ let identmain;
 let language;
 let languageid = "en";
 
-
 window.onload = async function () {
   maincont = document.getElementsByClassName("main")[0];
   ships = await getjson();
@@ -102,7 +101,7 @@ window.onclick = function (event) {
     identmain = undefined
     identid = undefined
   }
-  if (!event.target.matches('.legend-dot-dropbtn')) {
+  if (!event.target.matches('.legend-dot-dropbtn') && !event.target.matches('.legend-dropdown-content') && !event.target.matches('.legendicon_en') && !event.target.matches('.legendicon_cn') && !event.target.matches('.legendspan_en') && !event.target.matches('.legendspan_cn')) {
     var dropdowns = document.getElementsByClassName("legend-dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
@@ -382,7 +381,6 @@ async function myFunction(a1) {
   identmain = a1[0];
   // identid == *-dropdown
   identid = document.getElementsByClassName(identmain)[0].parentElement.classList[0]
-  console.log(identid)
   // adds show to *-dropdown
   document.getElementById(identid).classList.toggle("show");
 }

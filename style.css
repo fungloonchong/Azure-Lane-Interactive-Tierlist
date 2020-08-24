@@ -1,6 +1,7 @@
 body {
+  font-family: 'Lato', sans-serif;
   background-color: #160f19;
-  font-family: "Lato", sans-serif;
+  margin: 0;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -9,8 +10,42 @@ body {
   user-select: none;
 }
 
+.topbanner {
+  width: 100%;
+  height: 140px;
+  background-image: linear-gradient(#1e8dff, #3c9dfe);
+  color: white;
+  display: inline-block;
+  z-index: 9999;
+  position: fixed;
+}
+
+.topbanner span {
+  font-size: 80px;
+  line-height: 140px;
+  z-index: 9999;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.bbmasc {
+  line-height: 140px;
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 9999;
+  margin-top: 16px;
+  margin-left: 150px;
+  margin-right: 134px;
+}
+
 .main {
   display: inline-grid;
+  margin-top: 30px;
+}
+
+.dropdowns {
+  margin-top: 140px;
+  display: inline-block;
 }
 
 .destroyer, .battleship, .carrier, .heavycruiser, .lightcruiser, .submarine {
@@ -425,20 +460,19 @@ button:focus {
 }
 
 .language {
-  font-family: "Lato", sans-serif;
-  color: white;
   margin-left: 100px;
   position: fixed;
   display: inline-block;
   width: 65px;
   height: 50px;
   top: 10px;
-  right: 40px;
-  z-index: 100;
+  right: 20px;
+  z-index: 9999;
 }
 
-.lang:hover, .lang:active {
-  background-color: #2980B9;
+.lang {
+  width: 30px;
+  height: 20px;
 }
 
 .tagfilter_en, .tagfilter_cn, .tagfilter_ico {
