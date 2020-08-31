@@ -40,7 +40,7 @@ body {
 }
 
 .main {
-  display: inline-grid;
+  display: grid;
   margin-top: 30px;
 }
 
@@ -192,7 +192,7 @@ div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
 }
 
 /* Dropdown Button */
-.hulltype-dropbtn, .rarity-dropbtn, .tag-dropbtn, .tier-dropbtn, .nationality-dropbtn {
+.filter-dropbtn {
   background-color: #3498DB;
   color: white;
   padding: 16px;
@@ -201,20 +201,28 @@ div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
   cursor: pointer;
 }
 
+.hulltypefilterspan, .rarityfilterspan, .tierfilterspan, .nationalityfilterspan, .tagfilterspan {
+  display: block;
+  color: white;
+  margin-bottom: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
 /* Dropdown button on hover & focus */
-.hulltype-dropbtn:hover, .hulltype-dropbtn:focus, .rarity-dropbtn:hover, .rarity-dropbtn:focus, .tag-dropbtn:hover, .tag-dropbtn:focus, .tier-dropbtn:hover, .tier-dropbtn:focus, .nationality-dropbtn:hover, .nationality-dropbtn:focus, .legend-dot-dropbtn:hover, .legend-dot-dropbtn:focus {
+.filter-dropbtn:hover, .filter-dropbtn:focus {
   background-color: #2980B9;
 }
 
 /* The container <div> - needed to position the dropdown content */
-.hulltype-dropdown, .rarity-dropdown, .tag-dropdown, .tier-dropdown, .nationality-dropdown {
+.filter-dropdown {
   margin-left: 100px;
   position: relative;
   display: inline-block;
 }
 
 /* Dropdown Content (Hidden by Default) */
-.hulltype-dropdown-content, .rarity-dropdown-content, .tag-dropdown-content, .tier-dropdown-content, .nationality-dropdown-content {
+.filter-dropdown-content {
   background-image: linear-gradient(#1e8dff, #3c9dfe);
   margin-top: 15px;
   padding: 7px;
@@ -232,19 +240,11 @@ div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
   text-align: center;
 }
 
-.nationality-dropdown-content {
-  min-width: 210px;
-}
-
-.hulltype-dropdown-content.show, .rarity-dropdown-content.show, .tag-dropdown-content.show, .tier-dropdown-content.show, .nationality-dropdown-content.show {
+.filter-dropdown-content.show {
   display: block;
 }
 
-.nationality-dropdown-content.show {
-  display: block;
-}
-
-.hulltype-dropdown-content::before, .rarity-dropdown-content::before, .tag-dropdown-content::before, .tier-dropdown-content::before, .nationality-dropdown-content::before, .legend-dropdown-content::before {
+.filter-dropdown-content::before {
   content: " ";
   position: absolute;
   bottom: 100%;
@@ -263,7 +263,7 @@ div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
   border-color: white transparent transparent transparent;
 }
 
-.hulltype-dropdown-content::after, .rarity-dropdown-content::after, .tag-dropdown-content::after, .tier-dropdown-content::after, .nationality-dropdown-content::after, .legend-dropdown-content::after {
+.filter-dropdown-content::after {
   content: " ";
   position: absolute;
   bottom: 100%;
@@ -281,23 +281,36 @@ div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
   border-color: #1e8dff transparent transparent transparent;
 }
 
-#Normal, #Rare, #Elite, #SuperRare, #Priority, #Decisive {
-  width: 20%;
+.hulltypefilter, .rarityfilter, .natparent, .tagfilter_en.show, .tagfilter_cn.show {
+  display: inline-flex;
+  width: 25px;
+  text-align: center;
+  line-height: 25px;
+  margin-bottom: 5px;
 }
 
-.natparent {
-  width: 100px;
-  height: 100px;
-  display: inline-flex;
-  position: relative;
+.hulltypefilter.active, .rarityfilter.active, .natparent.active, .tagfilter_en.show.active, .tagfilter_cn.show.active, #t0.tierfilter.active, #t1.tierfilter.active, #t2.tierfilter.active, #t3.tierfilter.active, #t4.tierfilter.active, #t5.tierfilter.active, #t6.tierfilter.active, #t7.tierfilter.active {
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+}
+
+.tagfilter_en.show.active, .tagfilter_cn.show.active {
+  border-radius:50%;
+}
+
+.tagfilter_en, .tagfilter_cn, .tagfilter_ico {
+  display: none;
 }
 
 #n1, #n2, #n3, #n4, #n5, #n6, #n7, #n8, #n9, #n10, #n11, #n12, #n13, #n14, #n15 {
-  width: 100%;
+  height: 25px;
   z-index: 100;
   filter: invert(100%);
   position: inherit;
   object-fit: contain;
+  margin-bottom: 0px;
+  border-width: 0px;
 }
 
 #n12 {
@@ -306,10 +319,11 @@ div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
 
 .natparent.n1back, .natparent.n2back, .natparent.n3back, .natparent.n4back, .natparent.n5back, .natparent.n6back, .natparent.n7back, .natparent.n8back, .natparent.n9back, .natparent.n10back, .natparent.n11back, .natparent.n12back, .natparent.n13back, .natparent.n14back, .natparent.n15back{
   z-index: 99;
-  width: 100%;
-  height: 100%;
+  height: 25px;
   background-color: DeepSkyBlue;
   position: absolute;
+  margin-bottom: 0px;
+  border-width: 0px;
 }
 
 .natparent.n3back {
@@ -366,17 +380,15 @@ div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
 
 #t0.tierfilter, #t1.tierfilter, #t2.tierfilter, #t3.tierfilter, #t4.tierfilter, #t5.tierfilter, #t6.tierfilter, #t7.tierfilter {
   background-image: linear-gradient(#ff6d00, #ff9900);
-  border-radius: 10px;
+  display: inline-block;
   text-align: center;
   text-shadow: 2px 1px #00000070;
   height: 25px;
+  width: 25px;
   line-height: 25px;
   color: white;
-  font-size: 28px;
+  font-size: 18px;
   margin-bottom: 5px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: white;
 }
 
 #t1.tierfilter {
@@ -477,14 +489,6 @@ button:focus {
   height: 20px;
 }
 
-.tagfilter_en, .tagfilter_cn, .tagfilter_ico {
-  display: none;
-}
-
-.tagfilter_en.show, .tagfilter_cn.show {
-  display: inline-block;
-}
-
 .legendicon_en, .legendicon_cn {
   display: none;
   vertical-align: middle;
@@ -512,4 +516,8 @@ button:focus {
 
 .tags_en.show, .tags_cn.show {
   display: block;
+}
+
+.nomatchestext {
+  color: white;
 }
