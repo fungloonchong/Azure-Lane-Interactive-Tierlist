@@ -2023,6 +2023,7 @@ async function buildhtmlall(a1) {
     b.draggable = false;
     document.getElementsByClassName(shipobj[i][0])[0].appendChild(b);
     for (let ii = 0; ii < Object.keys(shipobj[i][1]).length; ii++) {
+      if (shipobj[i][1][Object.keys(shipobj[i][1])[ii]] != 0) {
       // s == t0 t1 t2 usw
       let s = document.createElement("div");
       s.className = Object.keys(shipobj[i][1])[ii];
@@ -2046,6 +2047,7 @@ async function buildhtmlall(a1) {
 
       await filltier(classname, s.className);
     }
+  }
   }
 }
 
