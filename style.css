@@ -53,6 +53,10 @@ body {
   display: inline-flex;
 }
 
+.destroyerbanner, .battleshipbanner, .carrierbanner, .heavycruiserbanner, .lightcruiserbanner, .submarinebanner {
+  display: inline-flex;
+}
+
 .all {
   margin-bottom: 20px;
 }

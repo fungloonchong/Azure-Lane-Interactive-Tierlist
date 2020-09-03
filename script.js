@@ -9,69 +9,7 @@ let f2 = undefined;
 let f3 = undefined;
 let f4 = undefined;
 let f5 = undefined;
-let arraysobj = {
-  battleship: {
-    t0: [],
-    t1: [],
-    t2: [],
-    t3: [],
-    t4: [],
-    t5: [],
-    t6: [],
-    t7: []
-  },
-  carrier: {
-    t0: [],
-    t1: [],
-    t2: [],
-    t3: [],
-    t4: [],
-    t5: [],
-    t6: [],
-    t7: []
-  },
-  heavycruiser: {
-    t0: [],
-    t1: [],
-    t2: [],
-    t3: [],
-    t4: [],
-    t5: [],
-    t6: [],
-    t7: []
-  },
-  lightcruiser: {
-    t0: [],
-    t1: [],
-    t2: [],
-    t3: [],
-    t4: [],
-    t5: [],
-    t6: [],
-    t7: []
-  },
-  destroyer: {
-    t0: [],
-    t1: [],
-    t2: [],
-    t3: [],
-    t4: [],
-    t5: [],
-    t6: [],
-    t7: []
-  },
-  submarine: {
-    t0: [],
-    t1: [],
-    t2: [],
-    t3: [],
-    t4: [],
-    t5: [],
-    t6: [],
-    t7: []
-  }
-}
-
+let arraysobj = {};
 
 window.onload = async function () {
   maincont = document.getElementsByClassName("main")[0];
@@ -267,25 +205,89 @@ async function mutifiltercheck(a1, a2, a3) {
   if (filters.length != 0) {
     if (filters.length == 1) {
       if (checker[0] == "f1") {
-        buildhulltypehtml(filters[0])
+        await buildhulltypehtml(filters[0])
       }
       if (checker[0] == "f2") {
-        buildrarityhtml(filters[0])
+        await buildrarityhtml(filters[0])
       }
       if (checker[0] == "f3") {
-        buildtaghtml(filters[0])
+        await buildtaghtml(filters[0])
       }
       if (checker[0] == "f4") {
-        buildtierhtml(filters[0])
+        await buildtierhtml(filters[0])
       }
       if (checker[0] == "f5") {
-        buildnationalityhtml(filters[0])
+        await buildnationalityhtml(filters[0])
       }
     } else {
-      buildmultihtml(filters, checker)
+      if (Object.entries(arraysobj).length == 0) {
+        arraysobj = {
+          battleship: {
+            t0: [],
+            t1: [],
+            t2: [],
+            t3: [],
+            t4: [],
+            t5: [],
+            t6: [],
+            t7: []
+          },
+          carrier: {
+            t0: [],
+            t1: [],
+            t2: [],
+            t3: [],
+            t4: [],
+            t5: [],
+            t6: [],
+            t7: []
+          },
+          heavycruiser: {
+            t0: [],
+            t1: [],
+            t2: [],
+            t3: [],
+            t4: [],
+            t5: [],
+            t6: [],
+            t7: []
+          },
+          lightcruiser: {
+            t0: [],
+            t1: [],
+            t2: [],
+            t3: [],
+            t4: [],
+            t5: [],
+            t6: [],
+            t7: []
+          },
+          destroyer: {
+            t0: [],
+            t1: [],
+            t2: [],
+            t3: [],
+            t4: [],
+            t5: [],
+            t6: [],
+            t7: []
+          },
+          submarine: {
+            t0: [],
+            t1: [],
+            t2: [],
+            t3: [],
+            t4: [],
+            t5: [],
+            t6: [],
+            t7: []
+          }
+        }
+      }
+      await buildmultihtml(filters, checker)
     }
   } else {
-    buildhtmlall();
+    await buildhtmlall();
   }
 }
 
@@ -1304,15 +1306,15 @@ async function buildhulltypehtml(a1) {
     switch (a1) {
       case "AviationBattleship":
         hulltypeidf = "battleship";
-        idf = 1;
+        idf = 0;
         break;
       case "Monitor":
         hulltypeidf = "battleship";
-        idf = 1;
+        idf = 0;
         break;
       case "Repairship":
         hulltypeidf = "carrier";
-        idf = 2;
+        idf = 1;
         break;
       case "SubmarineCarrier":
         hulltypeidf = "submarine";
@@ -1419,7 +1421,7 @@ async function buildmultihtml(a1, a2) {
           idf = 0
           break;
         case "carrier":
-          hulltypeidf = "Carrier"
+          hulltypeidf = "AircraftCarrier"
           filtername = "carrier"
           idf = 1
           break;
@@ -1456,7 +1458,7 @@ async function buildmultihtml(a1, a2) {
         case "Repairship":
           hulltypeidf = "Repairship"
           filtername = "carrier"
-          idf = 2
+          idf = 1
           break;
         case "SubmarineCarrier":
           hulltypeidf = "SubmarineCarrier"
@@ -1618,8 +1620,7 @@ async function buildmultihtml(a1, a2) {
     }
   }
 
-  await buildmultifilter(result)
-  result = {};
+  await pushintoarray(result)
 }
 
 async function removeemptyarr(arr) {
@@ -1639,71 +1640,73 @@ async function removeemptyarr(arr) {
   return newobj
 }
 
-async function buildmultifilter(result) {
-  let hulltype;
-  let tier;
-
-  switch (Object.entries(result).length) {
-    case 2:
-      arraysobj = arraysobj
-      await gotrough(result)
-      break;
-    case 3:
-      arraysobj = arraysobj
-      await gotrough(result)
-      break;
-    case 4:
-      arraysobj = arraysobj
-      await gotrough(result)
-      break;
-    case 5:
-      arraysobj = arraysobj
-      await gotrough(result)
-      break;
+async function pushintoarray(result) {
+  let a1
+  for (let i = 0; i < Object.entries(result).length; i++) {
+    switch (Object.entries(result)[i][0]) {
+      case "hullfilterindex":
+        a1 = result[Object.entries(result)[i][0]]
+        for (let a = 0; a < Object.entries(a1).length; a++) {
+          for (let aa = 0; aa < Object.keys(a1[Object.entries(a1)[a][0]]).length; aa++) {
+            arraysobj[Object.entries(a1)[a][0]][Object.keys(a1[Object.entries(a1)[a][0]])[aa]].push(a1[Object.entries(a1)[a][0]][Object.keys(a1[Object.entries(a1)[a][0]])[aa]])
+          }
+        }
+        break;
+      case "tierfilterindex":
+        a1 = result[Object.entries(result)[i][0]]
+        for (let a = 0; a < Object.entries(a1).length; a++) {
+          for (let aa = 0; aa < Object.keys(a1[Object.entries(a1)[a][0]]).length; aa++) {
+            arraysobj[Object.entries(a1)[a][0]][Object.keys(a1[Object.entries(a1)[a][0]])[aa]].push(a1[Object.entries(a1)[a][0]][Object.keys(a1[Object.entries(a1)[a][0]])[aa]])
+          }
+        }
+        break;
+      case "rarityfilterindex":
+        a1 = result[Object.entries(result)[i][0]]
+        for (let a = 0; a < Object.entries(a1).length; a++) {
+          for (let aa = 0; aa < Object.keys(a1[Object.entries(a1)[a][0]]).length; aa++) {
+            arraysobj[Object.entries(a1)[a][0]][Object.keys(a1[Object.entries(a1)[a][0]])[aa]].push(a1[Object.entries(a1)[a][0]][Object.keys(a1[Object.entries(a1)[a][0]])[aa]])
+          }
+        }
+        break;
+      case "tagsfilterindex":
+        a1 = result[Object.entries(result)[i][0]]
+        for (let a = 0; a < Object.entries(a1).length; a++) {
+          for (let aa = 0; aa < Object.keys(a1[Object.entries(a1)[a][0]]).length; aa++) {
+            arraysobj[Object.entries(a1)[a][0]][Object.keys(a1[Object.entries(a1)[a][0]])[aa]].push(a1[Object.entries(a1)[a][0]][Object.keys(a1[Object.entries(a1)[a][0]])[aa]])
+          }
+        }
+        break;
+      case "nationalityfilterindex":
+        a1 = result[Object.entries(result)[i][0]]
+        for (let a = 0; a < Object.entries(a1).length; a++) {
+          for (let aa = 0; aa < Object.keys(a1[Object.entries(a1)[a][0]]).length; aa++) {
+            arraysobj[Object.entries(a1)[a][0]][Object.keys(a1[Object.entries(a1)[a][0]])[aa]].push(a1[Object.entries(a1)[a][0]][Object.keys(a1[Object.entries(a1)[a][0]])[aa]])
+          }
+        }
+        break;
+    }
   }
-
-  async function gotrough(result) {
-    if (result.hullfilterindex != undefined) {
-      let hulltypeobj = Object.entries(result.hullfilterindex)
-      hulltype = Object.entries(result.hullfilterindex)[0][0]
-      await pushintoarray(hulltypeobj, result.hullfilterindex)
-    }
-
-    if (result.tierfilterindex != undefined) {
-      let tierobj = Object.entries(result.tierfilterindex)
-      tier = Object.keys(tierobj[0][1])[0]
-      await pushintoarray(tierobj, result.tierfilterindex)
-    }
-
-    if (result.rarityfilterindex != undefined) {
-      let rarityobj = Object.entries(result.rarityfilterindex)
-      await pushintoarray(rarityobj, result.rarityfilterindex)
-    }
-
-    if (result.tagsfilterindex != undefined) {
-      let tagsobj = Object.entries(result.tagsfilterindex)
-      await pushintoarray(tagsobj, result.tagsfilterindex)
-    }
-
-    if (result.nationalityfilterindex != undefined) {
-      let nationalityobj = Object.entries(result.nationalityfilterindex)
-      await pushintoarray(nationalityobj, result.nationalityfilterindex)
-    }
-    await getmatchesfilter(arraysobj, hulltype, tier, result)
-  }
+  await getmatchesfilter(result)
 }
 
-async function pushintoarray(a1, result) {
-  for (let i = 0; i < a1.length; i++) {
-    for (let ii = 0; ii < Object.keys(a1[i][1]).length; ii++) {
-      arraysobj[a1[i][0]][Object.keys(a1[i][1])[ii]].push(result[a1[i][0]][Object.keys(a1[i][1])[ii]])
-    }
-  }
-}
-
-async function getmatchesfilter(a1, a2, a3, a4) {
+async function getmatchesfilter(a4) {
+  let a1 = arraysobj
+  let a2
+  let a3
   let hullobj;
   let returnfilterindex;
+  for (let i = 0; i < Object.entries(a4).length; i++) {
+    switch (Object.entries(a4)[i][0]) {
+      case "hullfilterindex":
+        let r1 = a4[Object.entries(a4)[i][0]]
+        a2 = Object.keys(r1)[0]
+        break;
+      case "tierfilterindex":
+        let r2 = a4[Object.entries(a4)[i][0]]
+        a3 = Object.keys(r2[Object.entries(r2)[0][0]])[0]
+        break;
+    }
+  }
   if (a2 != undefined) {
     hullobj = a1[a2];
     if (a3 != undefined) {
@@ -1711,13 +1714,23 @@ async function getmatchesfilter(a1, a2, a3, a4) {
         returnfilterindex = await filter(hullobj[a3])
         let shipobj = ships;
         let newhullobj = shipobj[a2][a3]
-        await buildfiltermainhtml(newhullobj, a2, a3, returnfilterindex)
+        if (returnfilterindex.length != 0) {
+          await buildfiltermainhtml(newhullobj, a2, a3, returnfilterindex)
+        } else {
+          document.getElementsByClassName("main")[0].innerHTML = "";
+          let t = document.createElement("h1");
+          t.className = "nomatchestext";
+          t.innerText = "No matches found. Try again."
+          maincont.appendChild(t);
+          await deleteProperties(arraysobj)
+        }
       } else {
         document.getElementsByClassName("main")[0].innerHTML = "";
         let t = document.createElement("h1");
         t.className = "nomatchestext";
         t.innerText = "No matches found. Try again."
         maincont.appendChild(t);
+        await deleteProperties(arraysobj)
       }
     } else {
       let newshipobj = {};
@@ -1739,6 +1752,7 @@ async function getmatchesfilter(a1, a2, a3, a4) {
         t.className = "nomatchestext";
         t.innerText = "No matches found. Try again."
         maincont.appendChild(t);
+        await deleteProperties(arraysobj)
       }
     }
   } else {
@@ -1764,6 +1778,7 @@ async function getmatchesfilter(a1, a2, a3, a4) {
         t.className = "nomatchestext";
         t.innerText = "No matches found. Try again."
         maincont.appendChild(t);
+        await deleteProperties(arraysobj)
       }
     } else {
       let newshipobj = {};
@@ -1789,10 +1804,12 @@ async function getmatchesfilter(a1, a2, a3, a4) {
         t.className = "nomatchestext";
         t.innerText = "No matches found. Try again."
         maincont.appendChild(t);
+        await deleteProperties(arraysobj)
       }
     }
   }
 }
+
 async function filter(b1) {
   var result = b1.shift().filter(function (v) {
     return b1.every(function (a) {
@@ -1877,7 +1894,7 @@ async function buildfiltermainhtml(a1, a2, a3, a4) {
       // s == t0 t1 t2 usw
       let s = document.createElement("div");
       s.className = a3;
-      let sizecheck = await tiersize(a1.length);
+      let sizecheck = await tiersize(a4.length);
       s.style.width = sizecheck.result;
       s.style.marginRight = "20px";
       document.getElementsByClassName(a2)[0].appendChild(s);
@@ -1941,8 +1958,6 @@ async function buildfiltermainhtml(a1, a2, a3, a4) {
         await filltierspecial(Object.keys(a4)[i], s.className, Object.entries(a4)[i][1][a3]);
       }
     } else {
-      console.log(a4)
-      console.log(Object.keys(a4))
       for (let i = 0; i < Object.keys(a4).length; i++) {
         // Hulltype class
         let t = document.createElement("div");
@@ -1967,7 +1982,6 @@ async function buildfiltermainhtml(a1, a2, a3, a4) {
         b.draggable = false;
         document.getElementsByClassName(Object.keys(a4)[i])[0].appendChild(b);
         for (let ii = 0; ii < Object.keys(Object.entries(a4)[i][1]).length; ii++) {
-          console.log(Object.keys(Object.entries(a4)[i][1])[ii])
           // s == t0 t1 t2 usw
           let s = document.createElement("div");
           s.className = Object.keys(Object.entries(a4)[i][1])[ii];
@@ -1995,7 +2009,7 @@ async function buildfiltermainhtml(a1, a2, a3, a4) {
   }
 }
 
-async function buildhtmlall(a1) {
+async function buildhtmlall() {
   let shipobj = Object.entries(ships);
   document.getElementsByClassName("main")[0].innerHTML = "";
 
@@ -2024,30 +2038,30 @@ async function buildhtmlall(a1) {
     document.getElementsByClassName(shipobj[i][0])[0].appendChild(b);
     for (let ii = 0; ii < Object.keys(shipobj[i][1]).length; ii++) {
       if (shipobj[i][1][Object.keys(shipobj[i][1])[ii]] != 0) {
-      // s == t0 t1 t2 usw
-      let s = document.createElement("div");
-      s.className = Object.keys(shipobj[i][1])[ii];
-      let sizecheck = await tiersize(
-        shipobj[i][1][Object.keys(shipobj[i][1])[ii]].length
-      );
-      s.style.width = sizecheck.result;
-      s.style.marginRight = "20px";
-      document.getElementsByClassName(shipobj[i][0])[0].appendChild(s);
+        // s == t0 t1 t2 usw
+        let s = document.createElement("div");
+        s.className = Object.keys(shipobj[i][1])[ii];
+        let sizecheck = await tiersize(
+          shipobj[i][1][Object.keys(shipobj[i][1])[ii]].length
+        );
+        s.style.width = sizecheck.result;
+        s.style.marginRight = "20px";
+        document.getElementsByClassName(shipobj[i][0])[0].appendChild(s);
 
-      let f = document.createElement("div");
-      f.className = "tierbanner";
-      f.draggable = false;
-      let ttext = await tiertext(Object.keys(shipobj[i][1])[ii]);
-      f.innerHTML = ttext;
-      f.style.width = sizecheck.rawresult - 10 + "px";
-      document
-        .getElementsByClassName(shipobj[i][0])[0]
-        .getElementsByClassName(Object.keys(shipobj[i][1])[ii])[0]
-        .appendChild(f);
+        let f = document.createElement("div");
+        f.className = "tierbanner";
+        f.draggable = false;
+        let ttext = await tiertext(Object.keys(shipobj[i][1])[ii]);
+        f.innerHTML = ttext;
+        f.style.width = sizecheck.rawresult - 10 + "px";
+        document
+          .getElementsByClassName(shipobj[i][0])[0]
+          .getElementsByClassName(Object.keys(shipobj[i][1])[ii])[0]
+          .appendChild(f);
 
-      await filltier(classname, s.className);
+        await filltier(classname, s.className);
+      }
     }
-  }
   }
 }
 
@@ -2518,4 +2532,10 @@ async function filltierspecial(a1, a2, a3) {
         .appendChild(a);
     }
   }
+  await deleteProperties(arraysobj)
+}
+
+async function deleteProperties(cleanme) {
+  for (var x in cleanme)
+    if (cleanme.hasOwnProperty(x)) delete cleanme[x];
 }
