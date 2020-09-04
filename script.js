@@ -1700,9 +1700,7 @@ async function getmatchesfilter(a4) {
     battleship: {},
     carrier: {},
     heavycruiser: {},
-    lightcruiser: {
-
-    },
+    lightcruiser: {},
     destroyer: {},
     submarine: {}
   }
@@ -1752,10 +1750,10 @@ async function getmatchesfilter(a4) {
           }
         }
       }
-      if (Object.keys(newshipobj).length != 0) {
+      let filternewshipobj = await removeemptyarr(newshipobj)
+      if (Object.keys(filternewshipobj).length != 0) {
         let shipobj = ships;
         let newhullobj = shipobj[a2]
-        let filternewshipobj = await removeemptyarr(newshipobj)
         await buildfiltermainhtml(newhullobj, a2, a3, filternewshipobj)
       } else {
         document.getElementsByClassName("main")[0].innerHTML = "";
@@ -1777,10 +1775,10 @@ async function getmatchesfilter(a4) {
           }
         }
       }
-      if (Object.keys(newshipobj).length != 0) {
+      let filternewshipobj = await removeemptyarr(newshipobj)
+      if (Object.keys(filternewshipobj).length != 0) {
         let shipobj = ships;
         let newhullobj = shipobj
-        let filternewshipobj = await removeemptyarr(newshipobj)
         await buildfiltermainhtml(newhullobj, a2, a3, filternewshipobj)
       } else {
         document.getElementsByClassName("main")[0].innerHTML = "";
@@ -1802,10 +1800,10 @@ async function getmatchesfilter(a4) {
           }
         }
       }
-      if (Object.keys(newshipobj).length != 0) {
+      let filternewshipobj = await removeemptyarr(newshipobj)
+      if (Object.keys(filternewshipobj).length != 0) {
         let shipobj = ships;
         let newhullobj = shipobj
-        let filternewshipobj = await removeemptyarr(newshipobj)
         await buildfiltermainhtml(newhullobj, a2, a3, filternewshipobj)
       } else {
         document.getElementsByClassName("main")[0].innerHTML = "";
