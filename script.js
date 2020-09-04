@@ -1626,7 +1626,8 @@ async function buildmultihtml(a1, a2) {
 async function removeemptyarr(arr) {
   let newobj = {};
   let a1 = Object.entries(arr)
-  for (let i = 0; i < a1.length; i++) {
+  var i = a1.length;
+  while (i--) {
     if (Object.entries(a1[i][1]).length == 0) {
       a1.splice(i, 1);
     }
@@ -1695,6 +1696,16 @@ async function getmatchesfilter(a4) {
   let a3
   let hullobj;
   let returnfilterindex;
+  let newshipobj = {
+    battleship: {},
+    carrier: {},
+    heavycruiser: {},
+    lightcruiser: {
+
+    },
+    destroyer: {},
+    submarine: {}
+  }
   for (let i = 0; i < Object.entries(a4).length; i++) {
     switch (Object.entries(a4)[i][0]) {
       case "hullfilterindex":
@@ -1733,19 +1744,19 @@ async function getmatchesfilter(a4) {
         await deleteProperties(arraysobj)
       }
     } else {
-      let newshipobj = {};
       for (let i = 0; i < Object.keys(hullobj).length; i++) {
         if (hullobj[Object.keys(hullobj)[i]].length > 1 && hullobj[Object.keys(hullobj)[i]].length == Object.entries(a4).length) {
           returnfilterindex = await filter(hullobj[Object.keys(hullobj)[i]])
-          if (returnfilterindex != 0) {
-            newshipobj[Object.keys(hullobj)[i]] = returnfilterindex
+          if (returnfilterindex.length != 0) {
+            newshipobj[a2][Object.keys(hullobj)[i]] = returnfilterindex
           }
         }
       }
       if (Object.keys(newshipobj).length != 0) {
         let shipobj = ships;
         let newhullobj = shipobj[a2]
-        await buildfiltermainhtml(newhullobj, a2, a3, newshipobj)
+        let filternewshipobj = await removeemptyarr(newshipobj)
+        await buildfiltermainhtml(newhullobj, a2, a3, filternewshipobj)
       } else {
         document.getElementsByClassName("main")[0].innerHTML = "";
         let t = document.createElement("h1");
@@ -1757,13 +1768,11 @@ async function getmatchesfilter(a4) {
     }
   } else {
     if (a3 != undefined) {
-      let newshipobj = {};
       for (let i = 0; i < Object.keys(a1).length; i++) {
         hullobj = a1[Object.keys(a1)[i]]
         if (hullobj[a3].length > 1 && hullobj[a3].length == Object.entries(a4).length) {
           returnfilterindex = await filter(hullobj[a3])
-          if (returnfilterindex != 0) {
-            newshipobj[Object.keys(a1)[i]] = {}
+          if (returnfilterindex.length != 0) {
             newshipobj[Object.keys(a1)[i]][a3] = returnfilterindex
           }
         }
@@ -1771,7 +1780,8 @@ async function getmatchesfilter(a4) {
       if (Object.keys(newshipobj).length != 0) {
         let shipobj = ships;
         let newhullobj = shipobj
-        await buildfiltermainhtml(newhullobj, a2, a3, newshipobj)
+        let filternewshipobj = await removeemptyarr(newshipobj)
+        await buildfiltermainhtml(newhullobj, a2, a3, filternewshipobj)
       } else {
         document.getElementsByClassName("main")[0].innerHTML = "";
         let t = document.createElement("h1");
@@ -1781,14 +1791,12 @@ async function getmatchesfilter(a4) {
         await deleteProperties(arraysobj)
       }
     } else {
-      let newshipobj = {};
       for (let i = 0; i < Object.keys(a1).length; i++) {
         hullobj = a1[Object.keys(a1)[i]]
-        for (let ii = 0; ii < Object.keys(a1).length; ii++) {
-          if (Object.entries(hullobj)[ii][1].length > 1 && Object.entries(hullobj)[ii][1].length == Object.entries(a4).length) {
+        for (let ii = 0; ii < Object.entries(hullobj).length; ii++) {
+          if (hullobj[Object.entries(hullobj)[ii][0]].length > 1 && hullobj[Object.entries(hullobj)[ii][0]].length == Object.entries(a4).length) {
             returnfilterindex = await filter(hullobj[Object.entries(hullobj)[ii][0]])
-            if (returnfilterindex != 0) {
-              newshipobj[Object.keys(a1)[i]] = {}
+            if (returnfilterindex.length != 0) {
               newshipobj[Object.keys(a1)[i]][Object.entries(hullobj)[ii][0]] = returnfilterindex
             }
           }
@@ -1797,7 +1805,8 @@ async function getmatchesfilter(a4) {
       if (Object.keys(newshipobj).length != 0) {
         let shipobj = ships;
         let newhullobj = shipobj
-        await buildfiltermainhtml(newhullobj, a2, a3, newshipobj)
+        let filternewshipobj = await removeemptyarr(newshipobj)
+        await buildfiltermainhtml(newhullobj, a2, a3, filternewshipobj)
       } else {
         document.getElementsByClassName("main")[0].innerHTML = "";
         let t = document.createElement("h1");
@@ -1845,12 +1854,11 @@ async function buildfiltermainhtml(a1, a2, a3, a4) {
       }
       b.draggable = false;
       document.getElementsByClassName(a2)[0].appendChild(b);
-
-      for (let i = 0; i < Object.keys(a4).length; i++) {
+      for (let i = 0; i < Object.keys(a4[a2]).length; i++) {
         // s == t0 t1 t2 usw
         let s = document.createElement("div");
-        s.className = Object.keys(a4)[i];
-        let sizecheck = await tiersize(a4[Object.keys(a4)[i]].length);
+        s.className = Object.keys(a4[a2])[i];
+        let sizecheck = await tiersize(a4[a2][Object.keys(a4[a2])[i]].length);
         s.style.width = sizecheck.result;
         s.style.marginRight = "20px";
         document.getElementsByClassName(a2)[0].appendChild(s);
@@ -1858,14 +1866,14 @@ async function buildfiltermainhtml(a1, a2, a3, a4) {
         let f = document.createElement("div");
         f.className = "tierbanner";
         f.draggable = false;
-        let ttext = await tiertext(Object.keys(a4)[i]);
+        let ttext = await tiertext(Object.keys(a4[a2])[i]);
         f.innerHTML = ttext;
         f.style.width = sizecheck.rawresult - 10 + "px";
         document
           .getElementsByClassName(a2)[0]
-          .getElementsByClassName(Object.keys(a4)[i])[0]
+          .getElementsByClassName(Object.keys(a4[a2])[i])[0]
           .appendChild(f);
-        await filltierspecial(a2, s.className, a4[Object.keys(a4)[i]]);
+        await filltierspecial(a2, s.className, a4[a2][Object.keys(a4[a2])[i]]);
       }
     } else {
       // Hulltype class
