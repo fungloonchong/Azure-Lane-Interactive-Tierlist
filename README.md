@@ -40,6 +40,7 @@ Amazon (T3 🡅 T2)
 Kiyonami (T4 🡅 T3)
 
 DEMOTIONS:
+U-101 (T0 🡇 T1)
 Hanazuki (T2 🡇 T3)
 Yoizuki (T2 🡇 T3)
 Harutsuki (T2 🡇 T3)
