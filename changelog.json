@@ -1,0 +1,128 @@
+{
+    "55": {
+        "updatedate": 1596121818,
+        "fullname": "PvE Ship Tier List #55",
+        "number": 55,
+        "changes": {
+            "new": [{
+                    "shipname": "Howe",
+                    "changedrank": "T0"
+                },
+                {
+                    "shipname": "Perseus",
+                    "changedrank": "T0"
+                },
+                {
+                    "shipname": "Hermione",
+                    "changedrank": "T1"
+                },
+                {
+                    "shipname": "Valiant",
+                    "changedrank": "T2"
+                },
+                {
+                    "shipname": "Eagle",
+                    "changedrank": "T3"
+                },
+                {
+                    "shipname": "Icarus",
+                    "changedrank": "T4"
+                }
+            ],
+            "promotions": [{
+                "shipname": "Tanikaze",
+                "changedrank": "T2",
+                "oldrank": "T3"
+            }],
+            "demotions": [{
+                    "shipname": "Champagne",
+                    "changedrank": "T1",
+                    "oldrank": "T0"
+                },
+                {
+                    "shipname": "Washington",
+                    "changedrank": "T2",
+                    "oldrank": "T1"
+                },
+                {
+                    "shipname": "Biloxi",
+                    "changedrank": "T2",
+                    "oldrank": "T1"
+                },
+                {
+                    "shipname": "Sheffield",
+                    "changedrank": "T3",
+                    "oldrank": "T2"
+                },
+                {
+                    "shipname": "Kagerou",
+                    "changedrank": "T3",
+                    "oldrank": "T2"
+                }
+            ]
+        }
+    },
+        "56": {
+            "updatedate": 1598958769,
+            "fullname": "PvE Ship Tier List #56",
+            "number": 56,
+            "changes": {
+                "new": [{
+                        "shipname": "U-96",
+                        "changedrank": "T0"
+                    },
+                    {
+                        "shipname": "Z26",
+                        "changedrank": "T4"
+                    }
+                ],
+                "promotions": [{
+                    "shipname": "Naganami",
+                    "changedrank": "T2",
+                    "oldrank": "T3"
+                },
+                {
+                    "shipname": "Amazon",
+                    "changedrank": "T2",
+                    "oldrank": "T3"
+                },
+                {
+                    "shipname": "Kiyonami",
+                    "changedrank": "T3",
+                    "oldrank": "T4"
+                }
+            ],
+                "demotions": [{
+                        "shipname": "U-101",
+                        "changedrank": "T1",
+                        "oldrank": "T0"
+                    },
+                    {
+                        "shipname": "Hanazuki",
+                        "changedrank": "T3",
+                        "oldrank": "T2"
+                    },
+                    {
+                        "shipname": "Yoizuki",
+                        "changedrank": "T3",
+                        "oldrank": "T2"
+                    },
+                    {
+                        "shipname": "Harutsuki",
+                        "changedrank": "T3",
+                        "oldrank": "T2"
+                    },
+                    {
+                        "shipname": "Tartu",
+                        "changedrank": "T5",
+                        "oldrank": "T4"
+                    },
+                    {
+                        "shipname": "Musketeer",
+                        "changedrank": "T6",
+                        "oldrank": "T5"
+                    }
+                ]
+            }
+        }
+}
