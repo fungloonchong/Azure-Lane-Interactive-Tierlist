@@ -29,6 +29,23 @@ Finally, it should be noted that with new endgame content releasing soonTM, as t
 
 # Main List Changelog:
 ```
+[01-09-2020] Pve Ship Tier List #56
+NEW:
+U-96 (T0)
+Z26 (T4)
+
+PROMOTIONS:
+Naganami (T3 🡅 T2)
+Amazon (T3 🡅 T2)
+Kiyonami (T4 🡅 T3)
+
+DEMOTIONS:
+Hanazuki (T2 🡇 T3)
+Yoizuki (T2 🡇 T3)
+Harutsuki (T2 🡇 T3)
+Tartu (T4 🡇 T5)
+Musketeer (T5 🡇 T6)
+
 [30-07-2020] PvE Ship Tier List #55
 NEW:
 - Howe (T0)  
