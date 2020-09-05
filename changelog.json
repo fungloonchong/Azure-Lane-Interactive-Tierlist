@@ -6,58 +6,70 @@
         "changes": {
             "new": [{
                     "shipname": "Howe",
-                    "changedrank": "T0"
+                    "changedrank": "t0",
+                    "shiptype": "battleship"
                 },
                 {
                     "shipname": "Perseus",
-                    "changedrank": "T0"
+                    "changedrank": "t0",
+                    "shiptype": "carrier"
                 },
                 {
                     "shipname": "Hermione",
-                    "changedrank": "T1"
+                    "changedrank": "t1",
+                    "shiptype": "lightcruiser"
                 },
                 {
                     "shipname": "Valiant",
-                    "changedrank": "T2"
+                    "changedrank": "t2",
+                    "shiptype": "battleship"
                 },
                 {
                     "shipname": "Eagle",
-                    "changedrank": "T3"
+                    "changedrank": "t3",
+                    "shiptype": "carrier"
                 },
                 {
                     "shipname": "Icarus",
-                    "changedrank": "T4"
+                    "changedrank": "t4",
+                    "shiptype": "destroyer"
                 }
             ],
             "promotions": [{
                 "shipname": "Tanikaze",
-                "changedrank": "T2",
-                "oldrank": "T3"
+                "changedrank": "t2",
+                "oldrank": "t3",
+                "shiptype": "destroyer"
             }],
             "demotions": [{
                     "shipname": "Champagne",
-                    "changedrank": "T1",
-                    "oldrank": "T0"
+                    "changedrank": "t1",
+                    "oldrank": "t0",
+                    "shiptype": "battleship"
                 },
                 {
                     "shipname": "Washington",
-                    "changedrank": "T2",
-                    "oldrank": "T1"
+                    "changedrank": "t2",
+                    "oldrank": "t1",
+                    "shiptype": "battleship"
                 },
                 {
                     "shipname": "Biloxi",
-                    "changedrank": "T2",
-                    "oldrank": "T1"
+                    "changedrank": "t2",
+                    "oldrank": "t1",
+                    "shiptype": "lightcruiser"
                 },
                 {
                     "shipname": "Sheffield",
-                    "changedrank": "T3",
-                    "oldrank": "T2"
+                    "changedrank": "t3",
+                    "oldrank": "t2",
+                    "shiptype": "lightcruiser"
                 },
                 {
                     "shipname": "Kagerou",
-                    "changedrank": "T3",
-                    "oldrank": "T2"
+                    "changedrank": "t3",
+                    "oldrank": "t2",
+                    "shiptype": "destroyer"
                 }
             ]
         }
@@ -69,58 +81,69 @@
             "changes": {
                 "new": [{
                         "shipname": "U-96",
-                        "changedrank": "T0"
+                        "changedrank": "t0",
+                        "shiptype": "submarine"
                     },
                     {
                         "shipname": "Z26",
-                        "changedrank": "T4"
+                        "changedrank": "t4",
+                        "shiptype": "destroyer"
                     }
                 ],
                 "promotions": [{
                     "shipname": "Naganami",
-                    "changedrank": "T2",
-                    "oldrank": "T3"
+                    "changedrank": "t2",
+                    "oldrank": "t3",
+                    "shiptype": "destroyer"
                 },
                 {
                     "shipname": "Amazon",
-                    "changedrank": "T2",
-                    "oldrank": "T3"
+                    "changedrank": "t2",
+                    "oldrank": "t3",
+                    "shiptype": "destroyer"
                 },
                 {
                     "shipname": "Kiyonami",
-                    "changedrank": "T3",
-                    "oldrank": "T4"
+                    "changedrank": "t3",
+                    "oldrank": "t4",
+                    "shiptype": "destroyer"
                 }
             ],
                 "demotions": [{
                         "shipname": "U-101",
-                        "changedrank": "T1",
-                        "oldrank": "T0"
+                        "changedrank": "t1",
+                        "oldrank": "t0",
+                        "shiptype": "submarine"
                     },
                     {
                         "shipname": "Hanazuki",
-                        "changedrank": "T3",
-                        "oldrank": "T2"
+                        "changedrank": "t3",
+                        "oldrank": "t2",
+                        "shiptype": "destroyer"
                     },
                     {
                         "shipname": "Yoizuki",
-                        "changedrank": "T3",
-                        "oldrank": "T2"
+                        "changedrank": "t3",
+                        "oldrank": "t2",
+                        "shiptype": "destroyer"
                     },
                     {
                         "shipname": "Harutsuki",
-                        "changedrank": "T3",
-                        "oldrank": "T2"
+                        "changedrank": "t3",
+                        "oldrank": "t2",
+                        "shiptype": "destroyer"
                     },
                     {
                         "shipname": "Tartu",
-                        "changedrank": "T5",
-                        "oldrank": "T4"
+                        "changedrank": "t5",
+                        "oldrank": "t4",
+                        "shiptype": "destroyer"
                     },
                     {
                         "shipname": "Musketeer",
-                        "changedrank": "T6",
-                        "oldrank": "T5"
+                        "changedrank": "t6",
+                        "oldrank": "t5",
+                        "shiptype": "destroyer"
                     }
                 ]
             }

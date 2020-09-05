@@ -1,5 +1,6 @@
 let maincont;
 let ships;
+let changelog;
 let identid;
 let identmain;
 let language;
@@ -12,8 +13,37 @@ let f5 = undefined;
 let arraysobj = {};
 
 window.onload = async function () {
+  ships = await getjson("ships");
+  changelog = await getjson("changelog");
+  let openChangelogButtons = document.querySelectorAll('[data-changelog-target]')
+  let closeChangelogButtons = document.querySelectorAll('[data-close-button]')
+  let overlay = document.getElementById('overlay')
+  openChangelogButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const changelog = document.querySelector(button.dataset.changelogTarget)
+      openChangelog(changelog)
+    })
+  })
+  
+  overlay.addEventListener('click', () => {
+    const changelogs = document.querySelectorAll('.changelog.active')
+    changelogs.forEach(changelog => {
+      closeChangelog(changelog)
+    })
+  })
+  
+  closeChangelogButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const changelog = button.closest('.changelog')
+      closeChangelog(changelog)
+    })
+  })
+
+  let changelogdropdown = document.getElementById("changelogsdrop")
+  await getchangelog(Object.entries(changelog)[(Object.entries(changelog).length - 1)][0])
+  await fillchangelogselect(changelog, changelogdropdown)
+  changelogdropdown.addEventListener("change", getchangelog);
   maincont = document.getElementsByClassName("main")[0];
-  ships = await getjson();
   let gethulltype = document.querySelectorAll(".hulltypefilter");
   await nodrag("hulltypefilter");
   gethulltype.forEach(function (hulltypeadd) {
@@ -93,6 +123,639 @@ window.onload = async function () {
     }
   }
 };
+
+async function fillchangelogselect(a1, a2) {
+var i = Object.entries(a1).length;
+while (i--) {
+  var opt = document.createElement('option');
+  opt.appendChild( document.createTextNode('#' + a1[Object.entries(a1)[i][0]].number) );
+  opt.value = a1[Object.entries(a1)[i][0]].number; 
+  a2.appendChild(opt); 
+}
+}
+
+async function getchangelog(a1) {
+  if (isNaN(a1) == false) {
+    a1 = a1
+  } else {
+    a1 = this.value
+  }
+
+  document.getElementsByClassName("changelog-body")[0].innerHTML = "";
+
+    let f = document.createElement("div");
+    f.className = "changelogheader";
+    document
+      .getElementsByClassName("changelog-body")[0]
+      .appendChild(f);
+
+      f = document.createElement("div");
+      f.className = "changelogtext";
+      f.draggable = false;
+      let changelogtext = await tiertext(changelog[a1].fullname);
+      f.innerHTML = changelogtext;
+      document
+        .getElementsByClassName("changelogheader")[0]
+        .appendChild(f);
+
+      var date = new Date(changelog[a1].updatedate * 1000);
+
+      f = document.createElement("div");
+      f.className = "updated";
+      f.draggable = false;
+      f.innerHTML = date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear();
+      document
+        .getElementsByClassName("changelogheader")[0]
+        .appendChild(f);
+
+        f = document.createElement("div");
+        f.className = "changelogtextadded";
+        f.draggable = false;
+        f.innerHTML = "Added";
+        document
+        .getElementsByClassName("changelog-body")[0]
+        .appendChild(f);
+
+        f = document.createElement("div");
+        f.className = "changelogmainblock";
+        f.draggable = false;
+        document
+        .getElementsByClassName("changelog-body")[0]
+        .appendChild(f);
+
+        f = document.createElement("div");
+        f.className = "changelogtextpromotions";
+        f.draggable = false;
+        f.innerHTML = "Promotions";
+        document
+        .getElementsByClassName("changelog-body")[0]
+        .appendChild(f);
+
+        f = document.createElement("div");
+        f.className = "changelogmainpromotions";
+        f.draggable = false;
+        document
+        .getElementsByClassName("changelog-body")[0]
+        .appendChild(f);
+
+        f = document.createElement("div");
+        f.className = "changelogtextdemotions";
+        f.draggable = false;
+        f.innerHTML = "Demotions";
+        document
+        .getElementsByClassName("changelog-body")[0]
+        .appendChild(f);
+
+        f = document.createElement("div");
+        f.className = "changelogmaindemotions";
+        f.draggable = false;
+        document
+        .getElementsByClassName("changelog-body")[0]
+        .appendChild(f);
+
+        async function getindexforship(b1, b2, b3, b4, b5, b6) {
+          for (let i = 0; i < ships[b2][b3].length; i++) {
+          if(ships[b2][b3][i].names.en == b1) {
+            await buildchangelogships(b2, b3, i, b4, b5, b6)
+          }
+        }
+      }
+
+        for (let i = 0; i < changelog[a1].changes.new.length; i++) {
+          await getindexforship(changelog[a1].changes.new[i].shipname, changelog[a1].changes.new[i].shiptype, changelog[a1].changes.new[i].changedrank, i, "new")
+        }
+
+        for (let i = 0; i < changelog[a1].changes.promotions.length; i++) {
+          await getindexforship(changelog[a1].changes.promotions[i].shipname, changelog[a1].changes.promotions[i].shiptype, changelog[a1].changes.promotions[i].changedrank, i, "promotions", changelog[a1].changes.promotions[i].oldrank)
+        }
+
+        for (let i = 0; i < changelog[a1].changes.demotions.length; i++) {
+          await getindexforship(changelog[a1].changes.demotions[i].shipname, changelog[a1].changes.demotions[i].shiptype, changelog[a1].changes.demotions[i].changedrank, i, "demotions", changelog[a1].changes.demotions[i].oldrank)
+        }
+
+    async function buildchangelogships(a1, a2, i, b4, b5, b6) {
+      if (b5 == "new") {
+      if (document.getElementsByClassName("changelogmainblock")[0].getElementsByClassName(a2).length == 0) {
+        let s = document.createElement("div");
+        s.className = a2;
+        s.style.width = "110px";
+        s.style.display = "inline-block";
+        document
+        .getElementsByClassName("changelogmainblock")[0]
+        .appendChild(s);
+  
+        let f = document.createElement("div");
+        f.className = "tierbanner";
+        f.draggable = false;
+        let ttext = await tiertext(a2);
+        f.innerHTML = ttext;
+        f.style.width = 110 - 10 + "px";
+        document
+        .getElementsByClassName("changelogmainblock")[0]
+          .getElementsByClassName(a2)[0]
+          .appendChild(f);
+      }
+
+    // Main div
+    let a = document.createElement("div");
+    a.className = "changelogparentadded";
+    document
+      .getElementsByClassName("changelogmainblock")[0]
+      .getElementsByClassName(a2)[0]
+      .appendChild(a);
+    // rarity
+    a = document.createElement("img");
+    a.className = "rarityimg";
+    a.src =
+      "Assets/RarityBGs/" +
+      (await removespaces(ships[`${a1}`][`${a2}`][i].rarity)) +
+      ".png";
+      document
+      .getElementsByClassName("changelogparentadded")[b4]
+      .appendChild(a);
+    a = document.createElement("a");
+    a.className = "link";
+    a.href = ships[`${a1}`][`${a2}`][i].wikiUrl;
+    a.draggable = false;
+    a.target = "_blank";
+    document
+    .getElementsByClassName("changelogparentadded")[b4]
+    .appendChild(a);
+    // thumbnail
+    a = document.createElement("img");
+    a.className = "thumbnail";
+    a.src = ships[`${a1}`][`${a2}`][i].thumbnail;
+    document
+    .getElementsByClassName("changelogparentadded")[b4]
+    .appendChild(a);
+    // Bannerright
+    if (ships[`${a1}`][`${a2}`][i].banner != null) {
+      a = document.createElement("img");
+      a.className = "bannerright";
+      a.src = ships[`${a1}`][`${a2}`][i].bannerlink;
+      document
+      .getElementsByClassName("changelogparentadded")[b4]
+      .appendChild(a);
+    }
+    // Bannerleft
+    if (ships[`${a1}`][`${a2}`][i].banneralt != null) {
+      a = document.createElement("img");
+      a.className = "bannerleft";
+      a.src = ships[`${a1}`][`${a2}`][i].banneraltlink;
+      document
+      .getElementsByClassName("changelogparentadded")[b4]
+      .appendChild(a);
+    }
+    // Tags en
+    a = document.createElement("div");
+    if (languageid == "en" || languageid == "jp" || languageid == "kr") {
+      a.className = "tags_en show";
+    } else {
+      a.className = "tags_en";
+    }
+    document
+    .getElementsByClassName("changelogparentadded")[b4]
+    .appendChild(a);
+    a = document.createElement("div");
+    if (languageid == "cn") {
+      a.className = "tags_cn show";
+    } else {
+      a.className = "tags_cn";
+    }
+      document
+      .getElementsByClassName("changelogparentadded")[b4]
+      .appendChild(a);
+    // tags filler
+    if (ships[`${a1}`][`${a2}`][i].tags != null) {
+      for (let ii = 0; ii < ships[`${a1}`][`${a2}`][i].tags.length; ii++) {
+        a = document.createElement("img");
+        if (languageid == "en" || languageid == "jp" || languageid == "kr") {
+          a.className = "tag" + (ii + 1) + " show";
+        } else {
+          a.className = "tag" + (ii + 1);
+        }
+        a.src =
+          "Assets/TagIcons/EN/" + ships[`${a1}`][`${a2}`][i].tags[ii] + ".png";
+        document
+        .getElementsByClassName("changelogparentadded")[b4]
+          .getElementsByClassName("tags_en")[0].appendChild(a);
+
+        a = document.createElement("img");
+        if (languageid == "cn") {
+          a.className = "tag" + (ii + 1) + " show";
+        } else {
+          a.className = "tag" + (ii + 1);
+        }
+        a.src =
+          "Assets/TagIcons/CN/" + ships[`${a1}`][`${a2}`][i].tags[ii] + ".png";
+        document
+        .getElementsByClassName("changelogparentadded")[b4]
+          .getElementsByClassName("tags_cn")[0].appendChild(a);
+      }
+    }
+    // Greyblock
+    a = document.createElement("img");
+    a.className = "greyblock";
+    document
+    .getElementsByClassName("changelogparentadded")[b4]
+    .appendChild(a);
+    // Hulltype
+    a = document.createElement("img");
+    a.className = "hulltype";
+    a.src =
+      "Assets/HullTypeIcons/" + ships[`${a1}`][`${a2}`][i].hullTypeId + ".png";
+    a.draggable = false;
+    document
+    .getElementsByClassName("changelogparentadded")[b4]
+    .appendChild(a);
+
+    // Namechange html builder
+    // Textblock jp
+    a = document.createElement("div");
+    if (languageid == "en") {
+      a.className = "text_en show";
+    } else {
+      a.className = "text_en";
+    }
+    document
+    .getElementsByClassName("changelogparentadded")[b4]
+    .appendChild(a);
+    // Textblock jp
+    a = document.createElement("div");
+    if (languageid == "jp") {
+      a.className = "text_jp show";
+    } else {
+      a.className = "text_jp";
+    }
+    document
+    .getElementsByClassName("changelogparentadded")[b4]
+    .appendChild(a);
+    // Textblock kr
+    a = document.createElement("div");
+    if (languageid == "kr") {
+      a.className = "text_kr show";
+    } else {
+      a.className = "text_kr";
+    }
+    document
+    .getElementsByClassName("changelogparentadded")[b4]
+    .appendChild(a);
+    // Textblock cn
+    a = document.createElement("div");
+    if (languageid == "cn") {
+      a.className = "text_cn show";
+    } else {
+      a.className = "text_cn";
+    }
+    document
+    .getElementsByClassName("changelogparentadded")[b4]
+    .appendChild(a);
+    // Span text
+    for (let ii = 0; ii < 4; ii++) {
+      a = document.createElement("span");
+      switch (ii) {
+        case 0:
+          language = "en";
+          lang = "en";
+          break;
+        case 1:
+          language = "jp";
+          lang = "jp";
+          break;
+        case 2:
+          language = "cn";
+          lang = "cn";
+          break;
+        case 3:
+          language = "kr";
+          lang = "kr";
+          break;
+      }
+      if (ships[`${a1}`][`${a2}`][i].names[language] == null) {
+        lang = "en";
+        textcheck = await texthandler(
+          ships[`${a1}`][`${a2}`][i].names[lang].length,
+          ships[`${a1}`][`${a2}`][i].names[lang],
+          lang
+        );
+      } else {
+        textcheck = await texthandler(
+          ships[`${a1}`][`${a2}`][i].names[lang].length,
+          ships[`${a1}`][`${a2}`][i].names[lang],
+          language
+        );
+      }
+
+      if (textcheck.className != undefined) {
+        a.className = textcheck.className;
+      }
+
+      if (textcheck.fontSize != undefined) {
+        a.style.fontSize = textcheck.fontSize;
+      }
+
+      if (textcheck.lineHeight != undefined) {
+        a.style.lineHeight = textcheck.lineHeight;
+      }
+      a.innerHTML = ships[`${a1}`][`${a2}`][i].names[lang];
+      document
+      .getElementsByClassName("changelogparentadded")[b4]
+      .getElementsByClassName("text_" + language)[0]
+      .appendChild(a);
+    }
+  }
+  if (b5 == "promotions" || b5 == "demotions") {
+    // Main div
+    let a = document.createElement("div");
+    a.className = "changelogparent";
+    document
+      .getElementsByClassName("changelogmain" + b5)[0]
+      .appendChild(a);
+    // rarity
+    a = document.createElement("img");
+    a.className = "rarityimg";
+    a.src =
+      "Assets/RarityBGs/" +
+      (await removespaces(ships[`${a1}`][`${a2}`][i].rarity)) +
+      ".png";
+      document
+      .getElementsByClassName("changelogmain" + b5)[0]
+      .getElementsByClassName("changelogparent")[b4]
+      .appendChild(a);
+    a = document.createElement("a");
+    a.className = "link";
+    a.href = ships[`${a1}`][`${a2}`][i].wikiUrl;
+    a.draggable = false;
+    a.target = "_blank";
+    document
+    .getElementsByClassName("changelogmain" + b5)[0]
+    .getElementsByClassName("changelogparent")[b4]
+    .appendChild(a);
+    // thumbnail
+    a = document.createElement("img");
+    a.className = "thumbnail";
+    a.src = ships[`${a1}`][`${a2}`][i].thumbnail;
+    document
+    .getElementsByClassName("changelogmain" + b5)[0]
+    .getElementsByClassName("changelogparent")[b4]
+    .appendChild(a);
+    // Bannerright
+    if (ships[`${a1}`][`${a2}`][i].banner != null) {
+      a = document.createElement("img");
+      a.className = "bannerright";
+      a.src = ships[`${a1}`][`${a2}`][i].bannerlink;
+      document
+      .getElementsByClassName("changelogmain" + b5)[0]
+      .getElementsByClassName("changelogparent")[b4]
+      .appendChild(a);
+    }
+    // Bannerleft
+    if (ships[`${a1}`][`${a2}`][i].banneralt != null) {
+      a = document.createElement("img");
+      a.className = "bannerleft";
+      a.src = ships[`${a1}`][`${a2}`][i].banneraltlink;
+      document
+      .getElementsByClassName("changelogmain" + b5)[0]
+      .getElementsByClassName("changelogparent")[b4]
+      .appendChild(a);
+    }
+    // Tags en
+    a = document.createElement("div");
+    if (languageid == "en" || languageid == "jp" || languageid == "kr") {
+      a.className = "tags_en show";
+    } else {
+      a.className = "tags_en";
+    }
+    document
+    .getElementsByClassName("changelogmain" + b5)[0]
+    .getElementsByClassName("changelogparent")[b4]
+    .appendChild(a);
+    a = document.createElement("div");
+    if (languageid == "cn") {
+      a.className = "tags_cn show";
+    } else {
+      a.className = "tags_cn";
+    }
+      document
+      .getElementsByClassName("changelogmain" + b5)[0]
+      .getElementsByClassName("changelogparent")[b4]
+      .appendChild(a);
+    // tags filler
+    if (ships[`${a1}`][`${a2}`][i].tags != null) {
+      for (let ii = 0; ii < ships[`${a1}`][`${a2}`][i].tags.length; ii++) {
+        a = document.createElement("img");
+        if (languageid == "en" || languageid == "jp" || languageid == "kr") {
+          a.className = "tag" + (ii + 1) + " show";
+        } else {
+          a.className = "tag" + (ii + 1);
+        }
+        a.src =
+          "Assets/TagIcons/EN/" + ships[`${a1}`][`${a2}`][i].tags[ii] + ".png";
+        document
+        .getElementsByClassName("changelogmain" + b5)[0]
+        .getElementsByClassName("changelogparent")[b4]
+          .getElementsByClassName("tags_en")[0].appendChild(a);
+
+        a = document.createElement("img");
+        if (languageid == "cn") {
+          a.className = "tag" + (ii + 1) + " show";
+        } else {
+          a.className = "tag" + (ii + 1);
+        }
+        a.src =
+          "Assets/TagIcons/CN/" + ships[`${a1}`][`${a2}`][i].tags[ii] + ".png";
+        document
+        .getElementsByClassName("changelogmain" + b5)[0]
+        .getElementsByClassName("changelogparent")[b4]
+          .getElementsByClassName("tags_cn")[0].appendChild(a);
+      }
+    }
+    // Greyblock
+    a = document.createElement("img");
+    a.className = "greyblock";
+    document
+    .getElementsByClassName("changelogmain" + b5)[0]
+    .getElementsByClassName("changelogparent")[b4]
+    .appendChild(a);
+    // Hulltype
+    a = document.createElement("img");
+    a.className = "hulltype";
+    a.src =
+      "Assets/HullTypeIcons/" + ships[`${a1}`][`${a2}`][i].hullTypeId + ".png";
+    a.draggable = false;
+    document
+    .getElementsByClassName("changelogmain" + b5)[0]
+    .getElementsByClassName("changelogparent")[b4]
+    .appendChild(a);
+
+    // Namechange html builder
+    // Textblock jp
+    a = document.createElement("div");
+    if (languageid == "en") {
+      a.className = "text_en show";
+    } else {
+      a.className = "text_en";
+    }
+    document
+    .getElementsByClassName("changelogmain" + b5)[0]
+    .getElementsByClassName("changelogparent")[b4]
+    .appendChild(a);
+    // Textblock jp
+    a = document.createElement("div");
+    if (languageid == "jp") {
+      a.className = "text_jp show";
+    } else {
+      a.className = "text_jp";
+    }
+    document
+    .getElementsByClassName("changelogmain" + b5)[0]
+    .getElementsByClassName("changelogparent")[b4]
+    .appendChild(a);
+    // Textblock kr
+    a = document.createElement("div");
+    if (languageid == "kr") {
+      a.className = "text_kr show";
+    } else {
+      a.className = "text_kr";
+    }
+    document
+    .getElementsByClassName("changelogmain" + b5)[0]
+    .getElementsByClassName("changelogparent")[b4]
+    .appendChild(a);
+    // Textblock cn
+    a = document.createElement("div");
+    if (languageid == "cn") {
+      a.className = "text_cn show";
+    } else {
+      a.className = "text_cn";
+    }
+    document
+    .getElementsByClassName("changelogmain" + b5)[0]
+    .getElementsByClassName("changelogparent")[b4]
+    .appendChild(a);
+    // Span text
+    for (let ii = 0; ii < 4; ii++) {
+      a = document.createElement("span");
+      switch (ii) {
+        case 0:
+          language = "en";
+          lang = "en";
+          break;
+        case 1:
+          language = "jp";
+          lang = "jp";
+          break;
+        case 2:
+          language = "cn";
+          lang = "cn";
+          break;
+        case 3:
+          language = "kr";
+          lang = "kr";
+          break;
+      }
+      if (ships[`${a1}`][`${a2}`][i].names[language] == null) {
+        lang = "en";
+        textcheck = await texthandler(
+          ships[`${a1}`][`${a2}`][i].names[lang].length,
+          ships[`${a1}`][`${a2}`][i].names[lang],
+          lang
+        );
+      } else {
+        textcheck = await texthandler(
+          ships[`${a1}`][`${a2}`][i].names[lang].length,
+          ships[`${a1}`][`${a2}`][i].names[lang],
+          language
+        );
+      }
+
+      if (textcheck.className != undefined) {
+        a.className = textcheck.className;
+      }
+
+      if (textcheck.fontSize != undefined) {
+        a.style.fontSize = textcheck.fontSize;
+      }
+
+      if (textcheck.lineHeight != undefined) {
+        a.style.lineHeight = textcheck.lineHeight;
+      }
+      a.innerHTML = ships[`${a1}`][`${a2}`][i].names[lang];
+      document
+      .getElementsByClassName("changelogmain" + b5)[0]
+      .getElementsByClassName("changelogparent")[b4]
+      .getElementsByClassName("text_" + language)[0]
+      .appendChild(a);
+    }
+
+    a = document.createElement("div");
+    a.className = "tierchanges";
+    document
+    .getElementsByClassName("changelogmain" + b5)[0]
+    .getElementsByClassName("changelogparent")[b4]
+    .appendChild(a);
+
+    a = document.createElement("div");
+    a.className = "oldranktext";
+    a.innerText = b6.toUpperCase();
+    document
+    .getElementsByClassName("changelogmain" + b5)[0]
+    .getElementsByClassName("changelogparent")[b4]
+    .getElementsByClassName("tierchanges")[0]
+    .appendChild(a);
+
+    if (b5 == "promotions") {
+      a = document.createElement("img");
+      a.className = "rankiconup";
+      a.src = "Assets/Misc/Arrow.png";
+      a.draggable = false;
+      document
+      .getElementsByClassName("changelogmain" + b5)[0]
+      .getElementsByClassName("changelogparent")[b4]
+      .getElementsByClassName("tierchanges")[0]
+      .appendChild(a);
+    } else if (b5 == "demotions") {
+      a = document.createElement("img");
+      a.className = "rankicondown";
+      a.src = "Assets/Misc/Arrow.png";
+      a.draggable = false;
+      document
+      .getElementsByClassName("changelogmain" + b5)[0]
+      .getElementsByClassName("changelogparent")[b4]
+      .getElementsByClassName("tierchanges")[0]
+      .appendChild(a);
+    }
+
+    a = document.createElement("div");
+    a.className = "newranktext";
+    a.innerText = a2.toUpperCase();
+    document
+    .getElementsByClassName("changelogmain" + b5)[0]
+    .getElementsByClassName("changelogparent")[b4]
+    .getElementsByClassName("tierchanges")[0]
+    .appendChild(a);
+  }
+}
+}
+
+function openChangelog(changelog) {
+  if (changelog == null) return
+  changelog.classList.add('active')
+  overlay.classList.add('active')
+  var htmlbody = document.body
+  var oldWidth = htmlbody.clientWidth
+  htmlbody.style.overflow = "hidden";
+  htmlbody.style.width = oldWidth;
+}
+
+function closeChangelog(changelog) {
+  if (changelog == null) return
+  changelog.classList.remove('active')
+  overlay.classList.remove('active')
+  var htmlbody = document.body
+  htmlbody.style.overflow = "auto"
+  htmlbody.style.width = "auto"
+}
 
 async function mutifiltercheck(a1, a2, a3) {
   let checker = [];
@@ -892,9 +1555,9 @@ async function legenddropdown() {
   document.getElementById("legend-dropdown").classList.toggle("show");
 }
 
-async function getjson() {
+async function getjson(a1) {
   try {
-    let data = await fetch("ships.json");
+    let data = await fetch([a1] + ".json");
     let result = await data.json();
     return result;
   } catch (e) {
