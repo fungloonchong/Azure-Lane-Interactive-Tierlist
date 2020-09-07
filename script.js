@@ -1626,30 +1626,9 @@ async function texthandler(a1, a2, a3) {
   let fontSize;
   let lineHeight;
   let countcheck = await countspaces(a2);
-  if (a3 != "en") {
-    if (a1 < 7) {
-      fontSize = "10px";
-      lineHeight = "20px";
-      className = "shipname";
-    } else {
-      fontSize = "10px";
-      lineHeight = "9px";
-      className = "shipnamealt";
-    }
-    if (a3 == "kr") {
-      if (a1 < 9) {
-        fontSize = "10px";
-        lineHeight = "20px";
-        className = "shipname";
-      } else {
-        fontSize = "10px";
-        lineHeight = "9px";
-        className = "shipnamealt";
-      }
-    }
-  } else {
-    // Check if the sting is 13 or longer
-    if (a1 >= 13) {
+
+  if (a3 == "en") {
+        if (a1 >= 13) {
       className = "shipnamealt";
       // If the str has no empty spaces
       if ((await countcheck.count) == 0) {
@@ -1696,6 +1675,9 @@ async function texthandler(a1, a2, a3) {
       if (a1 >= 17) {
         fontSize = "11px";
       }
+      if (a1 == 16) {
+        fontSize = "10px";
+      }
     } else {
       if ((await countcheck.count) == 0 && a1 >= 12) {
         fontSize = "10px";
@@ -1704,8 +1686,82 @@ async function texthandler(a1, a2, a3) {
         fontSize = "10px";
       }
       className = "shipname";
+      if (a1 == 11) {
+        fontSize = "11px";
+      }
     }
   }
+
+  if (a3 == "jp") {
+    if (a1 < 7) {
+      fontSize = "10px";
+      lineHeight = "20px";
+      className = "shipname";
+    } else if (a1 > 11) {
+      fontSize = "9px";
+      lineHeight = "9px";
+      className = "shipnamealt";
+      if (a1 > 14) {
+        fontSize = "8px";
+        lineHeight = "9px";
+        className = "shipnamealt";
+      }
+    } else {
+      fontSize = "10px";
+      lineHeight = "9px";
+      className = "shipnamealt";
+      if (a1 == 7) {
+        fontSize = "11px";
+        lineHeight = "9px";
+        className = "shipnamealt";
+      }
+    }
+  }
+
+  if (a3 == "kr") {
+      if (a1 < 9) {
+        fontSize = "10px";
+        lineHeight = "20px";
+        className = "shipname";
+        if (a1 <= 8) {
+          fontSize = "9px";
+          lineHeight = "20px";
+          className = "shipnamealt";
+        }
+      } else {
+        fontSize = "10px";
+        lineHeight = "9px";
+        className = "shipnamealt";
+        if (countcheck.count == 1) {
+          fontSize = "10px";
+          lineHeight = "20px";
+          className = "shipnamealt";
+        }
+      }
+    }
+
+    if (a3 == "cn") {
+      if (a1 > 0 && a1 < 6) {
+        fontSize = "12px";
+        lineHeight = "20px";
+        className = "shipname";
+      } 
+      if (a1 > 5) {
+        fontSize = "11px";
+        lineHeight = "20px";
+        className = "shipnamealt";
+      }
+      if (a1 > 6) {
+        fontSize = "10px";
+        lineHeight = "20px";
+        className = "shipnamealt";
+      }
+      if (a1 > 7) {
+        fontSize = "8px";
+        lineHeight = "20px";
+        className = "shipnamealt";
+      }
+    }
   return {
     className,
     fontSize,
