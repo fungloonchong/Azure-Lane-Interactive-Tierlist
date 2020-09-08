@@ -43,7 +43,9 @@ window.onload = async function () {
   await getchangelog(Object.entries(changelog)[(Object.entries(changelog).length - 1)][0])
   await fillchangelogselect(changelog, changelogdropdown)
   changelogdropdown.addEventListener("change", getchangelog);
+
   maincont = document.getElementsByClassName("main")[0];
+  
   let gethulltype = document.querySelectorAll(".hulltypefilter");
   await nodrag("hulltypefilter");
   gethulltype.forEach(function (hulltypeadd) {

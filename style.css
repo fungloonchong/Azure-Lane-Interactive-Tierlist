@@ -29,6 +29,14 @@ body {
   vertical-align: middle;
 }
 
+.bannertwo {
+  height: 35px;
+  width: 100%;
+  margin-top: 140px;
+  display: inline-flex;
+  align-items: center;
+}
+
 .bbmasc {
   line-height: 140px;
   display: inline-block;
@@ -45,8 +53,8 @@ body {
 }
 
 .dropdowns {
-  margin-top: 140px;
-  display: inline-block;
+  display: inline-flex;
+  margin-top: 5px;
 }
 
 .destroyer, .battleship, .carrier, .heavycruiser, .lightcruiser, .submarine {
@@ -209,12 +217,27 @@ div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
 
 /* Dropdown Button */
 .filter-dropbtn {
-  background-color: #3498DB;
+  background-image: linear-gradient(#009eff, #0056fe);
   color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+  font-size: 22px;
   cursor: pointer;
+  height: 37px;
+  border: 1px solid white;
+  border-radius: 5px;
+  text-align: center;
+  text-shadow: 2px 1px #00000070;
+}
+
+.hulltype-dropbtn {
+  background-image: linear-gradient(#009eff, #0056fe);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  height: 37px;
+  border: 1px solid white;
+  border-radius: 5px;
+  text-align: center;
+  text-shadow: 2px 1px #00000070;
 }
 
 .hulltypefilterspan, .rarityfilterspan, .tierfilterspan, .nationalityfilterspan, .tagfilterspan {
@@ -225,8 +248,23 @@ div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
   margin-top: 10px;
 }
 
+.tierfiltercontainer {
+  width: 280px;
+  height: 35px;
+  border: 1px solid white;
+  border-radius: 5px;
+  display: inline-flex;
+  margin-left: 85px;
+  margin-top: 5px;
+  margin-right: 25px;
+}
+
 /* Dropdown button on hover & focus */
 .filter-dropbtn:hover, .filter-dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.hulltype-dropbtn:hover, .hulltype-dropbtn:focus {
   background-color: #2980B9;
 }
 
@@ -256,11 +294,30 @@ div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
   text-align: center;
 }
 
-.filter-dropdown-content.show {
+.hulltype-dropdown-content {
+  background-image: linear-gradient(#1e8dff, #3c9dfe);
+  margin-top: 15px;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 80px;
+  width: 105.7px;
+  max-width: 160px;
+  min-height: 65px;
+  z-index: 99;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 10px;
+  text-align: center;
+  color:white;
+}
+
+.filter-dropdown-content.show, .hulltype-dropdown-content.show {
   display: block;
 }
 
-.filter-dropdown-content::before {
+.filter-dropdown-content::before, .hulltype-dropdown-content::before {
   content: " ";
   position: absolute;
   bottom: 100%;
@@ -271,15 +328,7 @@ div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
   border-color: transparent transparent white transparent;
 }
 
-
-.legend-dropdown-content::before {
-  bottom: 0%;
-  top: 100%;
-  left: 50%;
-  border-color: white transparent transparent transparent;
-}
-
-.filter-dropdown-content::after {
+.filter-dropdown-content::after, .hulltype-dropdown-content::after {
   content: " ";
   position: absolute;
   bottom: 100%;
@@ -290,6 +339,14 @@ div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
   border-color: transparent transparent #1e8dff transparent;
 }
 
+
+.legend-dropdown-content::before {
+  bottom: 0%;
+  top: 100%;
+  left: 50%;
+  border-color: white transparent transparent transparent;
+}
+
 .legend-dropdown-content::after {
   bottom: 0%;
   top: 100%;
@@ -297,7 +354,7 @@ div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
   border-color: #1e8dff transparent transparent transparent;
 }
 
-.hulltypefilter, .rarityfilter, .natparent, .tagfilter_en.show, .tagfilter_cn.show {
+.rarityfilter, .natparent, .tagfilter_en.show, .tagfilter_cn.show {
   display: inline-flex;
   width: 25px;
   text-align: center;
@@ -305,7 +362,42 @@ div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
   margin-bottom: 5px;
 }
 
-.hulltypefilter.active, .rarityfilter.active, .natparent.active, .tagfilter_en.show.active, .tagfilter_cn.show.active, #t0.tierfilter.active, #t1.tierfilter.active, #t2.tierfilter.active, #t3.tierfilter.active, #t4.tierfilter.active, #t5.tierfilter.active, #t6.tierfilter.active, #t7.tierfilter.active {
+.hulltypefilter {
+  display: block;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.hulltypefilter:hover {
+  background-image: linear-gradient(#0064a1, #0056fe);
+}
+
+#battleship.hulltypefilter:hover {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#SubmarineCarrier.hulltypefilter:hover {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.hulltypefilter.active {
+  background-image: linear-gradient(#0064a1, #0056fe);
+}
+
+#battleship.hulltypefilter.active {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#SubmarineCarrier.hulltypefilter:hover {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.rarityfilter.active, .natparent.active, .tagfilter_en.show.active, .tagfilter_cn.show.active {
   border-width: 1px;
   border-style: solid;
   border-color: white;
@@ -395,32 +487,66 @@ div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
 }
 
 #t0.tierfilter, #t1.tierfilter, #t2.tierfilter, #t3.tierfilter, #t4.tierfilter, #t5.tierfilter, #t6.tierfilter, #t7.tierfilter {
-  background-image: linear-gradient(#ff6d00, #ff9900);
+  background-image: linear-gradient(#009eff, #0056fe);
   display: inline-block;
   text-align: center;
   text-shadow: 2px 1px #00000070;
-  height: 25px;
-  width: 25px;
-  line-height: 25px;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
   color: white;
-  font-size: 18px;
-  margin-bottom: 5px;
+  font-size: 22px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: 1px solid white;
+}
+
+#t0.tierfilter:hover, #t0.tierfilter.active {
+  background-image: linear-gradient(#ff6d00, #ff9900);
 }
 
 #t1.tierfilter {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+#t1.tierfilter:hover, #t1.tierfilter.active {
   background-image: linear-gradient(#fe016e, #fe012f);
 }
 
 #t2.tierfilter {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+#t2.tierfilter:hover, #t2.tierfilter.active {
   background-image: linear-gradient(#ff0a96, #ff5cd1);
 }
 
 #t3.tierfilter {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+#t3.tierfilter:hover, #t3.tierfilter.active {
   background-image: linear-gradient(#b002ff, #9320ff);
 }
 
-#t4.tierfilter, #t5.tierfilter, #t6.tierfilter, #t7.tierfilter {
-  background-image: linear-gradient(#009eff, #0056fe);
+#t4.tierfilter, #t5.tierfilter, #t6.tierfilter {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+#t4.tierfilter:hover, #t4.tierfilter.active, #t5.tierfilter:hover, #t5.tierfilter.active, #t6.tierfilter:hover, #t6.tierfilter.active, #t7.tierfilter:hover, #t7.tierfilter:active {
+  background-image: linear-gradient(#0064a1, #0056fe);
+}
+
+#t7.tierfilter {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-right: 0px solid white;
 }
 
 .legend-dot-dropbtn {
@@ -489,15 +615,11 @@ button:focus {
 }
 
 .language {
-  margin-left: 100px;
-  position: fixed;
-  display: inline-block;
-  width: 65px;
-  height: 50px;
-  top: 10px;
-  right: 20px;
   z-index: 9999;
   white-space: normal;
+  margin-left: 25px;
+  order: 3;
+  margin-right: 85px;
 }
 
 .lang {
@@ -520,6 +642,12 @@ button:focus {
   vertical-align: middle;
   font-size: 15px;
   min-width: 60%;
+  text-align: center;
+  text-shadow: 2px 1px #00000070;
+}
+
+.hulltype-dropdown-content .legendspan_en {
+  min-width: 0%;
 }
 
 .legendspan_en.show, .legendspan_cn.show {
@@ -553,12 +681,18 @@ button:focus {
 }
 
 .changelogbtn {
-  background-color: #3498DB;
+  background-image: linear-gradient(#009eff, #0056fe);
   color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+  font-size: 22px;
   cursor: pointer;
+  height: 37px;
+  border: 1px solid white;
+  border-radius: 5px;
+  text-align: center;
+  text-shadow: 2px 1px #00000070;
+  margin-left: auto;
+  order: 2;
+  margin-top: 5px;
 }
 
 .changelog {
@@ -659,7 +793,7 @@ button:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, .8);
+  background-color: rgba(0, 0, 0, 0.9);
   pointer-events: none;
 }
 
