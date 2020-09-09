@@ -16,15 +16,12 @@ body {
   background-image: linear-gradient(#1e8dff, #3c9dfe);
   color: white;
   display: inline-block;
-  z-index: 9999;
-  position: fixed;
   white-space: nowrap;
 }
 
 .topbanner span {
   font-size: 80px;
   line-height: 140px;
-  z-index: 9999;
   display: inline-block;
   vertical-align: middle;
 }
@@ -32,7 +29,6 @@ body {
 .bannertwo {
   height: 35px;
   width: 100%;
-  margin-top: 140px;
   display: inline-flex;
   align-items: center;
 }
@@ -356,9 +352,9 @@ div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
 
 .rarityfilter, .natparent, .tagfilter_en.show, .tagfilter_cn.show {
   display: inline-flex;
-  width: 25px;
+  width: 50px;
   text-align: center;
-  line-height: 25px;
+  line-height: 50px;
   margin-bottom: 5px;
 }
 
@@ -412,7 +408,7 @@ div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
 }
 
 #n1, #n2, #n3, #n4, #n5, #n6, #n7, #n8, #n9, #n10, #n11, #n12, #n13, #n14, #n15 {
-  height: 25px;
+  height: 50px;
   z-index: 100;
   filter: invert(100%);
   position: inherit;
@@ -427,7 +423,7 @@ div.t5>div.tierbanner, div.t6>div.tierbanner, div.t7>div.tierbanner {
 
 .natparent.n1back, .natparent.n2back, .natparent.n3back, .natparent.n4back, .natparent.n5back, .natparent.n6back, .natparent.n7back, .natparent.n8back, .natparent.n9back, .natparent.n10back, .natparent.n11back, .natparent.n12back, .natparent.n13back, .natparent.n14back, .natparent.n15back{
   z-index: 99;
-  height: 25px;
+  height: 50px;
   background-color: DeepSkyBlue;
   position: absolute;
   margin-bottom: 0px;
@@ -615,7 +611,6 @@ button:focus {
 }
 
 .language {
-  z-index: 9999;
   white-space: normal;
   margin-left: 25px;
   order: 3;
@@ -708,6 +703,7 @@ button:focus {
   z-index: 99999;
   width: 650px;
   max-width: 80%;
+  overflow-y: scroll;
 }
 
 .changelogmainblock {
@@ -800,4 +796,130 @@ button:focus {
 #overlay.active {
   opacity: 1;
   pointer-events: all;
+}
+
+/** stuff added **/
+.ffs-just-name-it-a-button {
+  background-image: linear-gradient(#009eff, #0056fe);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  height: 37px;
+  border: 1px solid white;
+  border-radius: 5px;
+  text-align: center;
+  text-shadow: 2px 1px #00000070;
+  margin-left: auto;
+  order: 2;
+  margin-top: 5px;
+}
+
+/** too lazy. so i copied and pasted. may fix this in the future **/
+.ffs-filter::after, .ffs-filter::before {
+  box-sizing: border-box;
+}
+
+.ffs-filterbtn {
+  background-image: linear-gradient(#009eff, #0056fe);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  height: 37px;
+  border: 1px solid white;
+  border-radius: 5px;
+  text-align: center;
+  text-shadow: 2px 1px #00000070;
+  margin-left: auto;
+  order: 2;
+  margin-top: 5px;
+}
+
+.ffs-filter {
+  background-image: linear-gradient(#1e8dff, #3c9dfe);
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid white;
+  border-radius: 10px;
+  z-index: 99999;
+  width: 650px;
+  max-width: 80%;
+  overflow-y: scroll;
+}
+
+.ffs-filtermainblock {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  max-height: 260px;
+  overflow-y: overlay;
+}
+
+.ffs-filtermainpromotions, .ffs-filtermaindemotions {
+  text-align: center;
+  position: relative;
+  max-height: 260px;
+  overflow-y: overlay;
+}
+
+.ffs-filtertextadded, .ffs-filtertextpromos, .ffs-filtertextpromotions, .ffs-filtertextdemotions {
+  text-align: center;
+  font-size: 30px;
+}
+
+.ffs-filter.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.ffs-filterparent, .ffs-filterparentadded {
+  display: inline-flex;
+  width: 100px;
+  height: 143px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.ffs-filterparentadded {
+  height: 118px;
+}
+
+.ffs-filter-header, .ffs-filterheader {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+
+.ffs-filter-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.ffs-filter-header .close-button {
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.ffs-filter-body {
+  padding: 10px 15px;
+}
+
+.ffs-filter-dropdown {
+  color: white;
+  background-image: linear-gradient(#1e8dff, #3c9dfe);
+  margin-right: 65px;
+  border-color: white;
+}
+
+.ffs-filter-dropdown option {
+  background-color: #3c9dfe;
 }

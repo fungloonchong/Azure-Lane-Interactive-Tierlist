@@ -15,6 +15,14 @@ let arraysobj = {};
 window.onload = async function () {
   ships = await getjson("ships");
   changelog = await getjson("changelog");
+
+  // append list update id & change date
+  // assume changelog is never empty.
+  let last_update_obj = changelog[Object.keys(changelog)[Object.keys(changelog).length - 1]];
+
+  document.querySelector('#topbannertextupdatedate').innerHTML = await lazy_epoch_to_date(last_update_obj['updatedate']);
+  document.querySelector('#topbannertextupdateid').innerHTML = last_update_obj['number'];
+
   let openChangelogButtons = document.querySelectorAll('[data-changelog-target]')
   let closeChangelogButtons = document.querySelectorAll('[data-close-button]')
   let overlay = document.getElementById('overlay')
@@ -30,6 +38,13 @@ window.onload = async function () {
     changelogs.forEach(changelog => {
       closeChangelog(changelog)
     })
+
+    // added temporarily. will be removed
+    const ffs_filters = document.querySelectorAll('.ffs-filter.active')
+    ffs_filters.forEach(ffs_filter => {
+      console.log("try");
+      closeChangelog(ffs_filter)
+    })
   })
   
   closeChangelogButtons.forEach(button => {
@@ -38,6 +53,66 @@ window.onload = async function () {
       closeChangelog(changelog)
     })
   })
+
+  /** stuff added by me**/
+  // added to hide the banner which takes too much space imho.
+  document.querySelectorAll('.ffs-just-name-it-a-button').forEach(button => {
+    button.addEventListener('click', () => {
+      let toggle_target = button.getAttribute("ffs-toggle-class");
+
+      document.querySelectorAll("." + toggle_target).forEach(i => {
+
+        // added for toggling the ffs-filter for now. will be removed in the future.
+        if (toggle_target === "ffs-filter")
+        {
+          openChangelog(document.querySelectorAll(".ffs-filter")[0]);
+        }
+        // the intended purpose for this method
+        else
+        {
+          let currentDisplayState = i.style.display;
+
+          if (currentDisplayState === "none")
+          {
+            i.style.display = "block";
+          }
+          else
+          {
+            i.style.display = "none";
+          }
+        }
+      });
+    });
+  });
+
+  document.querySelectorAll('.ffs-filter-body-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      if (button.className.includes("ffs-filter-body-btn-active"))
+      {
+        button.className = "ffs-filter-body-btn";
+      }
+      else
+      {
+        button.className = "ffs-filter-body-btn ffs-filter-body-btn-active";
+      }
+
+      if (button.getAttribute("value") === "all")
+      {
+        button.parentNode.querySelectorAll('.ffs-filter-body-btn').forEach(button2 => {
+          button2.className = "ffs-filter-body-btn";
+        });
+        button.className = "ffs-filter-body-btn ffs-filter-body-btn-active";
+      }
+      else
+      {
+        button.parentNode.querySelectorAll('.ffs-filter-body-btn[value=all]').forEach(button2 => {
+          button2.className = "ffs-filter-body-btn";
+        });
+      }
+    });
+  });
+
+  // end of stuff added by me?
 
   let changelogdropdown = document.getElementById("changelogsdrop")
   await getchangelog(Object.entries(changelog)[(Object.entries(changelog).length - 1)][0])
@@ -126,14 +201,22 @@ window.onload = async function () {
   }
 };
 
-async function fillchangelogselect(a1, a2) {
-var i = Object.entries(a1).length;
-while (i--) {
-  var opt = document.createElement('option');
-  opt.appendChild( document.createTextNode('#' + a1[Object.entries(a1)[i][0]].number) );
-  opt.value = a1[Object.entries(a1)[i][0]].number; 
-  a2.appendChild(opt); 
+// ignores tz; not too important imho
+// takes in epoch time in int and return date in string (us locale)
+async function lazy_epoch_to_date(epoch)
+{
+  let dateObj = new Date(epoch * 1000);
+  return dateObj.toLocaleString("en-US").split(",")[0].replaceAll("/", ".");
 }
+
+async function fillchangelogselect(a1, a2) {
+  var i = Object.entries(a1).length;
+  while (i--) {
+    var opt = document.createElement('option');
+    opt.appendChild( document.createTextNode('#' + a1[Object.entries(a1)[i][0]].number) );
+    opt.value = a1[Object.entries(a1)[i][0]].number; 
+    a2.appendChild(opt); 
+  }
 }
 
 async function getchangelog(a1) {
@@ -1538,6 +1621,7 @@ async function shipnamecheck(a1, a2) {
   }
 }
 
+// function to handle dropdown menus
 async function myFunction(a1) {
   if (a1 != identmain && identmain != undefined) {
     document.getElementById(identid).classList.remove("show");
@@ -1557,6 +1641,7 @@ async function legenddropdown() {
   document.getElementById("legend-dropdown").classList.toggle("show");
 }
 
+// fetch json from remote server
 async function getjson(a1) {
   try {
     let data = await fetch([a1] + ".json");
@@ -1623,6 +1708,8 @@ async function tiersize(a1) {
   };
 }
 
+// check the ship's name and format font size
+// texthandler(dev_id, name, lang)
 async function texthandler(a1, a2, a3) {
   let className;
   let fontSize;
@@ -1669,6 +1756,11 @@ async function texthandler(a1, a2, a3) {
         // If the second str is smaller or 8 long
         if (countcheck.countafter[1].length <= 8) {
           fontSize = "12px";
+          // handle edge case of king george; I prefer it to be a single line
+          if (countcheck.countafter[1].charAt(countcheck.countafter[1].length-2) === " ") {
+            fontSize = "10px";
+            className = "shipname";
+          }          
         }
       } else {
         fontSize = "10px";
@@ -1775,6 +1867,7 @@ async function tiertext(a1) {
   var result = a1.toUpperCase();
   return result;
 }
+
 async function buildnationalityhtml(a1) {
   a1 = a1.replace("_", " ");
   let shipobj = Object.entries(ships);
@@ -2792,6 +2885,7 @@ async function buildhtmlall() {
   }
 }
 
+// filltier(hull_type, tier)
 async function filltier(a1, a2) {
   let lang;
   let textcheck;
@@ -3265,4 +3359,475 @@ async function filltierspecial(a1, a2, a3) {
 async function deleteProperties(cleanme) {
   for (var x in cleanme)
     if (cleanme.hasOwnProperty(x)) delete cleanme[x];
+}
+
+// glossary parsed ship formatted object = PSFO
+// returns PSFO (object) with needle (object) found
+// if no results found, the return should be an empty PSFO.
+async function filter_ship_by_ship_like_obj(needle)
+{
+  let ret_psfo = {};
+  // k,v = hull, and (object) ships in tier
+  //ships.forEach((k, v) =>
+  for (let k in ships)
+  {
+    let v = ships[k];
+    // k2, v2 = tier, (object) ship
+    //v.forEach((k2, v2) => 
+    for (let k2 in v)
+    {
+      let v2 = v[k2];
+      
+      v2.forEach((ffs_ship) => {
+        // if needle found
+        if (check_if_ship_contains_needle(ffs_ship, needle))
+        {
+          // checks if hull type/tier exists before writing to ret_psfo.
+
+          // check if hull type in ret_psfo
+          if (!(k in ret_psfo))
+          {
+            ret_psfo[k] = {};
+          }
+
+          // checks if tier in ret_psfo
+          if (!(k2 in ret_psfo[k]))
+          {
+            ret_psfo[k][k2] = [];
+          }
+
+          // check ship exists before adding to tier
+          // should be safe but we wont want to have multiple of the same ship.
+          // check if duplicate exists
+
+          ret_psfo[k][k2].push(ffs_ship);
+          
+        }
+      });
+    }
+  }
+  return ret_psfo;
+}
+
+// check if ship (object) contains modified-ship object (difference is really just the key name vs names)
+function check_if_ship_contains_needle(ship_obj, needle)
+{
+  let retval = true;
+
+  // check if name is a parameter
+  if ("name" in needle)
+  {
+    // no need to be case sensitive.
+    // currently only localized name
+    // may want to include nickname; ie. z23 as nimi
+    let test_needle = needle["name"].toLowerCase();
+    let test_ship_info = ship_obj['names'][languageid].toLowerCase();
+
+    if (!(test_ship_info.includes(test_needle)))
+    {
+      retval = false;
+    }
+  }
+  
+  // check if hullType is a parameter
+  if ("hullType" in needle)
+  {
+    let test_needle = needle["hullType"];
+    let test_ship_info = ship_obj['hullType'];
+
+    if (!(test_ship_info.includes(test_needle)))
+    {
+      retval = false;
+    } 
+  }
+
+  // check if nationality is a parameter
+  if ("nationality" in needle)
+  {
+    let test_needle = needle["nationality"].toLowerCase().replace(" ", "");
+    let test_ship_info = ship_obj['nationality'].toLowerCase().replace(" ", "");
+
+    if (!(test_ship_info === test_needle))
+    {
+      retval = false;
+    }
+  }
+
+  // check if rarity is a parameter
+  if ("rarity" in needle)
+  {
+    let test_needle = needle["rarity"];
+    let test_ship_info = ship_obj['rarity'];
+
+    if (!(test_ship_info === test_needle))
+    {
+      retval = false;
+    }
+  }
+
+  // check if tags is a parameter
+  if ("tags" in needle)
+  {
+    let test_needle = needle["tags"];
+    let test_ship_info = ship_obj['tags'];
+
+    if (test_ship_info === null)
+    {
+      retval = false;
+    }
+    else
+    {
+      // testing of subset snipped from:
+      // https://stackoverflow.com/questions/38811421/how-to-check-if-an-array-is-a-subset-of-another-array-in-javascript
+      retval = !test_needle.some(val => test_ship_info.indexOf(val) === -1);
+    }
+  }
+
+  // check if usagitier is a parameter
+  if ("usagitier" in needle)
+  {
+    let test_needle = needle["usagitier"];
+    let test_ship_info = ship_obj['usagitier'];
+
+    if (test_ship_info === test_needle)
+    {
+      retval = false;
+    }
+  }
+  
+  return retval;
+}
+
+// takes the PSFO and rewrite the tier table
+// forked from buildhtmlall()
+async function build_ship_table_from_psfo(psfo) {
+  let shipobj = Object.entries(psfo);
+  document.getElementsByClassName("main")[0].innerHTML = "";
+
+  for (let i = 0; i < shipobj.length; i++) {
+    // Hulltype class
+    let t = document.createElement("div");
+    let hull_type_class = shipobj[i][0];
+    t.className = hull_type_class + " all";
+    maincont.appendChild(t);
+
+    // Hulltype class img
+    let b = document.createElement("img");
+    b.className = hull_type_class + "banner";
+    b.style.marginRight = "30px";
+
+    let quick_fix_img_src = hull_type_class.charAt(0).toUpperCase() + hull_type_class.slice(1);
+    quick_fix_img_src = quick_fix_img_src.replace("cruiser", "Cruiser");
+
+    b.src = "Assets/TierClassBanner/" + quick_fix_img_src + ".png";
+
+    // old method of adding
+    /**
+    
+    if (shipobj[i][0] == "heavycruiser") {
+      b.src = "Assets/TierClassBanner/HeavyCruiser.png";
+    } else if (shipobj[i][0] == "lightcruiser") {
+      b.src = "Assets/TierClassBanner/LightCruiser.png";
+    } else {
+      b.src =
+        "Assets/TierClassBanner/" +
+        shipobj[i][0].charAt(0).toUpperCase() +
+        shipobj[i][0].slice(1) +
+        ".png";
+    }
+    **/
+
+    b.draggable = false;
+    document.getElementsByClassName(hull_type_class)[0].appendChild(b);
+
+    // filling ships to hull-type/tier table
+    let list_of_ships_in_tier = shipobj[i][1];
+    for (let ii = 0; ii < Object.keys(list_of_ships_in_tier).length; ii++) {
+      if (list_of_ships_in_tier[Object.keys(list_of_ships_in_tier)[ii]] != 0) {
+        // s == t0 t1 t2 usw
+        let s = document.createElement("div");
+        s.className = Object.keys(list_of_ships_in_tier)[ii];
+        let sizecheck = await tiersize(
+          list_of_ships_in_tier[Object.keys(list_of_ships_in_tier)[ii]].length
+        );
+        s.style.width = sizecheck.result;
+        s.style.marginRight = "20px";
+        document.getElementsByClassName(hull_type_class)[0].appendChild(s);
+
+        let f = document.createElement("div");
+        f.className = "tierbanner";
+        f.draggable = false;
+        let ttext = await tiertext(Object.keys(list_of_ships_in_tier)[ii]);
+        f.innerHTML = ttext;
+        f.style.width = sizecheck.rawresult - 10 + "px";
+        document
+          .getElementsByClassName(hull_type_class)[0]
+          .getElementsByClassName(Object.keys(list_of_ships_in_tier)[ii])[0]
+          .appendChild(f);
+
+        await ffs_fill_tier(psfo, hull_type_class, s.className);
+      }
+    }
+  }
+}
+
+// ffs_fill_tier(psfo, hull_type, tier_id)
+async function ffs_fill_tier(psfo, hull_type, tier_id) {
+  let lang;
+  let textcheck;
+  for (let i = 0; i < psfo[`${hull_type}`][`${tier_id}`].length; i++) {
+    // Main div
+    let a = document.createElement("div");
+    a.className = "parent";
+    document
+      .getElementsByClassName(hull_type)[0]
+      .getElementsByClassName(tier_id)[0]
+      .appendChild(a);
+    // rarity
+    a = document.createElement("img");
+    a.className = "rarityimg";
+    a.src =
+      "Assets/RarityBGs/" +
+      (await removespaces(psfo[`${hull_type}`][`${tier_id}`][i].rarity)) +
+      ".png";
+    document
+      .getElementsByClassName(hull_type)[0]
+      .getElementsByClassName(tier_id)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    a = document.createElement("a");
+    a.className = "link";
+    a.href = psfo[`${hull_type}`][`${tier_id}`][i].wikiUrl;
+    a.draggable = false;
+    a.target = "_blank";
+    document
+      .getElementsByClassName(hull_type)[0]
+      .getElementsByClassName(tier_id)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    // thumbnail
+    a = document.createElement("img");
+    a.className = "thumbnail";
+    a.src = psfo[`${hull_type}`][`${tier_id}`][i].thumbnail;
+    document
+      .getElementsByClassName(hull_type)[0]
+      .getElementsByClassName(tier_id)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    // Bannerright
+    if (psfo[`${hull_type}`][`${tier_id}`][i].banner != null) {
+      a = document.createElement("img");
+      a.className = "bannerright";
+      a.src = psfo[`${hull_type}`][`${tier_id}`][i].bannerlink;
+      document
+        .getElementsByClassName(hull_type)[0]
+        .getElementsByClassName(tier_id)[0]
+        .getElementsByClassName("parent")[i].appendChild(a);
+    }
+    // Bannerleft
+    if (psfo[`${hull_type}`][`${tier_id}`][i].banneralt != null) {
+      a = document.createElement("img");
+      a.className = "bannerleft";
+      a.src = psfo[`${hull_type}`][`${tier_id}`][i].banneraltlink;
+      document
+        .getElementsByClassName(hull_type)[0]
+        .getElementsByClassName(tier_id)[0]
+        .getElementsByClassName("parent")[i].appendChild(a);
+    }
+    // Tags en
+    a = document.createElement("div");
+    if (languageid == "en" || languageid == "jp" || languageid == "kr") {
+      a.className = "tags_en show";
+    } else {
+      a.className = "tags_en";
+    }
+    document
+      .getElementsByClassName(hull_type)[0]
+      .getElementsByClassName(tier_id)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    a = document.createElement("div");
+    if (languageid == "cn") {
+      a.className = "tags_cn show";
+    } else {
+      a.className = "tags_cn";
+    }
+    document
+      .getElementsByClassName(hull_type)[0]
+      .getElementsByClassName(tier_id)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    // tags filler
+    if (psfo[`${hull_type}`][`${tier_id}`][i].tags != null) {
+      for (let ii = 0; ii < psfo[`${hull_type}`][`${tier_id}`][i].tags.length; ii++) {
+        a = document.createElement("img");
+        if (languageid == "en" || languageid == "jp" || languageid == "kr") {
+          a.className = "tag" + (ii + 1) + " show";
+        } else {
+          a.className = "tag" + (ii + 1);
+        }
+        a.src =
+          "Assets/TagIcons/EN/" + psfo[`${hull_type}`][`${tier_id}`][i].tags[ii] + ".png";
+        document
+          .getElementsByClassName(hull_type)[0]
+          .getElementsByClassName(tier_id)[0]
+          .getElementsByClassName("tags_en")[i].appendChild(a);
+
+        a = document.createElement("img");
+        if (languageid == "cn") {
+          a.className = "tag" + (ii + 1) + " show";
+        } else {
+          a.className = "tag" + (ii + 1);
+        }
+        a.src =
+          "Assets/TagIcons/CN/" + psfo[`${hull_type}`][`${tier_id}`][i].tags[ii] + ".png";
+        document
+          .getElementsByClassName(hull_type)[0]
+          .getElementsByClassName(tier_id)[0]
+          .getElementsByClassName("tags_cn")[i].appendChild(a);
+      }
+    }
+    // Greyblock
+    a = document.createElement("img");
+    a.className = "greyblock";
+    document
+      .getElementsByClassName(hull_type)[0]
+      .getElementsByClassName(tier_id)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    // Hulltype
+    a = document.createElement("img");
+    a.className = "hulltype";
+    a.src =
+      "Assets/HullTypeIcons/" + psfo[`${hull_type}`][`${tier_id}`][i].hullTypeId + ".png";
+    a.draggable = false;
+    document
+      .getElementsByClassName(hull_type)[0]
+      .getElementsByClassName(tier_id)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+
+    // Namechange html builder
+    // Textblock jp
+    a = document.createElement("div");
+    if (languageid == "en") {
+      a.className = "text_en show";
+    } else {
+      a.className = "text_en";
+    }
+    document
+      .getElementsByClassName(hull_type)[0]
+      .getElementsByClassName(tier_id)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    // Textblock jp
+    a = document.createElement("div");
+    if (languageid == "jp") {
+      a.className = "text_jp show";
+    } else {
+      a.className = "text_jp";
+    }
+    document
+      .getElementsByClassName(hull_type)[0]
+      .getElementsByClassName(tier_id)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    // Textblock kr
+    a = document.createElement("div");
+    if (languageid == "kr") {
+      a.className = "text_kr show";
+    } else {
+      a.className = "text_kr";
+    }
+    document
+      .getElementsByClassName(hull_type)[0]
+      .getElementsByClassName(tier_id)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    // Textblock cn
+    a = document.createElement("div");
+    if (languageid == "cn") {
+      a.className = "text_cn show";
+    } else {
+      a.className = "text_cn";
+    }
+    document
+      .getElementsByClassName(hull_type)[0]
+      .getElementsByClassName(tier_id)[0]
+      .getElementsByClassName("parent")[i].appendChild(a);
+    // Span text
+    for (let ii = 0; ii < 4; ii++) {
+      a = document.createElement("span");
+      switch (ii) {
+        case 0:
+          language = "en";
+          lang = "en";
+          break;
+        case 1:
+          language = "jp";
+          lang = "jp";
+          break;
+        case 2:
+          language = "cn";
+          lang = "cn";
+          break;
+        case 3:
+          language = "kr";
+          lang = "kr";
+          break;
+      }
+      if (psfo[`${hull_type}`][`${tier_id}`][i].names[language] == null) {
+        lang = "en";
+        textcheck = await texthandler(
+          psfo[`${hull_type}`][`${tier_id}`][i].names[lang].length,
+          psfo[`${hull_type}`][`${tier_id}`][i].names[lang],
+          lang
+        );
+      } else {
+        textcheck = await texthandler(
+          psfo[`${hull_type}`][`${tier_id}`][i].names[lang].length,
+          psfo[`${hull_type}`][`${tier_id}`][i].names[lang],
+          language
+        );
+      }
+
+      if (textcheck.className != undefined) {
+        a.className = textcheck.className;
+      }
+
+      if (textcheck.fontSize != undefined) {
+        a.style.fontSize = textcheck.fontSize;
+      }
+
+      if (textcheck.lineHeight != undefined) {
+        a.style.lineHeight = textcheck.lineHeight;
+      }
+      a.innerHTML = psfo[`${hull_type}`][`${tier_id}`][i].names[lang];
+      document
+        .getElementsByClassName(hull_type)[0]
+        .getElementsByClassName(tier_id)[0]
+        .getElementsByClassName("parent")[i].getElementsByClassName("text_" + language)[0]
+        .appendChild(a);
+    }
+  }
+}
+
+// takes the info from .ffs-filter to filter.
+// ffs-filter will have more parameters in the future.
+async function generate_psfo()
+{
+  let my_filter = {};
+
+  let ffs_filter_actives = document.querySelectorAll('.ffs-filter-body-btn-active');
+
+  ffs_filter_actives.forEach(e => {
+    let ffs_filter_name = e.getAttribute("ffs-filter-name");
+    let ffs_filter_value = e.getAttribute("value");
+
+    if (ffs_filter_value !== "all" && ffs_filter_name !== "name")
+    {
+      my_filter[ffs_filter_name] = ffs_filter_value;
+    }
+  });
+  console.log(my_filter);
+
+  let my_filtered_psfo = await filter_ship_by_ship_like_obj(my_filter);
+  await build_ship_table_from_psfo(my_filtered_psfo);
+
+  // added temporarily. will be removed; duplicate of a function above.
+  const ffs_filters = document.querySelectorAll('.ffs-filter.active')
+  ffs_filters.forEach(ffs_filter => {
+    console.log("try");
+    closeChangelog(ffs_filter)
+  });
 }
