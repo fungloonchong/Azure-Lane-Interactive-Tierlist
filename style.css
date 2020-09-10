@@ -847,7 +847,6 @@ button:focus {
   z-index: 99999;
   width: 650px;
   max-width: 80%;
-  overflow-y: scroll;
 }
 
 .ffs-filtermainblock {

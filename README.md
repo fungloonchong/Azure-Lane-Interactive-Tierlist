@@ -1,10 +1,22 @@
 # What is this?
-This a tier list by Usagi Sensei, a CN player who is notable for his contributions to the AL community, made filterable by various things for ease of use.  
+This an interactable tier list made from data from Usagi Sensei, a CN player who is notable for his contributions to the AL community.
+
+Revamped the filter that was originally written by xTobiShotz.
 
 Credits to:  
+**[xTobiShotz](https://github.com/xTobiShotz)** Original fork
 **[Usagi Sensei](https://space.bilibili.com/24889090)** for the creation of the list.  
 **[u/TheScorpion1397](https://www.reddit.com/user/TheScorpion1397/)** for translating it to english.  
 
+# What is not working
+The revamped filter may have bugs or missing features. You can report such issues and I will try to fix them asap.
+
+# Roadmap
+- More filters (retrofittable, support ships?)
+- Persistent filters even if you reload (cookie support)
+- Seperating the data file (.json) to make it more manageable
+- Debloating css/js files (reducing load time)
+- Further improvement to the UI/UX?
 
 # How do I read this?
 **Ships are rated within their own class from T0 (the strongest) to Tn (the weakest).  

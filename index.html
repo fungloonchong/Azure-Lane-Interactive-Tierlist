@@ -6,6 +6,9 @@
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
   <script src="./script.js"></script>
+  <script src="./script2.js"></script>
+  <!-- project from https://github.com/js-cookie/js-cookie -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 </head>
 
 <body>
@@ -216,7 +219,7 @@
       <style>
         .ffs-filter-table>tbody>tr>td>span
         {
-          padding-top:3px;
+          padding-top: 1.5px;
           display:block;
           background-image: linear-gradient(#1e8dff, #3c9dfe);
           color: white;
@@ -240,6 +243,19 @@
           margin: 3px;
           min-width: 300px;
           font-family: 'Lato', sans-serif;
+          padding-left: 10px;
+        }
+
+        .ffs-filter-table>tbody>tr>td>button
+        {
+          background-image: linear-gradient(#1e8dff, #3c9dfe);
+          color: white;
+          border-radius: 3px;
+          width: 80px;
+          height: 30px;
+          margin: 3px;
+          font-family: 'Lato', sans-serif;
+          padding-left: 10px;
         }
 
         .ffs-filter-body-btn-active
@@ -250,19 +266,33 @@
       </style>
       <table class="ffs-filter-table">
         <tr>
+          <td>Tier</td>
+          <td>
+            <span class="ffs-filter-body-btn ffs-filter-body-btn-active" ffs-filter-name="usagitier" value="all">All</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="usagitier" value="t0">T0</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="usagitier" value="t1">T1</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="usagitier" value="t2">T2</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="usagitier" value="t3">T3</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="usagitier" value="t4">T4</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="usagitier" value="t5">T5</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="usagitier" value="t6">T6</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="usagitier" value="t7">T7</span>
+          </td>
+        </tr>
+        <tr>
           <td>Index</td>
           <td>
             <span class="ffs-filter-body-btn ffs-filter-body-btn-active" ffs-filter-name="hullType" value="all">All</span>
-            <span class="ffs-filter-body-btn" ffs-filter-name="hullType" value="">Vanguard</span>
-            <span class="ffs-filter-body-btn" ffs-filter-name="hullType" value="">Main</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="hullType" value="Vanguard">Vanguard</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="hullType" value="Main">Main</span>
             <span class="ffs-filter-body-btn" ffs-filter-name="hullType" value="Destroyer">DD</span>
             <span class="ffs-filter-body-btn" ffs-filter-name="hullType" value="Light Cruiser">CL</span>
             <span class="ffs-filter-body-btn" ffs-filter-name="hullType" value="Heavy Cruiser">CA</span>
-            <span class="ffs-filter-body-btn" ffs-filter-name="hullType" value="Battleship">BB</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="hullType" value="Battle">BB</span>
             <span class="ffs-filter-body-btn" ffs-filter-name="hullType" value="Aircraft Carrier">CV</span>
             <span class="ffs-filter-body-btn" ffs-filter-name="hullType" value="Repair">Repair</span>
             <span class="ffs-filter-body-btn" ffs-filter-name="hullType" value="Submarine">SS</span>
-            <span class="ffs-filter-body-btn" ffs-filter-name="hullType" value="">Others</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="hullType" value="Others">Others</span>
           </td>
         </tr>
 
@@ -291,21 +321,42 @@
             <span class="ffs-filter-body-btn" ffs-filter-name="rarity" value="Rare">Rare</span>
             <span class="ffs-filter-body-btn" ffs-filter-name="rarity" value="Elite">Elite</span>
             <span class="ffs-filter-body-btn" ffs-filter-name="rarity" value="Super Rare">Super Rare</span>
-            <span class="ffs-filter-body-btn" ffs-filter-name="rarity" value="Ultra">Ultra</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="rarity" value="Decisive">Ultra</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Tags</td>
+          <td>
+            <span class="ffs-filter-body-btn ffs-filter-body-btn-active" ffs-filter-name="tags" value="all">All</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="tags" value="AS">AS</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="tags" value="BA">BA</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="tags" value="BUFFAA">BUFFAA</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="tags" value="BUFFAIR">BUFFAIR</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="tags" value="BUFFDEF">BUFFDEF</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="tags" value="BUFFDMG">BUFFDMG</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="tags" value="BUFFEXP">BUFFEXP</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="tags" value="BUFFSHL">BUFFSHL</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="tags" value="BUFFTRP">BUFFTRP</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="tags" value="DEF">DEF</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="tags" value="HEAL">HEAL</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="tags" value="MG+1">MG+1</span>
+            <span class="ffs-filter-body-btn" ffs-filter-name="tags" value="TRP">TRP</span>
           </td>
         </tr>
 
         <tr>
           <td>Name</td>
           <td>
-            <input type="text" placeholder="Search by name">
+            <input type="text" placeholder="Search by name" ffs-filter-name="name" class="ffs-filter-body-btn-active">
           </td>
         </tr>
 
         <tr>
           <td></td>
           <td>
-            <span><button onclick="generate_psfo()">Confirm</button>
+            <button onclick="generate_psfo()">Confirm</button>
+            <button onclick="clear_filters()">Reset</button>
           </td>
         </tr>
       </table>
