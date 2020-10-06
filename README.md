@@ -1,10 +1,14 @@
+# Project discontinued
+This fork was initially created to alleviate the shortcomings of the original fork.
+As the original fork is now 'merged' with the improvements I have made, I don't see the point of keeping this project as I am occupied with other projects.
+
 # What is this?
 This an interactable tier list made from data from Usagi Sensei, a CN player who is notable for his contributions to the AL community.
 
 Revamped the filter that was originally written by xTobiShotz.
 
 Credits to:  
-**[xTobiShotz](https://github.com/xTobiShotz)** Original fork
+**[xTobiShotz](https://github.com/xTobiShotz)** Original fork.  
 **[Usagi Sensei](https://space.bilibili.com/24889090)** for the creation of the list.  
 **[u/TheScorpion1397](https://www.reddit.com/user/TheScorpion1397/)** for translating it to english.  
 
